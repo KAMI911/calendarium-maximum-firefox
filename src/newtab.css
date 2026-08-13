@@ -70,6 +70,12 @@
      dark-palette blocks below. */
   --cal-icon-size: 20px;
 
+  /* The calendar panel's own target width — shared with .calendarium-
+     widgets' column width below so every widget reads as roughly the
+     same width as the calendar panel, instead of narrower tiles. Not
+     theme-dependent either. */
+  --cal-panel-width: 560px;
+
   /* Date / time / name-day (brightest text) */
   --cal-date-color: #1c1c1f;
   --cal-time-color: #0e0e12;
@@ -300,18 +306,21 @@ body {
    into the next once it's full, packing height efficiently (unlike a
    grid's row-locked track sizing, which would leave a short widget's row
    as tall as its tallest sibling in the same row across every column).
-   "columns: 4 300px" auto-picks up to 4 columns of at least 300px each —
-   1 on a narrow widgets area, up to 4 once there's room for them — rather
-   than a fixed column count. Each column always stretches to fill an
-   even share of the container's own width (including the 1-column case,
-   where that's just the container's full width), and the container
-   itself is already horizontally centered as part of the shell/page —
-   so a single column reads centered on the page too, with nothing extra
-   needed here for that case. */
+   The column width is tied to --cal-panel-width (the same width the
+   calendar panel targets, below), so each widget reads roughly as wide
+   as the calendar itself rather than a narrower tile — 1 column on a
+   narrow widgets area, up to 4 once there's enough room for that many.
+   Each column always stretches to fill an even share of the container's
+   own width (including the 1-column case, where that's just the
+   container's full width), and the container itself is already
+   horizontally centered as part of the shell/page — so a single column
+   reads centered on the page too, with nothing extra needed here for
+   that case. Container width caps at enough for 4 columns of
+   --cal-panel-width (560px) plus 3 gaps: 4×560 + 3×16 = 2288px. */
 .calendarium-widgets {
-  columns: 4 300px;
+  columns: 4 var(--cal-panel-width);
   column-gap: 16px;
-  width: min(1280px, 92vw);
+  width: min(2320px, 92vw);
 }
 
 .calendarium-widget {
@@ -330,7 +339,7 @@ body {
     align-items: center;
   }
   .calendarium-widgets {
-    width: min(560px, 92vw);
+    width: min(var(--cal-panel-width), 92vw);
   }
 }
 
@@ -570,7 +579,7 @@ body {
      that JS runs. */
   background-color: rgba(0, 0, 0, 0);
   border-radius: 12px;
-  width: min(560px, 92vw);
+  width: min(var(--cal-panel-width), 92vw);
 }
 
 /* Section visibility is controlled explicitly from newtab.js via the
