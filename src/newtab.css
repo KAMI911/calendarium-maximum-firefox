@@ -448,31 +448,24 @@ body {
 .calendarium-widget-list-item:hover { color: var(--cal-link-color); }
 
 /* ── Firefox logo (decorative) ─────────────────────────────────────── */
-/* container-type:inline-size turns "cqw" below into a fraction of this
-   box's own rendered width, so "large" scales the glyph with however
-   wide the widget actually is (narrow column, full-width stacked
-   layout, etc.) rather than a fixed em size. */
-.calendarium-widget-firefox-logo .calendarium-widget-body {
-  container-type: inline-size;
-}
-
+/* Fixed size (not viewport/container-relative) — a bit under the default
+   .calendarium-widgets column width (480px, minus this element's own
+   ~26px of padding/border) so there's visible breathing room on every
+   side instead of the glyph touching the widget's edges. A previous
+   cqw-based attempt put container-type:inline-size on the very same
+   element that also read "cqw" from it — a container can't query its
+   own size, so that silently fell back to treating cqw like a
+   *viewport*-relative unit, rendering the glyph screen-sized. */
 .calendarium-firefox-logo-body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* container-type is on .calendarium-widget-body (the query container),
-     so "cqw" measures THAT element's own border-box width — before its
-     own 12px-each-side padding is subtracted for this child. Subtract
-     that padding (24px) plus its 1px border each side explicitly, so
-     the glyph's ~1em-square rendered box lines up with the actual
-     available content width instead of overflowing past it. */
-  font-size: calc(100cqw - 26px);
+  font-size: 400px;
   line-height: 1;
   overflow: hidden;
-  /* Pure insurance against sub-pixel/font-metric variance (some emoji
-     glyphs render very slightly wider than their nominal font-size) —
-     the calc() above is sized to need this only for that residual
-     slack, not as the primary sizing mechanism. */
+  /* Safety net only — a fixed font-size doesn't shrink for a narrower
+     box, so on unusually narrow viewports/columns this clips the glyph
+     rather than letting it overflow past the widget's own edges. */
   max-width: 100%;
 }
 
