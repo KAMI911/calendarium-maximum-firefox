@@ -1,0 +1,9 @@
+node_modules/
+dist/
+web-ext-artifacts/
+coverage/
+*.xpi
+.DS_Store
+.env.local
+*.env.local
+src/.amo-upload-uuid

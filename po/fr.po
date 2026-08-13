@@ -1,0 +1,1243 @@
+# French translation for calendarium@kami911
+# Copyright (C) 2024 kami911
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: calendarium@kami911 1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-desklets/issues\n"
+"POT-Creation-Date: 2026-07-23 16:36+0200\n"
+"PO-Revision-Date: 2026-03-14 00:00+0100\n"
+"Last-Translator: Kalman „KAMI” Szalai <kami911@gmail.com>\n"
+"Language-Team: French <fr@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. desklet.js:61
+msgid "New Moon"
+msgstr "Nouvelle lune"
+
+#. desklet.js:61
+msgid "Waxing Crescent"
+msgstr "Premier croissant"
+
+#. desklet.js:61
+msgid "First Quarter"
+msgstr "Premier quartier"
+
+#. desklet.js:61
+msgid "Waxing Gibbous"
+msgstr "Gibbeuse croissante"
+
+#. desklet.js:62
+msgid "Full Moon"
+msgstr "Pleine lune"
+
+#. desklet.js:62
+msgid "Waning Gibbous"
+msgstr "Gibbeuse décroissante"
+
+#. desklet.js:62
+msgid "Last Quarter"
+msgstr "Dernier quartier"
+
+#. desklet.js:62
+msgid "Waning Crescent"
+msgstr "Dernier croissant"
+
+#. desklet.js:64
+msgid "Aquarius"
+msgstr "Verseau"
+
+#. desklet.js:64
+msgid "Pisces"
+msgstr "Poissons"
+
+#. desklet.js:64
+msgid "Aries"
+msgstr "Bélier"
+
+#. desklet.js:64
+msgid "Taurus"
+msgstr "Taureau"
+
+#. desklet.js:64
+msgid "Gemini"
+msgstr "Gémeaux"
+
+#. desklet.js:64
+msgid "Cancer"
+msgstr "Cancer"
+
+#. desklet.js:65
+msgid "Leo"
+msgstr "Lion"
+
+#. desklet.js:65
+msgid "Virgo"
+msgstr "Vierge"
+
+#. desklet.js:65
+msgid "Libra"
+msgstr "Balance"
+
+#. desklet.js:65
+msgid "Scorpio"
+msgstr "Scorpion"
+
+#. desklet.js:65
+msgid "Sagittarius"
+msgstr "Sagittaire"
+
+#. desklet.js:65
+msgid "Capricorn"
+msgstr "Capricorne"
+
+#. desklet.js:67
+msgid "Rat"
+msgstr "Rat"
+
+#. desklet.js:67
+msgid "Ox"
+msgstr "Bœuf"
+
+#. desklet.js:67
+msgid "Tiger"
+msgstr "Tigre"
+
+#. desklet.js:67
+msgid "Rabbit"
+msgstr "Lapin"
+
+#. desklet.js:67
+msgid "Dragon"
+msgstr "Dragon"
+
+#. desklet.js:67
+msgid "Snake"
+msgstr "Serpent"
+
+#. desklet.js:68
+msgid "Horse"
+msgstr "Cheval"
+
+#. desklet.js:68
+msgid "Goat"
+msgstr "Chèvre"
+
+#. desklet.js:68
+msgid "Monkey"
+msgstr "Singe"
+
+#. desklet.js:68
+msgid "Rooster"
+msgstr "Coq"
+
+#. desklet.js:68
+msgid "Dog"
+msgstr "Chien"
+
+#. desklet.js:68
+msgid "Pig"
+msgstr "Cochon"
+
+#. desklet.js:70
+msgid "Wood"
+msgstr "Bois"
+
+#. desklet.js:70
+msgid "Fire"
+msgstr "Feu"
+
+#. desklet.js:70
+msgid "Earth"
+msgstr "Terre"
+
+#. desklet.js:70
+msgid "Metal"
+msgstr "Métal"
+
+#. desklet.js:70
+msgid "Water"
+msgstr "Eau"
+
+#. desklet.js:72
+msgid "Spring equinox"
+msgstr "Équinoxe de printemps"
+
+#. desklet.js:72
+msgid "Summer solstice"
+msgstr "Solstice d'été"
+
+#. desklet.js:72
+msgid "Autumn equinox"
+msgstr "Équinoxe d'automne"
+
+#. desklet.js:72
+msgid "Winter solstice"
+msgstr "Solstice d'hiver"
+
+#. desklet.js:359
+msgid "Current date"
+msgstr "Date actuelle"
+
+#. desklet.js:367
+msgid "Current time"
+msgstr "Heure actuelle"
+
+#. desklet.js:383 desklet.js:895
+msgid "Day of year"
+msgstr "Jour de l'année"
+
+#. desklet.js:409 desklet.js:906
+msgid "Week number"
+msgstr "Numéro de semaine"
+
+#. desklet.js:418 desklet.js:922
+msgid "Month highlights"
+msgstr "Actualité du mois"
+
+#. desklet.js:475 desklet.js:1062
+msgid "Moon phase"
+msgstr "Phase lunaire"
+
+#. desklet.js:506 desklet.js:507 desklet.js:1254
+msgid "Moonrise"
+msgstr "Lever de lune"
+
+#. desklet.js:514 desklet.js:515 desklet.js:1255
+msgid "Moonset"
+msgstr "Coucher de lune"
+
+#. desklet.js:532 desklet.js:533 desklet.js:561 desklet.js:1109
+msgid "Sunrise"
+msgstr "Lever du soleil"
+
+#. desklet.js:540 desklet.js:541 desklet.js:562 desklet.js:1110
+msgid "Sunset"
+msgstr "Coucher du soleil"
+
+#. desklet.js:563
+msgid "Local time"
+msgstr "Heure locale"
+
+#. desklet.js:583 desklet.js:1152
+msgid "Western zodiac"
+msgstr "Zodiaque occidental"
+
+#. desklet.js:600 desklet.js:1166
+msgid "Chinese zodiac"
+msgstr "Zodiaque chinois"
+
+#. desklet.js:622
+msgid "Equinox and Solstice"
+msgstr "Équinoxe et solstice"
+
+#. desklet.js:680 desklet.js:681 desklet.js:1396
+msgid "Events on this day"
+msgstr "Événements de ce jour"
+
+#. desklet.js:682 desklet.js:683 desklet.js:1376
+msgid "Births on this day"
+msgstr "Naissances de ce jour"
+
+#. desklet.js:684 desklet.js:685 desklet.js:1386
+msgid "Deaths on this day"
+msgstr "Décès de ce jour"
+
+#. desklet.js:686 desklet.js:687 desklet.js:1439
+msgid "Article of the day"
+msgstr "Article du jour"
+
+#. settings-schema.json->section-altcal->title
+#. desklet.js:703
+msgid "Alternate Calendars"
+msgstr "Calendriers alternatifs"
+
+#. desklet.js:891
+#, javascript-format
+msgid "Day %d of %d"
+msgstr "Jour %d sur %d"
+
+#. desklet.js:903
+#, javascript-format
+msgid "Week %d"
+msgstr "Semaine %d"
+
+#. settings-schema.json->holiday-lookahead->units
+#. settings-schema.json->period-upcoming-lookahead->units
+#. settings-schema.json->nameday-lookahead->units
+#. desklet.js:919 desklet.js:1045 desklet.js:1071 desklet.js:1270
+msgid "days"
+msgstr "jours"
+
+#. desklet.js:933
+msgid "days until New Year"
+msgstr "jours jusqu'au Nouvel An"
+
+#. desklet.js:986
+msgid "public holiday"
+msgstr "jour férié"
+
+#. desklet.js:988
+msgid "weekend"
+msgstr "week-end"
+
+#. desklet.js:1029
+msgid "days left"
+msgstr "jours restants"
+
+#. desklet.js:1073
+msgid "Moon age"
+msgstr "Âge de la lune"
+
+#. desklet.js:1127
+msgid "Polar day"
+msgstr "Jour polaire"
+
+#. desklet.js:1128
+msgid "Polar night"
+msgstr "Nuit polaire"
+
+#. desklet.js:1129 desklet.js:1249 desklet.js:1250
+msgid "No data"
+msgstr "Pas de données"
+
+#. desklet.js:1177
+msgid "Name days"
+msgstr "Fêtes"
+
+#. desklet.js:1179
+msgid "Tomorrow"
+msgstr "Demain"
+
+#. desklet.js:1285
+msgid "Julian date"
+msgstr "Date julienne"
+
+#. desklet.js:1286
+msgid "Hebrew date"
+msgstr "Date hébraïque"
+
+#. desklet.js:1287
+msgid "Islamic date"
+msgstr "Date islamique"
+
+#. desklet.js:1288
+msgid "Persian date"
+msgstr "Date persane"
+
+#. metadata.json->name
+msgid "Calendarium"
+msgstr "Calendarium"
+
+#. metadata.json->description
+msgid "A rich calendar desklet with moon phase, sunrise/sunset, zodiac, name days, traditional month names, and optional Wikipedia features."
+msgstr "Un desklet de calendrier complet avec phase lunaire, lever/coucher du soleil, zodiaque, fêtes, noms traditionnels des mois et fonctions Wikipedia optionnelles."
+
+#. settings-schema.json->page-general->title
+msgid "General"
+msgstr "Général"
+
+#. settings-schema.json->page-location->title
+#. settings-schema.json->section-location->title
+msgid "Location"
+msgstr "Emplacement"
+
+#. settings-schema.json->page-wikipedia->title
+msgid "Wikipedia"
+msgstr "Wikipédia"
+
+#. settings-schema.json->section-datetime->title
+msgid "Date and Time"
+msgstr "Date et heure"
+
+#. settings-schema.json->section-progress->title
+msgid "Calendar Highlights"
+msgstr "Actualités du calendrier"
+
+#. settings-schema.json->section-traditional->title
+msgid "Traditional Month Names"
+msgstr "Noms de mois traditionnels"
+
+#. settings-schema.json->section-folkdays->title
+msgid "Folk Calendar Sayings"
+msgstr "Proverbes du calendrier populaire"
+
+#. settings-schema.json->section-holidays->title
+msgid "National Holidays"
+msgstr "Fêtes nationales"
+
+#. settings-schema.json->section-moon->title
+msgid "Moon Phase"
+msgstr "Phase lunaire"
+
+#. settings-schema.json->section-sun->title
+msgid "Sunrise and Sunset"
+msgstr "Lever et coucher du soleil"
+
+#. settings-schema.json->section-zodiac->title
+msgid "Zodiac"
+msgstr "Zodiaque"
+
+#. settings-schema.json->section-namedays->title
+msgid "Name Days"
+msgstr "Fêtes"
+
+#. settings-schema.json->section-wikipedia->title
+msgid "Wikipedia (Internet Required)"
+msgstr "Wikipédia (Internet requis)"
+
+#. settings-schema.json->section-appearance->title
+msgid "Appearance"
+msgstr "Apparence"
+
+#. settings-schema.json->show-date->description
+msgid "Show date"
+msgstr "Afficher la date"
+
+#. settings-schema.json->date-format-preset->description
+msgid "Date format"
+msgstr "Format de date"
+
+#. settings-schema.json->date-format-preset->tooltip
+msgid "Select a predefined date format, or choose Custom to enter your own strftime string below."
+msgstr "Sélectionnez un format de date prédéfini, ou choisissez Personnalisé pour saisir votre propre chaîne strftime ci-dessous.Sélectionnez un format de date prédéfini, ou choisissez Personnalisé pour saisir votre propre code strftime ci-dessous."
+
+#. settings-schema.json->date-format-preset->options
+msgid "Friday, 22. February 2026  (%A, %d. %B %Y)"
+msgstr "vendredi, 22. février 2026 (%A, %d. %B %Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "22. February 2026          (%d. %B %Y)"
+msgstr "22 février 2026           (%d. %B %Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "22. Feb 2026               (%d. %b %Y)"
+msgstr ""
+
+#. settings-schema.json->date-format-preset->options
+msgid "22 Feb 2026                (%d %b %Y)"
+msgstr "22 févr. 2026              (%d %b %Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "Fri, 22 Feb 2026           (%a, %d %b %Y)"
+msgstr "ven. 22 févr. 2026         (%a, %d %b %Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "Friday, February 22, 2026  (%A, %B %d, %Y)"
+msgstr "vendredi, février 22, 2026 (%A, %B %d, %Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "February 22, 2026          (%B %d, %Y)"
+msgstr "février 22, 2026          (%B %d, %Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "Feb 22, 2026               (%b %d, %Y)"
+msgstr "févr. 22, 2026             (%b %d, %Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "2026-02-22                 (%Y-%m-%d)"
+msgstr ""
+
+#. settings-schema.json->date-format-preset->options
+msgid "22/02/2026                 (%d/%m/%Y)"
+msgstr ""
+
+#. settings-schema.json->date-format-preset->options
+msgid "02/22/2026                 (%m/%d/%Y)"
+msgstr "02/22/2026                 (%m/%d/%Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "22.02.2026                 (%d.%m.%Y)"
+msgstr "22.02.2026                 (%d.%m.%Y)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "2026. February 22., Friday (%Y. %B %d., %A)"
+msgstr "2026. février 22., vendredi (%Y. %B %d., %A)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "2026. February 22.         (%Y. %B %d.)"
+msgstr "2026. février 22.         (%Y. %B %d.)"
+
+#. settings-schema.json->date-format-preset->options
+msgid "2026. 02. 22.              (%Y. %m. %d.)"
+msgstr "2026. 02. 22.              (%Y. %m. %d.)"
+
+#. settings-schema.json->date-format-custom->description
+msgid "Custom date format (strftime) — only active when 'Custom' is selected above"
+msgstr "Format de date personnalisé (strftime) — actif uniquement quand 'Personnalisé' est sélectionnéFormat de date personnalisé (strftime) — actif uniquement quand « Personnalisé » est sélectionné ci-dessus"
+
+#. settings-schema.json->date-format-custom->tooltip
+msgid "strftime codes: %A=full weekday  %a=short weekday  %d=day  %B=full month  %b=short month  %Y=4-digit year  %y=2-digit year  %m=month number  %j=day of year  %H=hour(24h)  %I=hour(12h)  %M=minute  %p=AM/PM.  Example: %Y. %B %d., %A"
+msgstr "Codes strftime : %A=jour de la semaine complet  %a=jour de la semaine court  %d=jour  %B=mois complet  %b=mois court  %Y=année sur 4 chiffres  %y=année sur 2 chiffres  %m=numéro du mois  %j=jour de l'année  %H=heure(24h)  %I=heure(12h)  %M=minute  %p=AM/PM.  Exemple : %Y. %B %d., %A"
+
+#. settings-schema.json->show-time->description
+msgid "Show time"
+msgstr "Afficher l'heure"
+
+#. settings-schema.json->time-format->description
+msgid "Time format"
+msgstr "Format de l'heure"
+
+#. settings-schema.json->time-format->options
+msgid "24-hour"
+msgstr "24 heures"
+
+#. settings-schema.json->time-format->options
+msgid "12-hour (AM/PM)"
+msgstr "12 heures (AM/PM)"
+
+#. settings-schema.json->show-seconds->description
+msgid "Show seconds"
+msgstr "Afficher les secondes"
+
+#. settings-schema.json->show-day-of-year->description
+msgid "Show day of year (e.g. Day 52 of 365)"
+msgstr "Afficher le jour de l'année (ex. Jour 52 sur 365)"
+
+#. settings-schema.json->show-week-number->description
+msgid "Show ISO week number"
+msgstr "Afficher le numéro de semaine ISO"
+
+#. settings-schema.json->show-month-progress->description
+msgid "Show month highlights (day / days in month)"
+msgstr "Afficher l'actualité du mois (jour / jours dans le mois)"
+
+#. settings-schema.json->show-new-year-countdown->description
+msgid "Show days until New Year"
+msgstr "Afficher les jours jusqu'au Nouvel An"
+
+#. settings-schema.json->progress-separator->description
+msgid "Separator character between calendar items"
+msgstr "Caractère séparateur entre les éléments du calendrier"
+
+#. settings-schema.json->show-traditional->description
+msgid "Show traditional month name"
+msgstr "Afficher le nom de mois traditionnel"
+
+#. settings-schema.json->traditional-lang->description
+msgid "Traditional month name tradition"
+msgstr "Tradition du nom de mois"
+
+#. settings-schema.json->traditional-lang->options
+#. settings-schema.json->folkday-locale->options
+#. settings-schema.json->holiday-locale->options
+#. settings-schema.json->nameday-locale->options
+#. settings-schema.json->wikipedia-lang->options
+msgid "System language"
+msgstr "Langue du système"
+
+#. settings-schema.json->traditional-lang->options
+msgid "Old Hungarian"
+msgstr "Hongrois ancien"
+
+#. settings-schema.json->traditional-lang->options
+msgid "Old English (Anglo-Saxon)"
+msgstr "Vieil anglais (anglo-saxon)"
+
+#. settings-schema.json->traditional-lang->options
+msgid "Old German"
+msgstr "Vieil allemand"
+
+#. settings-schema.json->show-folkdays->description
+msgid "Show folk calendar saying for today"
+msgstr "Afficher le proverbe populaire du jour"
+
+#. settings-schema.json->folkday-locale->description
+msgid "Folk saying language"
+msgstr "Langue du proverbe populaire"
+
+#. settings-schema.json->folkday-locale->options
+#. settings-schema.json->holiday-locale->options
+#. settings-schema.json->nameday-locale->options
+#. settings-schema.json->wikipedia-lang->options
+msgid "Hungarian"
+msgstr "Hongrois"
+
+#. settings-schema.json->folkday-locale->options
+#. settings-schema.json->holiday-locale->options
+#. settings-schema.json->nameday-locale->options
+#. settings-schema.json->wikipedia-lang->options
+msgid "German"
+msgstr "Allemand"
+
+#. settings-schema.json->folkday-locale->options
+#. settings-schema.json->holiday-locale->options
+#. settings-schema.json->nameday-locale->options
+#. settings-schema.json->wikipedia-lang->options
+msgid "English"
+msgstr "Anglais"
+
+#. settings-schema.json->folkday-locale->options
+#. settings-schema.json->holiday-locale->options
+#. settings-schema.json->nameday-locale->options
+#. settings-schema.json->wikipedia-lang->options
+msgid "French"
+msgstr "Français"
+
+#. settings-schema.json->folkday-locale->options
+#. settings-schema.json->holiday-locale->options
+#. settings-schema.json->nameday-locale->options
+#. settings-schema.json->wikipedia-lang->options
+msgid "Spanish"
+msgstr "Espagnol"
+
+#. settings-schema.json->folkday-locale->options
+#. settings-schema.json->holiday-locale->options
+#. settings-schema.json->nameday-locale->options
+#. settings-schema.json->wikipedia-lang->options
+msgid "Italian"
+msgstr "Italien"
+
+#. settings-schema.json->show-holidays->description
+msgid "Show national holidays and weekends"
+msgstr "Afficher les jours fériés nationaux et les week-ends"
+
+#. settings-schema.json->holiday-locale->description
+msgid "Holiday calendar"
+msgstr "Calendrier des jours fériés"
+
+#. settings-schema.json->holiday-lookahead->description
+msgid "Show upcoming holidays (days ahead)"
+msgstr "Afficher les prochains jours fériés (jours à l'avance)"
+
+#. settings-schema.json->show-period-upcoming->description
+msgid "Show upcoming seasonal periods (days ahead)"
+msgstr "Afficher les périodes saisonnières à venir (jours à l'avance)"
+
+#. settings-schema.json->period-upcoming-lookahead->description
+msgid "Upcoming periods lookahead (days)"
+msgstr "Anticipation des périodes à venir (jours)"
+
+#. settings-schema.json->show-moon->description
+msgid "Show moon phase"
+msgstr "Afficher la phase lunaire"
+
+#. settings-schema.json->show-moon-name->description
+msgid "Show moon phase name"
+msgstr "Afficher le nom de la phase lunaire"
+
+#. settings-schema.json->show-moon-age->description
+msgid "Show moon age (days since new moon)"
+msgstr "Afficher l'âge de la lune (jours depuis la nouvelle lune)"
+
+#. settings-schema.json->show-moonrise->description
+msgid "Show moonrise and moonset times"
+msgstr "Afficher le lever et le coucher de lune"
+
+#. settings-schema.json->show-sun->description
+msgid "Show sunrise and sunset times"
+msgstr "Afficher les heures de lever et coucher du soleil"
+
+#. settings-schema.json->show-solstice->description
+msgid "Show equinox and solstice"
+msgstr "Afficher les équinoxes et solstices"
+
+#. settings-schema.json->use-manual-location->description
+msgid "Use manual location (default: Budapest, Hungary)"
+msgstr "Utiliser un emplacement manuel (par défaut : Budapest, Hongrie)"
+
+#. settings-schema.json->location-search->description
+msgid "Search city to auto-fill coordinates"
+msgstr "Rechercher une ville pour remplir les coordonnées automatiquement"
+
+#. settings-schema.json->location-search->tooltip
+msgid "Type a city name — coordinates are filled in automatically after 1.5 seconds."
+msgstr "Tapez un nom de ville — les coordonnées se remplissent automatiquement après 1,5 seconde."
+
+#. settings-schema.json->latitude->units
+#. settings-schema.json->longitude->units
+#. settings-schema.json->city1-lat->units
+#. settings-schema.json->city1-lon->units
+#. settings-schema.json->city2-lat->units
+#. settings-schema.json->city2-lon->units
+#. settings-schema.json->city3-lat->units
+#. settings-schema.json->city3-lon->units
+msgid "degrees"
+msgstr "degrés"
+
+#. settings-schema.json->latitude->description
+msgid "Latitude (positive = North)"
+msgstr "Latitude (positif = Nord)"
+
+#. settings-schema.json->longitude->description
+msgid "Longitude (positive = East)"
+msgstr "Longitude (positif = Est)"
+
+#. settings-schema.json->city1-name->description
+msgid "City 1 name (leave empty to disable)"
+msgstr "Nom de la ville 1 (laisser vide pour désactiver)"
+
+#. settings-schema.json->city1-name->tooltip
+msgid "Label for an additional city. Leave empty to hide."
+msgstr "Étiquette pour une ville supplémentaire. Laisser vide pour masquer."
+
+#. settings-schema.json->city1-lat->description
+msgid "City 1 latitude"
+msgstr "Latitude de la ville 1"
+
+#. settings-schema.json->city1-lon->description
+msgid "City 1 longitude"
+msgstr "Longitude de la ville 1"
+
+#. settings-schema.json->city1-tz->description
+msgid "City 1 timezone (IANA, e.g. Europe/Vienna)"
+msgstr "Fuseau horaire de la ville 1 (IANA, ex. Europe/Vienna)"
+
+#. settings-schema.json->city1-tz->tooltip
+msgid "Filled automatically when using city search. You can also enter an IANA timezone name manually, e.g. America/New_York."
+msgstr "Rempli automatiquement lors de la recherche de ville. Vous pouvez aussi saisir manuellement un nom de fuseau horaire IANA, ex. America/New_York."
+
+#. settings-schema.json->city2-name->description
+msgid "City 2 name (leave empty to disable)"
+msgstr "Nom de la ville 2 (laisser vide pour désactiver)"
+
+#. settings-schema.json->city2-lat->description
+msgid "City 2 latitude"
+msgstr "Latitude de la ville 2"
+
+#. settings-schema.json->city2-lon->description
+msgid "City 2 longitude"
+msgstr "Longitude de la ville 2"
+
+#. settings-schema.json->city2-tz->description
+msgid "City 2 timezone (IANA, e.g. America/New_York)"
+msgstr "Fuseau horaire de la ville 2 (IANA, ex. America/New_York)"
+
+#. settings-schema.json->city2-tz->tooltip
+#. settings-schema.json->city3-tz->tooltip
+msgid "Filled automatically when using city search. You can also enter an IANA timezone name manually."
+msgstr "Rempli automatiquement lors de la recherche de ville. Vous pouvez aussi saisir manuellement un nom de fuseau horaire IANA."
+
+#. settings-schema.json->city3-name->description
+msgid "City 3 name (leave empty to disable)"
+msgstr "Nom de la ville 3 (laisser vide pour désactiver)"
+
+#. settings-schema.json->city3-lat->description
+msgid "City 3 latitude"
+msgstr "Latitude de la ville 3"
+
+#. settings-schema.json->city3-lon->description
+msgid "City 3 longitude"
+msgstr "Longitude de la ville 3"
+
+#. settings-schema.json->city3-tz->description
+msgid "City 3 timezone (IANA, e.g. Asia/Tokyo)"
+msgstr "Fuseau horaire de la ville 3 (IANA, ex. Asia/Tokyo)"
+
+#. settings-schema.json->show-city-time->description
+msgid "Show current local time for each city"
+msgstr "Afficher l'heure locale actuelle pour chaque ville"
+
+#. settings-schema.json->show-city-tz-offset->description
+msgid "Show UTC offset for each city (e.g. UTC+1)"
+msgstr "Afficher le décalage UTC pour chaque ville (ex. UTC+1)"
+
+#. settings-schema.json->zodiac-western-display->description
+msgid "Western zodiac display"
+msgstr "Affichage du zodiaque occidental"
+
+#. settings-schema.json->zodiac-western-display->tooltip
+msgid "Choose what to show for the western zodiac sign."
+msgstr "Choisissez ce qu'il faut afficher pour le signe du zodiaque occidental.Choisissez ce qui s'affiche pour le signe du zodiaque occidental.Choisissez ce qu'il faut afficher pour le signe du zodiaque occidental."
+
+#. settings-schema.json->zodiac-western-display->options
+#. settings-schema.json->zodiac-chinese-display->options
+msgid "Icon and text"
+msgstr "Icône et texte"
+
+#. settings-schema.json->zodiac-western-display->options
+#. settings-schema.json->zodiac-chinese-display->options
+msgid "Icon only"
+msgstr "Icône uniquement"
+
+#. settings-schema.json->zodiac-western-display->options
+#. settings-schema.json->zodiac-chinese-display->options
+msgid "Text only"
+msgstr "Texte uniquement"
+
+#. settings-schema.json->zodiac-western-display->options
+#. settings-schema.json->zodiac-chinese-display->options
+msgid "None (hidden)"
+msgstr "Aucun (masqué)"
+
+#. settings-schema.json->zodiac-chinese-display->description
+msgid "Chinese zodiac display"
+msgstr "Affichage du zodiaque chinois"
+
+#. settings-schema.json->zodiac-chinese-display->tooltip
+msgid "Choose what to show for the Chinese zodiac year (animal and element)."
+msgstr "Choisissez ce qu'il faut afficher pour l'année du zodiaque chinois (animal et élément).Choisissez ce qui s'affiche pour l'année du zodiaque chinois (animal et élément).Choisissez ce qu'il faut afficher pour l'année du zodiaque chinois (animal et élément)."
+
+#. settings-schema.json->show-namedays->description
+msgid "Show name days"
+msgstr "Afficher les fêtes"
+
+#. settings-schema.json->nameday-locale->description
+msgid "Name day calendar"
+msgstr "Calendrier des fêtes"
+
+#. settings-schema.json->nameday-lookahead->description
+msgid "Show upcoming name days (days ahead)"
+msgstr "Afficher les prochaines fêtes (jours à l'avance)"
+
+#. settings-schema.json->nameday-two-columns->description
+msgid "Show future name days in two columns"
+msgstr "Afficher les prochaines fêtes en deux colonnes"
+
+#. settings-schema.json->show-wikipedia->description
+msgid "Enable Wikipedia features (requires Internet)"
+msgstr "Activer les fonctionnalités Wikipédia (Internet requis)"
+
+#. settings-schema.json->wikipedia-lang->description
+msgid "Wikipedia language"
+msgstr "Langue de Wikipédia"
+
+#. settings-schema.json->show-wiki-events->description
+msgid "Show notable events on this day"
+msgstr "Afficher les événements notables de ce jour"
+
+#. settings-schema.json->show-wiki-births->description
+msgid "Show notable births on this day"
+msgstr "Afficher les naissances notables de ce jour"
+
+#. settings-schema.json->show-wiki-deaths->description
+msgid "Show notable deaths on this day"
+msgstr "Afficher les décès notables de ce jour"
+
+#. settings-schema.json->show-wiki-featured->description
+msgid "Show article of the day"
+msgstr "Afficher l'article du jour"
+
+#. settings-schema.json->wikipedia-items-count->units
+msgid "items"
+msgstr "éléments"
+
+#. settings-schema.json->wikipedia-items-count->description
+msgid "Items shown per section"
+msgstr "Éléments affichés par section"
+
+#. settings-schema.json->wikipedia-items-count->tooltip
+msgid "How many births, deaths, and events to display at a time. The list rotates periodically, cycling through all available entries from the cache."
+msgstr "Combien de naissances, décès et événements afficher à la fois. La liste tourne périodiquement, parcourant toutes les entrées disponibles dans le cache."
+
+#. settings-schema.json->wikipedia-rotate-minutes->units
+msgid "minutes"
+msgstr "minutes"
+
+#. settings-schema.json->wikipedia-rotate-minutes->description
+msgid "Rotate items every N minutes"
+msgstr "Faire tourner les éléments toutes les N minutes"
+
+#. settings-schema.json->wikipedia-rotate-minutes->tooltip
+msgid "How often to advance to the next set of items. Set to 1 to rotate every minute."
+msgstr "À quelle fréquence passer au groupe d'éléments suivant. Mettre 1 pour tourner chaque minute."
+
+#. settings-schema.json->wikipedia-cache-hours->units
+msgid "hours"
+msgstr "heures"
+
+#. settings-schema.json->wikipedia-cache-hours->description
+msgid "Cache duration for Wikipedia data"
+msgstr "Durée du cache des données Wikipédia"
+
+#. settings-schema.json->wikipedia-cache-hours->tooltip
+msgid "How long to keep Wikipedia data in the local cache before fetching fresh data. Lower values fetch more often; higher values reduce network usage."
+msgstr "Durée de conservation des données Wikipedia dans le cache local avant de télécharger de nouvelles données. Des valeurs plus basses actualisent plus souvent ; des valeurs plus hautes réduisent l'utilisation du réseau.Combien de temps conserver les données Wikipédia dans le cache local avant d'en obtenir de nouvelles. Des valeurs faibles actualisent plus souvent ; des valeurs élevées réduisent l'utilisation du réseau."
+
+#. settings-schema.json->icon-size->description
+msgid "Icon and symbol size"
+msgstr "Taille des icônes et symboles"
+
+#. settings-schema.json->icon-size->tooltip
+msgid "Controls the display size of moon phase and zodiac symbols."
+msgstr "Contrôle la taille d'affichage des symboles de phase lunaire et du zodiaque."
+
+#. settings-schema.json->icon-size->options
+msgid "Small"
+msgstr "Petit"
+
+#. settings-schema.json->icon-size->options
+msgid "Medium"
+msgstr "Moyen"
+
+#. settings-schema.json->icon-size->options
+msgid "Large"
+msgstr "Grand"
+
+#. settings-schema.json->text-scale->units
+msgid "×"
+msgstr ""
+
+#. settings-schema.json->text-scale->description
+msgid "Text scale factor"
+msgstr "Facteur d'échelle du texte"
+
+#. settings-schema.json->text-scale->tooltip
+msgid "Scale all text in the desklet up or down."
+msgstr "Agrandir ou réduire tout le texte du desklet."
+
+#. settings-schema.json->bg-opacity->description
+msgid "Background opacity"
+msgstr "Opacité de l'arrière-plan"
+
+#. settings-schema.json->bg-opacity->tooltip
+msgid "0 = fully transparent (wallpaper shows through), 1 = solid black background"
+msgstr "0 = entièrement transparent (le fond d'écran est visible), 1 = fond noir opaque"
+
+#. settings-schema.json->show-julian->description
+msgid "Show Julian calendar date"
+msgstr "Afficher la date du calendrier julien"
+
+#. settings-schema.json->show-hebrew->description
+msgid "Show Hebrew calendar date"
+msgstr "Afficher la date du calendrier hébreu"
+
+#. settings-schema.json->show-islamic->description
+msgid "Show Islamic calendar date"
+msgstr "Afficher la date du calendrier islamique"
+
+#. settings-schema.json->show-persian->description
+msgid "Show Persian calendar date"
+msgstr "Afficher la date du calendrier persan"
+
+msgid "0 = fully transparent (default), 1 = a solid opaque panel behind the widget's own text content, independent of the page background below. The panel color follows the light/dark theme so text always stays legible."
+msgstr "0 = entièrement transparent (par défaut), 1 = un panneau entièrement opaque derrière le propre contenu textuel du widget, indépendant de l'arrière-plan de la page en dessous. La couleur du panneau suit le thème clair/sombre afin que le texte reste toujours lisible."
+
+msgid "A direct https:// (or data:image/...) image URL. Used only as a CSS background-image — never evaluated as script or markup."
+msgstr "Une URL d'image directe https:// (ou data:image/...). Utilisée uniquement comme background-image CSS — jamais évaluée comme script ou balisage."
+
+msgid "Advanced"
+msgstr "Avancé"
+
+msgid "Aurora"
+msgstr "Aurore"
+
+msgid "Background"
+msgstr "Arrière-plan"
+
+msgid "Background color"
+msgstr "Couleur d'arrière-plan"
+
+msgid "Background image folder"
+msgstr "Dossier d'images d'arrière-plan"
+
+msgid "Berry"
+msgstr "Baie"
+
+msgid "Cache duration for weather data"
+msgstr "Durée de mise en cache des données météo"
+
+msgid "Calendarium settings"
+msgstr "Paramètres de Calendarium"
+
+msgid "Candy"
+msgstr "Bonbon"
+
+msgid "Clear sky"
+msgstr "Ciel dégagé"
+
+msgid "Color theme"
+msgstr "Thème de couleur"
+
+msgid "Copper"
+msgstr "Cuivre"
+
+msgid "Custom background image URL"
+msgstr "URL d'image d'arrière-plan personnalisée"
+
+msgid "Custom background image URL(s)"
+msgstr "URL(s) d'image d'arrière-plan personnalisée(s)"
+
+msgid "Custom (enter strftime string below)"
+msgstr "Personnalisé (saisissez le code strftime ci-dessous)"
+
+msgid "Custom image URL"
+msgstr "URL d'image personnalisée"
+
+msgid "Dark"
+msgstr "Sombre"
+
+msgid "Dense drizzle"
+msgstr "Bruine dense"
+
+msgid "Dense freezing drizzle"
+msgstr "Bruine verglaçante dense"
+
+msgid "Depositing rime fog"
+msgstr "Brouillard givrant"
+
+msgid "Each time a new tab opens"
+msgstr "À chaque ouverture d'un nouvel onglet"
+
+msgid "Ember"
+msgstr "Braise"
+
+msgid "Export downloads all of your settings as a JSON file; Import reads one back in, keeping only keys this version of Calendarium recognizes (unrecognized keys — e.g. from a newer or older version — are silently skipped). This does NOT include folder-picked background images (see \"Background image folder\" above) — those live in this browser profile's IndexedDB and are never part of the exported file."
+msgstr "Exporter télécharge tous vos paramètres sous forme de fichier JSON ; Importer en relit un, en ne conservant que les clés que cette version de Calendarium reconnaît (les clés non reconnues — par exemple d'une version plus récente ou plus ancienne — sont silencieusement ignorées). Cela n'inclut PAS les images d'arrière-plan choisies via un dossier (voir « Dossier d'images d'arrière-plan » ci-dessus) — celles-ci vivent dans l'IndexedDB de ce profil de navigateur et ne font jamais partie du fichier exporté."
+
+msgid "Export failed"
+msgstr "Échec de l'exportation"
+
+msgid "Export settings"
+msgstr "Exporter les paramètres"
+
+msgid "Firefox theme colors"
+msgstr "Couleurs du thème Firefox"
+
+msgid "Fog"
+msgstr "Brouillard"
+
+msgid "For \"Gradient\", cycles through all built-in gradients. For \"Custom image URL\", cycles through every URL listed above (if more than one). Has no effect for the other background styles."
+msgstr "Pour « Dégradé », parcourt tous les dégradés intégrés. Pour « URL d'image personnalisée », parcourt toutes les URL listées ci-dessus (si plusieurs sont indiquées). Sans effet sur les autres styles d'arrière-plan."
+
+msgid "For \"Gradient\", cycles through all built-in gradients. For \"Custom image URL\" or \"Image folder\", cycles through every image (if more than one). Has no effect for the other background styles."
+msgstr "Pour « Dégradé », parcourt tous les dégradés intégrés. Pour « URL d'image personnalisée » ou « Dossier d'images », parcourt toutes les images (s'il y en a plusieurs). N'a aucun effet sur les autres styles d'arrière-plan."
+
+msgid "Forest"
+msgstr "Forêt"
+
+msgid "Gradient"
+msgstr "Dégradé"
+
+msgid "Heavy freezing rain"
+msgstr "Pluie verglaçante forte"
+
+msgid "Heavy rain"
+msgstr "Pluie forte"
+
+msgid "Heavy snow fall"
+msgstr "Chute de neige forte"
+
+msgid "Heavy snow showers"
+msgstr "Averses de neige fortes"
+
+msgid "How long to keep weather data in the local cache before fetching fresh data. Lower values fetch more often; higher values reduce network usage. Weather changes faster than Wikipedia's daily content, so this defaults much lower than the Wikipedia cache."
+msgstr "Durée de conservation des données météo dans le cache local avant de récupérer des données actualisées. Des valeurs plus basses interrogent plus souvent ; des valeurs plus élevées réduisent l'utilisation du réseau. La météo change plus vite que le contenu quotidien de Wikipédia, cette valeur par défaut est donc bien plus basse que celle du cache Wikipédia."
+
+msgid "How often to switch to the next background while rotation is enabled."
+msgstr "Fréquence à laquelle passer à l'arrière-plan suivant tant que la rotation est activée."
+
+msgid "How often to switch to the next background while rotation is enabled. Only applies when \"Rotate\" (above) is set to \"On a timer\" — ignored for \"Each time a new tab opens\"."
+msgstr "À quelle fréquence passer à l'arrière-plan suivant tant que la rotation est activée. S'applique uniquement lorsque « Rotation » (ci-dessus) est réglé sur « Selon une minuterie » — ignoré pour « À chaque ouverture d'un nouvel onglet »."
+
+msgid "Image folder"
+msgstr "Dossier d'images"
+
+msgid "Import & Export"
+msgstr "Importer et exporter"
+
+msgid "Import / export settings"
+msgstr "Importer / exporter les paramètres"
+
+msgid "Import failed"
+msgstr "Échec de l'importation"
+
+msgid "Import failed: the file is not valid JSON."
+msgstr "Échec de l'importation : le fichier n'est pas un JSON valide."
+
+msgid "Import settings"
+msgstr "Importer les paramètres"
+
+msgid "Imported %d setting(s), skipped %d unrecognized key(s)."
+msgstr "%d paramètre(s) importé(s), %d clé(s) non reconnue(s) ignorée(s)."
+
+msgid "In order"
+msgstr "Dans l'ordre"
+
+msgid "\"In order\" cycles through the list the same way every time. \"Randomly\" picks a different one each rotation, with repeats possible."
+msgstr "« Dans l'ordre » parcourt la liste toujours de la même manière. « Aléatoirement » choisit un élément différent à chaque rotation, des répétitions sont possibles."
+
+msgid "Include images from subfolders"
+msgstr "Inclure les images des sous-dossiers"
+
+msgid "Lagoon"
+msgstr "Lagune"
+
+msgid "Lavender"
+msgstr "Lavande"
+
+msgid "Light"
+msgstr "Clair"
+
+msgid "Light drizzle"
+msgstr "Bruine légère"
+
+msgid "Light freezing drizzle"
+msgstr "Bruine verglaçante légère"
+
+msgid "Light freezing rain"
+msgstr "Pluie verglaçante légère"
+
+msgid "Mainly clear"
+msgstr "Généralement dégagé"
+
+msgid "Match system"
+msgstr "Suivre le système"
+
+msgid "\"Match system\" follows your OS/browser light or dark preference automatically. Light/Dark force that palette regardless of the system setting, on the New Tab page, popup, and full view alike."
+msgstr "« Suivre le système » s'adapte automatiquement à la préférence claire ou sombre de votre système d'exploitation/navigateur. Clair/Sombre force cette palette quel que soit le réglage système, de la même façon sur la page Nouvel onglet, le popup et la vue complète."
+
+msgid "Meadow"
+msgstr "Prairie"
+
+msgid "Mint"
+msgstr "Menthe"
+
+msgid "Moderate drizzle"
+msgstr "Bruine modérée"
+
+msgid "Moderate rain"
+msgstr "Pluie modérée"
+
+msgid "Moderate rain showers"
+msgstr "Averses de pluie modérées"
+
+msgid "Moderate snow fall"
+msgstr "Chute de neige modérée"
+
+msgid "%d images loaded"
+msgstr "%d images chargées"
+
+msgid "No images selected"
+msgstr "Aucune image sélectionnée"
+
+msgid "Ocean"
+msgstr "Océan"
+
+msgid "On a timer"
+msgstr "Selon une minuterie"
+
+msgid "\"On a timer\" switches every N minutes (see below) for as long as a New Tab/full-view page stays open. \"Each time a new tab opens\" picks once when the page loads and then stays put — no periodic switching while that tab remains open."
+msgstr "« Selon une minuterie » change toutes les N minutes (voir ci-dessous) tant qu'une page Nouvel onglet/vue complète reste ouverte. « À chaque ouverture d'un nouvel onglet » choisit une seule fois au chargement de la page puis ne change plus de lui-même tant que cet onglet reste ouvert."
+
+msgid "One or more direct https:// (or data:image/...) image URLs, one per line. Used only as a CSS background-image — never evaluated as script or markup. Invalid lines are skipped individually rather than rejecting the whole list. With more than one URL and \"Rotate backgrounds\" enabled below, they rotate the same way the built-in gradients do."
+msgstr "Une ou plusieurs URL d'image directes https:// (ou data:image/...), une par ligne. Utilisée uniquement comme background-image CSS — jamais évaluée comme script ou balisage. Les lignes non valides sont ignorées individuellement plutôt que de rejeter toute la liste. Avec plusieurs URL et « Faire pivoter les arrière-plans » activé ci-dessous, elles alternent de la même manière que les dégradés intégrés."
+
+msgid "Open full view ↗"
+msgstr "Ouvrir la vue complète ↗"
+
+msgid "Open full view in a new tab"
+msgstr "Ouvrir la vue complète dans un nouvel onglet"
+
+msgid "Order"
+msgstr "Ordre"
+
+msgid "Overcast"
+msgstr "Couvert"
+
+msgid "Page background (New Tab / homepage / full view)"
+msgstr "Arrière-plan de la page (Nouvel onglet / page d'accueil / vue complète)"
+
+msgid "Partly cloudy"
+msgstr "Partiellement nuageux"
+
+msgid "Permission was not granted; Weather stays disabled."
+msgstr "L'autorisation n'a pas été accordée ; la météo reste désactivée."
+
+msgid "Pick a local folder of images to rotate through as your background. Images are read once at pick time and stored in this browser profile's IndexedDB — NOT in your synced/exported settings — so they do NOT survive an extension reinstall or a move to a different Firefox profile/computer; re-pick the folder if that happens. This control has no single storage.local value of its own (see src/lib/image-store.js) — it only participates in the schema so it can be shown/hidden like every other field."
+msgstr "Choisissez un dossier local d'images à faire défiler comme arrière-plan. Les images sont lues une seule fois au moment du choix et stockées dans l'IndexedDB de ce profil de navigateur — PAS dans vos paramètres synchronisés/exportés — elles ne survivent donc PAS à une réinstallation de l'extension ni à un déplacement vers un autre profil/ordinateur Firefox ; choisissez à nouveau le dossier si cela se produit. Ce contrôle n'a pas de valeur storage.local propre (voir src/lib/image-store.js) — il ne participe au schéma que pour pouvoir être affiché/masqué comme tout autre champ."
+
+msgid "Randomly"
+msgstr "Aléatoirement"
+
+msgid "Rotate"
+msgstr "Rotation"
+
+msgid "Rotate backgrounds automatically"
+msgstr "Faire pivoter les arrière-plans automatiquement"
+
+msgid "Rotate every"
+msgstr "Faire pivoter toutes les"
+
+msgid "Search"
+msgstr "Recherche"
+
+msgid "Search engine"
+msgstr "Moteur de recherche"
+
+msgid "Settings exported."
+msgstr "Paramètres exportés."
+
+msgid "Show a search box (uses your default search engine)"
+msgstr "Afficher une barre de recherche (utilise votre moteur de recherche par défaut)"
+
+msgid "Show current weather (uses Open-Meteo, requires Internet)"
+msgstr "Afficher la météo actuelle (utilise Open-Meteo, nécessite Internet)"
+
+msgid "Shows current temperature and conditions for your primary location and for any extra city below that has a name set. Enabling this requests permission to contact api.open-meteo.com, a free keyless weather API — no account or API key needed."
+msgstr "Affiche la température et les conditions actuelles de votre emplacement principal et de chaque ville supplémentaire ci-dessous dont le nom est défini. L'activation demande l'autorisation de contacter api.open-meteo.com, une API météo gratuite sans clé — aucun compte ni clé API n'est nécessaire."
+
+msgid "Slate"
+msgstr "Ardoise"
+
+msgid "Slight rain"
+msgstr "Pluie faible"
+
+msgid "Slight rain showers"
+msgstr "Averses de pluie faibles"
+
+msgid "Slight snow fall"
+msgstr "Chute de neige faible"
+
+msgid "Slight snow showers"
+msgstr "Averses de neige faibles"
+
+msgid "Snow grains"
+msgstr "Neige en grains"
+
+msgid "Solid color"
+msgstr "Couleur unie"
+
+msgid "Sync"
+msgstr "Synchronisation"
+
+msgid "Sync settings across devices via Firefox Sync"
+msgstr "Synchroniser les paramètres entre les appareils via Firefox Sync"
+
+msgid "System default"
+msgstr "Système par défaut"
+
+msgid "\"System default\" uses whatever Firefox's default search engine is. Picking a specific one always uses that engine instead, regardless of your Firefox default."
+msgstr "« Système par défaut » utilise le moteur de recherche par défaut actuel de Firefox. Si vous en choisissez un spécifique, celui-ci sera toujours utilisé, quel que soit votre moteur par défaut Firefox."
+
+msgid "Theme default"
+msgstr "Thème par défaut"
+
+msgid "This is the extension's own background, independent of Firefox's built-in New Tab wallpaper picker (which extensions cannot read or set). \"Theme default\" follows the light/dark palette above. \"Firefox theme colors\" reads your installed Firefox Theme's colors via the browser.theme API — a real, separate WebExtension API for installed Themes, not the New Tab wallpaper picker — falling back to the default palette if the active theme has no useful colors. \"Image folder\" lets you pick a local folder of images to rotate through, stored in this browser profile's IndexedDB rather than in your synced settings — see the note under that option. The toolbar popup always uses the plain theme palette, regardless of this setting."
+msgstr "Il s'agit de l'arrière-plan propre à l'extension, indépendant du sélecteur d'arrière-plan intégré du nouvel onglet de Firefox (que les extensions ne peuvent ni lire ni définir). « Thème par défaut » suit la palette claire/sombre ci-dessus. « Couleurs du thème Firefox » lit les couleurs de votre thème Firefox installé via l'API browser.theme — une véritable API WebExtension distincte pour les thèmes installés, pas le sélecteur d'arrière-plan du nouvel onglet — revenant à la palette par défaut si le thème actif n'a pas de couleurs utiles. « Dossier d'images » vous permet de choisir un dossier local d'images à faire défiler comme arrière-plan ; elles sont stockées dans l'IndexedDB de ce profil de navigateur, pas dans vos paramètres synchronisés — voir la remarque sous cette option. Le popup de la barre d'outils utilise toujours la palette de thème simple, quel que soit ce paramètre."
+
+msgid "This is the extension's own background, independent of Firefox's built-in New Tab wallpaper picker (which extensions cannot read or set). \"Theme default\" follows the light/dark palette above. \"Firefox theme colors\" reads your installed Firefox Theme's colors via the browser.theme API — a real, separate WebExtension API for installed Themes, not the New Tab wallpaper picker — falling back to the default palette if the active theme has no useful colors. The toolbar popup always uses the plain theme palette, regardless of this setting."
+msgstr "Il s'agit de l'arrière-plan propre à l'extension, indépendant du sélecteur d'arrière-plan intégré du Nouvel onglet de Firefox (que les extensions ne peuvent ni lire ni définir). « Thème par défaut » suit la palette claire/sombre ci-dessus. « Couleurs du thème Firefox » lit les couleurs de votre thème Firefox installé via l'API browser.theme — une véritable API WebExtension distincte pour les thèmes installés, différente du sélecteur d'arrière-plan du Nouvel onglet — et revient à la palette par défaut si le thème actif n'a pas de couleurs utiles. Le popup de la barre d'outils utilise toujours la palette de thème simple, quel que soit ce paramètre."
+
+msgid "This is the extension's own background, independent of Firefox's built-in New Tab wallpaper picker (which extensions cannot read or set). \"Theme default\" follows the light/dark palette above. The toolbar popup always uses the plain theme palette, regardless of this setting."
+msgstr "Il s'agit de l'arrière-plan propre de l'extension, indépendant du sélecteur de fond d'écran intégré de Firefox pour le Nouvel onglet (que les extensions ne peuvent ni lire ni définir). « Thème par défaut » suit la palette claire/sombre ci-dessus. Le popup de la barre d'outils utilise toujours la palette de thème simple, quel que soit ce réglage."
+
+msgid "Thunderstorm"
+msgstr "Orage"
+
+msgid "Thunderstorm with heavy hail"
+msgstr "Orage avec grêle forte"
+
+msgid "Thunderstorm with slight hail"
+msgstr "Orage avec grêle légère"
+
+msgid "Twilight"
+msgstr "Crépuscule"
+
+msgid "Unknown conditions"
+msgstr "Conditions inconnues"
+
+msgid "Violent rain showers"
+msgstr "Averses de pluie violentes"
+
+msgid "Weather"
+msgstr "Météo"
+
+msgid "When enabled, most settings (toggles, colors, single text fields, numbers) are also written to browser.storage.sync, and on load take precedence over this device's local copy — so multiple signed-in devices converge on the same settings. Firefox Sync has a strict quota (100KB total, 8KB per item), so a few fields never sync: the custom background image URL(s) (can be long or many), the \"include subfolders\" folder-picker flag (the folder/images themselves can never sync — they live in this browser profile's IndexedDB), and this toggle itself (it has to be readable locally before anything can decide whether to consult Sync at all). Requires being signed into Firefox Sync — if you aren't, or a write exceeds quota, saves quietly stay local-only."
+msgstr "Lorsque cette option est activée, la plupart des paramètres (interrupteurs, couleurs, champs de texte à une ligne, nombres) sont également écrits dans browser.storage.sync et, au chargement, priment sur la copie locale de cet appareil — de sorte que plusieurs appareils connectés convergent vers les mêmes paramètres. Firefox Sync applique un quota strict (100 Ko au total, 8 Ko par élément), donc certains champs ne sont jamais synchronisés : la ou les URL d'image d'arrière-plan personnalisée (peuvent être longues ou nombreuses), la case « inclure les sous-dossiers » du sélecteur de dossier (le dossier ou les images eux-mêmes ne peuvent jamais être synchronisés — ils résident dans l'IndexedDB de ce profil de navigateur), et cet interrupteur lui-même (il doit pouvoir être lu localement avant même de décider s'il faut consulter Sync). Nécessite d'être connecté à Firefox Sync — si ce n'est pas le cas, ou si une écriture dépasse le quota, les enregistrements restent silencieusement locaux."
+
+msgid "When unchecked (default), only images directly inside the chosen folder are used. When checked, images in every subfolder underneath it are included too."
+msgstr "Si la case n'est pas cochée (par défaut), seules les images se trouvant directement dans le dossier choisi sont utilisées. Si elle est cochée, les images de chaque sous-dossier en dessous sont également incluses."

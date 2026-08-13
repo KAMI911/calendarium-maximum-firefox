@@ -1,0 +1,1286 @@
+{
+  "02_22_2026_m_n_y": {
+    "message": "02/22/2026                 (%m/%d/%Y)",
+    "description": "Source: \"02/22/2026                 (%m/%d/%Y)\""
+  },
+  "0_fully_transparent_default_1_a_solid_opaque_panel_behind_the_widget_s_own_text_content_independent_of_the_page_background_below_the_panel_color_follows_the_light_dark_theme_so_text_always_stays_legible": {
+    "message": "0 = entièrement transparent (par défaut), 1 = un panneau entièrement opaque derrière le propre contenu textuel du widget, indépendant de l'arrière-plan de la page en dessous. La couleur du panneau suit le thème clair/sombre afin que le texte reste toujours lisible.",
+    "description": "Source: \"0 = fully transparent (default), 1 = a solid opaque panel behind the widget's own text content, independent of the page background below. The panel color follows the light/dark theme so text always stays legible.\""
+  },
+  "0_fully_transparent_wallpaper_shows_through_1_solid_black_background": {
+    "message": "0 = entièrement transparent (le fond d'écran est visible), 1 = fond noir opaque",
+    "description": "Source: \"0 = fully transparent (wallpaper shows through), 1 = solid black background\""
+  },
+  "12_hour_am_pm": {
+    "message": "12 heures (AM/PM)",
+    "description": "Source: \"12-hour (AM/PM)\""
+  },
+  "2026_02_22_y_m_n": {
+    "message": "2026. 02. 22.              (%Y. %m. %d.)",
+    "description": "Source: \"2026. 02. 22.              (%Y. %m. %d.)\""
+  },
+  "2026_february_22_friday_y_b_n_a": {
+    "message": "2026. février 22., vendredi (%Y. %B %d., %A)",
+    "description": "Source: \"2026. February 22., Friday (%Y. %B %d., %A)\""
+  },
+  "2026_february_22_y_b_n": {
+    "message": "2026. février 22.         (%Y. %B %d.)",
+    "description": "Source: \"2026. February 22.         (%Y. %B %d.)\""
+  },
+  "22_02_2026_n_m_y": {
+    "message": "22.02.2026                 (%d.%m.%Y)",
+    "description": "Source: \"22.02.2026                 (%d.%m.%Y)\""
+  },
+  "22_feb_2026_n_b_y": {
+    "message": "22 févr. 2026              (%d %b %Y)",
+    "description": "Source: \"22 Feb 2026                (%d %b %Y)\""
+  },
+  "22_february_2026_n_b_y": {
+    "message": "22 février 2026           (%d. %B %Y)",
+    "description": "Source: \"22. February 2026          (%d. %B %Y)\""
+  },
+  "24_hour": {
+    "message": "24 heures",
+    "description": "Source: \"24-hour\""
+  },
+  "a_direct_https_or_data_image_image_url_used_only_as_a_css_background_image_never_evaluated_as_script_or_markup": {
+    "message": "Une URL d'image directe https:// (ou data:image/...). Utilisée uniquement comme background-image CSS — jamais évaluée comme script ou balisage.",
+    "description": "Source: \"A direct https:// (or data:image/...) image URL. Used only as a CSS background-image — never evaluated as script or markup.\""
+  },
+  "a_rich_calendar_desklet_with_moon_phase_sunrise_sunset_zodiac_name_days_traditional_month_names_and_optional_wikipedia_features": {
+    "message": "Un desklet de calendrier complet avec phase lunaire, lever/coucher du soleil, zodiaque, fêtes, noms traditionnels des mois et fonctions Wikipedia optionnelles.",
+    "description": "Source: \"A rich calendar desklet with moon phase, sunrise/sunset, zodiac, name days, traditional month names, and optional Wikipedia features.\""
+  },
+  "advanced": {
+    "message": "Avancé",
+    "description": "Source: \"Advanced\""
+  },
+  "alternate_calendars": {
+    "message": "Calendriers alternatifs",
+    "description": "Source: \"Alternate Calendars\""
+  },
+  "appearance": {
+    "message": "Apparence",
+    "description": "Source: \"Appearance\""
+  },
+  "aquarius": {
+    "message": "Verseau",
+    "description": "Source: \"Aquarius\""
+  },
+  "aries": {
+    "message": "Bélier",
+    "description": "Source: \"Aries\""
+  },
+  "article_of_the_day": {
+    "message": "Article du jour",
+    "description": "Source: \"Article of the day\""
+  },
+  "aurora": {
+    "message": "Aurore",
+    "description": "Source: \"Aurora\""
+  },
+  "autumn_equinox": {
+    "message": "Équinoxe d'automne",
+    "description": "Source: \"Autumn equinox\""
+  },
+  "background": {
+    "message": "Arrière-plan",
+    "description": "Source: \"Background\""
+  },
+  "background_color": {
+    "message": "Couleur d'arrière-plan",
+    "description": "Source: \"Background color\""
+  },
+  "background_image_folder": {
+    "message": "Dossier d'images d'arrière-plan",
+    "description": "Source: \"Background image folder\""
+  },
+  "background_opacity": {
+    "message": "Opacité de l'arrière-plan",
+    "description": "Source: \"Background opacity\""
+  },
+  "berry": {
+    "message": "Baie",
+    "description": "Source: \"Berry\""
+  },
+  "births_on_this_day": {
+    "message": "Naissances de ce jour",
+    "description": "Source: \"Births on this day\""
+  },
+  "cache_duration_for_weather_data": {
+    "message": "Durée de mise en cache des données météo",
+    "description": "Source: \"Cache duration for weather data\""
+  },
+  "cache_duration_for_wikipedia_data": {
+    "message": "Durée du cache des données Wikipédia",
+    "description": "Source: \"Cache duration for Wikipedia data\""
+  },
+  "calendar_highlights": {
+    "message": "Actualités du calendrier",
+    "description": "Source: \"Calendar Highlights\""
+  },
+  "calendarium": {
+    "message": "Calendarium",
+    "description": "Source: \"Calendarium\""
+  },
+  "calendarium_settings": {
+    "message": "Paramètres de Calendarium",
+    "description": "Source: \"Calendarium settings\""
+  },
+  "cancer": {
+    "message": "Cancer",
+    "description": "Source: \"Cancer\""
+  },
+  "candy": {
+    "message": "Bonbon",
+    "description": "Source: \"Candy\""
+  },
+  "capricorn": {
+    "message": "Capricorne",
+    "description": "Source: \"Capricorn\""
+  },
+  "chinese_zodiac": {
+    "message": "Zodiaque chinois",
+    "description": "Source: \"Chinese zodiac\""
+  },
+  "chinese_zodiac_display": {
+    "message": "Affichage du zodiaque chinois",
+    "description": "Source: \"Chinese zodiac display\""
+  },
+  "choose_what_to_show_for_the_chinese_zodiac_year_animal_and_element": {
+    "message": "Choisissez ce qu'il faut afficher pour l'année du zodiaque chinois (animal et élément).Choisissez ce qui s'affiche pour l'année du zodiaque chinois (animal et élément).Choisissez ce qu'il faut afficher pour l'année du zodiaque chinois (animal et élément).",
+    "description": "Source: \"Choose what to show for the Chinese zodiac year (animal and element).\""
+  },
+  "choose_what_to_show_for_the_western_zodiac_sign": {
+    "message": "Choisissez ce qu'il faut afficher pour le signe du zodiaque occidental.Choisissez ce qui s'affiche pour le signe du zodiaque occidental.Choisissez ce qu'il faut afficher pour le signe du zodiaque occidental.",
+    "description": "Source: \"Choose what to show for the western zodiac sign.\""
+  },
+  "city_1_latitude": {
+    "message": "Latitude de la ville 1",
+    "description": "Source: \"City 1 latitude\""
+  },
+  "city_1_longitude": {
+    "message": "Longitude de la ville 1",
+    "description": "Source: \"City 1 longitude\""
+  },
+  "city_1_name_leave_empty_to_disable": {
+    "message": "Nom de la ville 1 (laisser vide pour désactiver)",
+    "description": "Source: \"City 1 name (leave empty to disable)\""
+  },
+  "city_1_timezone_iana_e_g_europe_vienna": {
+    "message": "Fuseau horaire de la ville 1 (IANA, ex. Europe/Vienna)",
+    "description": "Source: \"City 1 timezone (IANA, e.g. Europe/Vienna)\""
+  },
+  "city_2_latitude": {
+    "message": "Latitude de la ville 2",
+    "description": "Source: \"City 2 latitude\""
+  },
+  "city_2_longitude": {
+    "message": "Longitude de la ville 2",
+    "description": "Source: \"City 2 longitude\""
+  },
+  "city_2_name_leave_empty_to_disable": {
+    "message": "Nom de la ville 2 (laisser vide pour désactiver)",
+    "description": "Source: \"City 2 name (leave empty to disable)\""
+  },
+  "city_2_timezone_iana_e_g_america_new_york": {
+    "message": "Fuseau horaire de la ville 2 (IANA, ex. America/New_York)",
+    "description": "Source: \"City 2 timezone (IANA, e.g. America/New_York)\""
+  },
+  "city_3_latitude": {
+    "message": "Latitude de la ville 3",
+    "description": "Source: \"City 3 latitude\""
+  },
+  "city_3_longitude": {
+    "message": "Longitude de la ville 3",
+    "description": "Source: \"City 3 longitude\""
+  },
+  "city_3_name_leave_empty_to_disable": {
+    "message": "Nom de la ville 3 (laisser vide pour désactiver)",
+    "description": "Source: \"City 3 name (leave empty to disable)\""
+  },
+  "city_3_timezone_iana_e_g_asia_tokyo": {
+    "message": "Fuseau horaire de la ville 3 (IANA, ex. Asia/Tokyo)",
+    "description": "Source: \"City 3 timezone (IANA, e.g. Asia/Tokyo)\""
+  },
+  "clear_sky": {
+    "message": "Ciel dégagé",
+    "description": "Source: \"Clear sky\""
+  },
+  "color_theme": {
+    "message": "Thème de couleur",
+    "description": "Source: \"Color theme\""
+  },
+  "controls_the_display_size_of_moon_phase_and_zodiac_symbols": {
+    "message": "Contrôle la taille d'affichage des symboles de phase lunaire et du zodiaque.",
+    "description": "Source: \"Controls the display size of moon phase and zodiac symbols.\""
+  },
+  "copper": {
+    "message": "Cuivre",
+    "description": "Source: \"Copper\""
+  },
+  "current_date": {
+    "message": "Date actuelle",
+    "description": "Source: \"Current date\""
+  },
+  "current_time": {
+    "message": "Heure actuelle",
+    "description": "Source: \"Current time\""
+  },
+  "custom_background_image_url": {
+    "message": "URL d'image d'arrière-plan personnalisée",
+    "description": "Source: \"Custom background image URL\""
+  },
+  "custom_background_image_url_s": {
+    "message": "URL(s) d'image d'arrière-plan personnalisée(s)",
+    "description": "Source: \"Custom background image URL(s)\""
+  },
+  "custom_date_format_strftime_only_active_when_custom_is_selected_above": {
+    "message": "Format de date personnalisé (strftime) — actif uniquement quand 'Personnalisé' est sélectionnéFormat de date personnalisé (strftime) — actif uniquement quand « Personnalisé » est sélectionné ci-dessus",
+    "description": "Source: \"Custom date format (strftime) — only active when 'Custom' is selected above\""
+  },
+  "custom_enter_strftime_string_below": {
+    "message": "Personnalisé (saisissez le code strftime ci-dessous)",
+    "description": "Source: \"Custom (enter strftime string below)\""
+  },
+  "custom_image_url": {
+    "message": "URL d'image personnalisée",
+    "description": "Source: \"Custom image URL\""
+  },
+  "dark": {
+    "message": "Sombre",
+    "description": "Source: \"Dark\""
+  },
+  "date_and_time": {
+    "message": "Date et heure",
+    "description": "Source: \"Date and Time\""
+  },
+  "date_format": {
+    "message": "Format de date",
+    "description": "Source: \"Date format\""
+  },
+  "day_n_of_n": {
+    "message": "Jour %d sur %d",
+    "description": "Source: \"Day %d of %d\""
+  },
+  "day_of_year": {
+    "message": "Jour de l'année",
+    "description": "Source: \"Day of year\""
+  },
+  "days": {
+    "message": "jours",
+    "description": "Source: \"days\""
+  },
+  "days_left": {
+    "message": "jours restants",
+    "description": "Source: \"days left\""
+  },
+  "days_until_new_year": {
+    "message": "jours jusqu'au Nouvel An",
+    "description": "Source: \"days until New Year\""
+  },
+  "deaths_on_this_day": {
+    "message": "Décès de ce jour",
+    "description": "Source: \"Deaths on this day\""
+  },
+  "degrees": {
+    "message": "degrés",
+    "description": "Source: \"degrees\""
+  },
+  "dense_drizzle": {
+    "message": "Bruine dense",
+    "description": "Source: \"Dense drizzle\""
+  },
+  "dense_freezing_drizzle": {
+    "message": "Bruine verglaçante dense",
+    "description": "Source: \"Dense freezing drizzle\""
+  },
+  "depositing_rime_fog": {
+    "message": "Brouillard givrant",
+    "description": "Source: \"Depositing rime fog\""
+  },
+  "dog": {
+    "message": "Chien",
+    "description": "Source: \"Dog\""
+  },
+  "dragon": {
+    "message": "Dragon",
+    "description": "Source: \"Dragon\""
+  },
+  "each_time_a_new_tab_opens": {
+    "message": "À chaque ouverture d'un nouvel onglet",
+    "description": "Source: \"Each time a new tab opens\""
+  },
+  "earth": {
+    "message": "Terre",
+    "description": "Source: \"Earth\""
+  },
+  "ember": {
+    "message": "Braise",
+    "description": "Source: \"Ember\""
+  },
+  "enable_wikipedia_features_requires_internet": {
+    "message": "Activer les fonctionnalités Wikipédia (Internet requis)",
+    "description": "Source: \"Enable Wikipedia features (requires Internet)\""
+  },
+  "english": {
+    "message": "Anglais",
+    "description": "Source: \"English\""
+  },
+  "equinox_and_solstice": {
+    "message": "Équinoxe et solstice",
+    "description": "Source: \"Equinox and Solstice\""
+  },
+  "events_on_this_day": {
+    "message": "Événements de ce jour",
+    "description": "Source: \"Events on this day\""
+  },
+  "export_downloads_all_of_your_settings_as_a_json_file_import_reads_one_back_in_keeping_only_keys_this_version_of_calendarium_recognizes_unrecognized_keys_e_g_from_a_newer_or_older_version_are_silently_skipped_this_does_not_include_folder_picked_background_images_see_background_image_folder_above_those_live_in_this_browser_profile_s_indexeddb_and_are_never_part_of_the_exported_file": {
+    "message": "Exporter télécharge tous vos paramètres sous forme de fichier JSON ; Importer en relit un, en ne conservant que les clés que cette version de Calendarium reconnaît (les clés non reconnues — par exemple d'une version plus récente ou plus ancienne — sont silencieusement ignorées). Cela n'inclut PAS les images d'arrière-plan choisies via un dossier (voir « Dossier d'images d'arrière-plan » ci-dessus) — celles-ci vivent dans l'IndexedDB de ce profil de navigateur et ne font jamais partie du fichier exporté.",
+    "description": "Source: \"Export downloads all of your settings as a JSON file; Import reads one back in, keeping only keys this version of Calendarium recognizes (unrecognized keys — e.g. from a newer or older version — are silently skipped). This does NOT include folder-picked background images (see \"Background image folder\" above) — those live in this browser profile's IndexedDB and are never part of the exported file.\""
+  },
+  "export_failed": {
+    "message": "Échec de l'exportation",
+    "description": "Source: \"Export failed\""
+  },
+  "export_settings": {
+    "message": "Exporter les paramètres",
+    "description": "Source: \"Export settings\""
+  },
+  "extension_description": {
+    "message": "A rich New Tab page with date, moon phase, sun times, zodiac, name days, holidays, folk sayings, alternate calendars and optional Wikipedia \"on this day\" content — ported from the calendarium@kami911 Cinnamon desklet.",
+    "description": "Extension description shown in about:addons"
+  },
+  "extension_name": {
+    "message": "Calendarium Maximum",
+    "description": "Extension name shown in about:addons"
+  },
+  "feb_22_2026_b_n_y": {
+    "message": "févr. 22, 2026             (%b %d, %Y)",
+    "description": "Source: \"Feb 22, 2026               (%b %d, %Y)\""
+  },
+  "february_22_2026_b_n_y": {
+    "message": "février 22, 2026          (%B %d, %Y)",
+    "description": "Source: \"February 22, 2026          (%B %d, %Y)\""
+  },
+  "filled_automatically_when_using_city_search_you_can_also_enter_an_iana_timezone_name_manually": {
+    "message": "Rempli automatiquement lors de la recherche de ville. Vous pouvez aussi saisir manuellement un nom de fuseau horaire IANA.",
+    "description": "Source: \"Filled automatically when using city search. You can also enter an IANA timezone name manually.\""
+  },
+  "filled_automatically_when_using_city_search_you_can_also_enter_an_iana_timezone_name_manually_e_g_america_new_york": {
+    "message": "Rempli automatiquement lors de la recherche de ville. Vous pouvez aussi saisir manuellement un nom de fuseau horaire IANA, ex. America/New_York.",
+    "description": "Source: \"Filled automatically when using city search. You can also enter an IANA timezone name manually, e.g. America/New_York.\""
+  },
+  "fire": {
+    "message": "Feu",
+    "description": "Source: \"Fire\""
+  },
+  "firefox_theme_colors": {
+    "message": "Couleurs du thème Firefox",
+    "description": "Source: \"Firefox theme colors\""
+  },
+  "first_quarter": {
+    "message": "Premier quartier",
+    "description": "Source: \"First Quarter\""
+  },
+  "fog": {
+    "message": "Brouillard",
+    "description": "Source: \"Fog\""
+  },
+  "folk_calendar_sayings": {
+    "message": "Proverbes du calendrier populaire",
+    "description": "Source: \"Folk Calendar Sayings\""
+  },
+  "folk_saying_language": {
+    "message": "Langue du proverbe populaire",
+    "description": "Source: \"Folk saying language\""
+  },
+  "for_gradient_cycles_through_all_built_in_gradients_for_custom_image_url_cycles_through_every_url_listed_above_if_more_than_one_has_no_effect_for_the_other_background_styles": {
+    "message": "Pour « Dégradé », parcourt tous les dégradés intégrés. Pour « URL d'image personnalisée », parcourt toutes les URL listées ci-dessus (si plusieurs sont indiquées). Sans effet sur les autres styles d'arrière-plan.",
+    "description": "Source: \"For \"Gradient\", cycles through all built-in gradients. For \"Custom image URL\", cycles through every URL listed above (if more than one). Has no effect for the other background styles.\""
+  },
+  "for_gradient_cycles_through_all_built_in_gradients_for_custom_image_url_or_image_folder_cycles_through_every_image_if_more_than_one_has_no_effect_for_the_other_background_styles": {
+    "message": "Pour « Dégradé », parcourt tous les dégradés intégrés. Pour « URL d'image personnalisée » ou « Dossier d'images », parcourt toutes les images (s'il y en a plusieurs). N'a aucun effet sur les autres styles d'arrière-plan.",
+    "description": "Source: \"For \"Gradient\", cycles through all built-in gradients. For \"Custom image URL\" or \"Image folder\", cycles through every image (if more than one). Has no effect for the other background styles.\""
+  },
+  "forest": {
+    "message": "Forêt",
+    "description": "Source: \"Forest\""
+  },
+  "french": {
+    "message": "Français",
+    "description": "Source: \"French\""
+  },
+  "fri_22_feb_2026_a_n_b_y": {
+    "message": "ven. 22 févr. 2026         (%a, %d %b %Y)",
+    "description": "Source: \"Fri, 22 Feb 2026           (%a, %d %b %Y)\""
+  },
+  "friday_22_february_2026_a_n_b_y": {
+    "message": "vendredi, 22. février 2026 (%A, %d. %B %Y)",
+    "description": "Source: \"Friday, 22. February 2026  (%A, %d. %B %Y)\""
+  },
+  "friday_february_22_2026_a_b_n_y": {
+    "message": "vendredi, février 22, 2026 (%A, %B %d, %Y)",
+    "description": "Source: \"Friday, February 22, 2026  (%A, %B %d, %Y)\""
+  },
+  "full_moon": {
+    "message": "Pleine lune",
+    "description": "Source: \"Full Moon\""
+  },
+  "gemini": {
+    "message": "Gémeaux",
+    "description": "Source: \"Gemini\""
+  },
+  "general": {
+    "message": "Général",
+    "description": "Source: \"General\""
+  },
+  "german": {
+    "message": "Allemand",
+    "description": "Source: \"German\""
+  },
+  "goat": {
+    "message": "Chèvre",
+    "description": "Source: \"Goat\""
+  },
+  "gradient": {
+    "message": "Dégradé",
+    "description": "Source: \"Gradient\""
+  },
+  "heavy_freezing_rain": {
+    "message": "Pluie verglaçante forte",
+    "description": "Source: \"Heavy freezing rain\""
+  },
+  "heavy_rain": {
+    "message": "Pluie forte",
+    "description": "Source: \"Heavy rain\""
+  },
+  "heavy_snow_fall": {
+    "message": "Chute de neige forte",
+    "description": "Source: \"Heavy snow fall\""
+  },
+  "heavy_snow_showers": {
+    "message": "Averses de neige fortes",
+    "description": "Source: \"Heavy snow showers\""
+  },
+  "hebrew_date": {
+    "message": "Date hébraïque",
+    "description": "Source: \"Hebrew date\""
+  },
+  "holiday_calendar": {
+    "message": "Calendrier des jours fériés",
+    "description": "Source: \"Holiday calendar\""
+  },
+  "horse": {
+    "message": "Cheval",
+    "description": "Source: \"Horse\""
+  },
+  "hours": {
+    "message": "heures",
+    "description": "Source: \"hours\""
+  },
+  "how_long_to_keep_weather_data_in_the_local_cache_before_fetching_fresh_data_lower_values_fetch_more_often_higher_values_reduce_network_usage_weather_changes_faster_than_wikipedia_s_daily_content_so_this_defaults_much_lower_than_the_wikipedia_cache": {
+    "message": "Durée de conservation des données météo dans le cache local avant de récupérer des données actualisées. Des valeurs plus basses interrogent plus souvent ; des valeurs plus élevées réduisent l'utilisation du réseau. La météo change plus vite que le contenu quotidien de Wikipédia, cette valeur par défaut est donc bien plus basse que celle du cache Wikipédia.",
+    "description": "Source: \"How long to keep weather data in the local cache before fetching fresh data. Lower values fetch more often; higher values reduce network usage. Weather changes faster than Wikipedia's daily content, so this defaults much lower than the Wikipedia cache.\""
+  },
+  "how_long_to_keep_wikipedia_data_in_the_local_cache_before_fetching_fresh_data_lower_values_fetch_more_often_higher_values_reduce_network_usage": {
+    "message": "Durée de conservation des données Wikipedia dans le cache local avant de télécharger de nouvelles données. Des valeurs plus basses actualisent plus souvent ; des valeurs plus hautes réduisent l'utilisation du réseau.Combien de temps conserver les données Wikipédia dans le cache local avant d'en obtenir de nouvelles. Des valeurs faibles actualisent plus souvent ; des valeurs élevées réduisent l'utilisation du réseau.",
+    "description": "Source: \"How long to keep Wikipedia data in the local cache before fetching fresh data. Lower values fetch more often; higher values reduce network usage.\""
+  },
+  "how_many_births_deaths_and_events_to_display_at_a_time_the_list_rotates_periodically_cycling_through_all_available_entries_from_the_cache": {
+    "message": "Combien de naissances, décès et événements afficher à la fois. La liste tourne périodiquement, parcourant toutes les entrées disponibles dans le cache.",
+    "description": "Source: \"How many births, deaths, and events to display at a time. The list rotates periodically, cycling through all available entries from the cache.\""
+  },
+  "how_often_to_advance_to_the_next_set_of_items_set_to_1_to_rotate_every_minute": {
+    "message": "À quelle fréquence passer au groupe d'éléments suivant. Mettre 1 pour tourner chaque minute.",
+    "description": "Source: \"How often to advance to the next set of items. Set to 1 to rotate every minute.\""
+  },
+  "how_often_to_switch_to_the_next_background_while_rotation_is_enabled": {
+    "message": "Fréquence à laquelle passer à l'arrière-plan suivant tant que la rotation est activée.",
+    "description": "Source: \"How often to switch to the next background while rotation is enabled.\""
+  },
+  "how_often_to_switch_to_the_next_background_while_rotation_is_enabled_only_applies_when_rotate_above_is_set_to_on_a_timer_ignored_for_each_time_a_new_tab_opens": {
+    "message": "À quelle fréquence passer à l'arrière-plan suivant tant que la rotation est activée. S'applique uniquement lorsque « Rotation » (ci-dessus) est réglé sur « Selon une minuterie » — ignoré pour « À chaque ouverture d'un nouvel onglet ».",
+    "description": "Source: \"How often to switch to the next background while rotation is enabled. Only applies when \"Rotate\" (above) is set to \"On a timer\" — ignored for \"Each time a new tab opens\".\""
+  },
+  "hungarian": {
+    "message": "Hongrois",
+    "description": "Source: \"Hungarian\""
+  },
+  "icon_and_symbol_size": {
+    "message": "Taille des icônes et symboles",
+    "description": "Source: \"Icon and symbol size\""
+  },
+  "icon_and_text": {
+    "message": "Icône et texte",
+    "description": "Source: \"Icon and text\""
+  },
+  "icon_only": {
+    "message": "Icône uniquement",
+    "description": "Source: \"Icon only\""
+  },
+  "image_folder": {
+    "message": "Dossier d'images",
+    "description": "Source: \"Image folder\""
+  },
+  "import_export": {
+    "message": "Importer et exporter",
+    "description": "Source: \"Import & Export\""
+  },
+  "import_export_settings": {
+    "message": "Importer / exporter les paramètres",
+    "description": "Source: \"Import / export settings\""
+  },
+  "import_failed": {
+    "message": "Échec de l'importation",
+    "description": "Source: \"Import failed\""
+  },
+  "import_failed_the_file_is_not_valid_json": {
+    "message": "Échec de l'importation : le fichier n'est pas un JSON valide.",
+    "description": "Source: \"Import failed: the file is not valid JSON.\""
+  },
+  "import_settings": {
+    "message": "Importer les paramètres",
+    "description": "Source: \"Import settings\""
+  },
+  "imported_n_setting_s_skipped_n_unrecognized_key_s": {
+    "message": "%d paramètre(s) importé(s), %d clé(s) non reconnue(s) ignorée(s).",
+    "description": "Source: \"Imported %d setting(s), skipped %d unrecognized key(s).\""
+  },
+  "in_order": {
+    "message": "Dans l'ordre",
+    "description": "Source: \"In order\""
+  },
+  "in_order_cycles_through_the_list_the_same_way_every_time_randomly_picks_a_different_one_each_rotation_with_repeats_possible": {
+    "message": "« Dans l'ordre » parcourt la liste toujours de la même manière. « Aléatoirement » choisit un élément différent à chaque rotation, des répétitions sont possibles.",
+    "description": "Source: \"\"In order\" cycles through the list the same way every time. \"Randomly\" picks a different one each rotation, with repeats possible.\""
+  },
+  "include_images_from_subfolders": {
+    "message": "Inclure les images des sous-dossiers",
+    "description": "Source: \"Include images from subfolders\""
+  },
+  "islamic_date": {
+    "message": "Date islamique",
+    "description": "Source: \"Islamic date\""
+  },
+  "italian": {
+    "message": "Italien",
+    "description": "Source: \"Italian\""
+  },
+  "items": {
+    "message": "éléments",
+    "description": "Source: \"items\""
+  },
+  "items_shown_per_section": {
+    "message": "Éléments affichés par section",
+    "description": "Source: \"Items shown per section\""
+  },
+  "julian_date": {
+    "message": "Date julienne",
+    "description": "Source: \"Julian date\""
+  },
+  "label_for_an_additional_city_leave_empty_to_hide": {
+    "message": "Étiquette pour une ville supplémentaire. Laisser vide pour masquer.",
+    "description": "Source: \"Label for an additional city. Leave empty to hide.\""
+  },
+  "lagoon": {
+    "message": "Lagune",
+    "description": "Source: \"Lagoon\""
+  },
+  "large": {
+    "message": "Grand",
+    "description": "Source: \"Large\""
+  },
+  "last_quarter": {
+    "message": "Dernier quartier",
+    "description": "Source: \"Last Quarter\""
+  },
+  "latitude_positive_north": {
+    "message": "Latitude (positif = Nord)",
+    "description": "Source: \"Latitude (positive = North)\""
+  },
+  "lavender": {
+    "message": "Lavande",
+    "description": "Source: \"Lavender\""
+  },
+  "leo": {
+    "message": "Lion",
+    "description": "Source: \"Leo\""
+  },
+  "libra": {
+    "message": "Balance",
+    "description": "Source: \"Libra\""
+  },
+  "light": {
+    "message": "Clair",
+    "description": "Source: \"Light\""
+  },
+  "light_drizzle": {
+    "message": "Bruine légère",
+    "description": "Source: \"Light drizzle\""
+  },
+  "light_freezing_drizzle": {
+    "message": "Bruine verglaçante légère",
+    "description": "Source: \"Light freezing drizzle\""
+  },
+  "light_freezing_rain": {
+    "message": "Pluie verglaçante légère",
+    "description": "Source: \"Light freezing rain\""
+  },
+  "local_time": {
+    "message": "Heure locale",
+    "description": "Source: \"Local time\""
+  },
+  "location": {
+    "message": "Emplacement",
+    "description": "Source: \"Location\""
+  },
+  "longitude_positive_east": {
+    "message": "Longitude (positif = Est)",
+    "description": "Source: \"Longitude (positive = East)\""
+  },
+  "mainly_clear": {
+    "message": "Généralement dégagé",
+    "description": "Source: \"Mainly clear\""
+  },
+  "match_system": {
+    "message": "Suivre le système",
+    "description": "Source: \"Match system\""
+  },
+  "match_system_follows_your_os_browser_light_or_dark_preference_automatically_light_dark_force_that_palette_regardless_of_the_system_setting_on_the_new_tab_page_popup_and_full_view_alike": {
+    "message": "« Suivre le système » s'adapte automatiquement à la préférence claire ou sombre de votre système d'exploitation/navigateur. Clair/Sombre force cette palette quel que soit le réglage système, de la même façon sur la page Nouvel onglet, le popup et la vue complète.",
+    "description": "Source: \"\"Match system\" follows your OS/browser light or dark preference automatically. Light/Dark force that palette regardless of the system setting, on the New Tab page, popup, and full view alike.\""
+  },
+  "meadow": {
+    "message": "Prairie",
+    "description": "Source: \"Meadow\""
+  },
+  "medium": {
+    "message": "Moyen",
+    "description": "Source: \"Medium\""
+  },
+  "metal": {
+    "message": "Métal",
+    "description": "Source: \"Metal\""
+  },
+  "mint": {
+    "message": "Menthe",
+    "description": "Source: \"Mint\""
+  },
+  "minutes": {
+    "message": "minutes",
+    "description": "Source: \"minutes\""
+  },
+  "moderate_drizzle": {
+    "message": "Bruine modérée",
+    "description": "Source: \"Moderate drizzle\""
+  },
+  "moderate_rain": {
+    "message": "Pluie modérée",
+    "description": "Source: \"Moderate rain\""
+  },
+  "moderate_rain_showers": {
+    "message": "Averses de pluie modérées",
+    "description": "Source: \"Moderate rain showers\""
+  },
+  "moderate_snow_fall": {
+    "message": "Chute de neige modérée",
+    "description": "Source: \"Moderate snow fall\""
+  },
+  "monkey": {
+    "message": "Singe",
+    "description": "Source: \"Monkey\""
+  },
+  "month_highlights": {
+    "message": "Actualité du mois",
+    "description": "Source: \"Month highlights\""
+  },
+  "moon_age": {
+    "message": "Âge de la lune",
+    "description": "Source: \"Moon age\""
+  },
+  "moon_phase": {
+    "message": "Phase lunaire",
+    "description": "Source: \"Moon Phase\""
+  },
+  "moonrise": {
+    "message": "Lever de lune",
+    "description": "Source: \"Moonrise\""
+  },
+  "moonset": {
+    "message": "Coucher de lune",
+    "description": "Source: \"Moonset\""
+  },
+  "n_images_loaded": {
+    "message": "%d images chargées",
+    "description": "Source: \"%d images loaded\""
+  },
+  "name_day_calendar": {
+    "message": "Calendrier des fêtes",
+    "description": "Source: \"Name day calendar\""
+  },
+  "name_days": {
+    "message": "Fêtes",
+    "description": "Source: \"Name Days\""
+  },
+  "national_holidays": {
+    "message": "Fêtes nationales",
+    "description": "Source: \"National Holidays\""
+  },
+  "new_moon": {
+    "message": "Nouvelle lune",
+    "description": "Source: \"New Moon\""
+  },
+  "no_data": {
+    "message": "Pas de données",
+    "description": "Source: \"No data\""
+  },
+  "no_images_selected": {
+    "message": "Aucune image sélectionnée",
+    "description": "Source: \"No images selected\""
+  },
+  "none_hidden": {
+    "message": "Aucun (masqué)",
+    "description": "Source: \"None (hidden)\""
+  },
+  "ocean": {
+    "message": "Océan",
+    "description": "Source: \"Ocean\""
+  },
+  "old_english_anglo_saxon": {
+    "message": "Vieil anglais (anglo-saxon)",
+    "description": "Source: \"Old English (Anglo-Saxon)\""
+  },
+  "old_german": {
+    "message": "Vieil allemand",
+    "description": "Source: \"Old German\""
+  },
+  "old_hungarian": {
+    "message": "Hongrois ancien",
+    "description": "Source: \"Old Hungarian\""
+  },
+  "on_a_timer": {
+    "message": "Selon une minuterie",
+    "description": "Source: \"On a timer\""
+  },
+  "on_a_timer_switches_every_n_minutes_see_below_for_as_long_as_a_new_tab_full_view_page_stays_open_each_time_a_new_tab_opens_picks_once_when_the_page_loads_and_then_stays_put_no_periodic_switching_while_that_tab_remains_open": {
+    "message": "« Selon une minuterie » change toutes les N minutes (voir ci-dessous) tant qu'une page Nouvel onglet/vue complète reste ouverte. « À chaque ouverture d'un nouvel onglet » choisit une seule fois au chargement de la page puis ne change plus de lui-même tant que cet onglet reste ouvert.",
+    "description": "Source: \"\"On a timer\" switches every N minutes (see below) for as long as a New Tab/full-view page stays open. \"Each time a new tab opens\" picks once when the page loads and then stays put — no periodic switching while that tab remains open.\""
+  },
+  "one_or_more_direct_https_or_data_image_image_urls_one_per_line_used_only_as_a_css_background_image_never_evaluated_as_script_or_markup_invalid_lines_are_skipped_individually_rather_than_rejecting_the_whole_list_with_more_than_one_url_and_rotate_backgrounds_enabled_below_they_rotate_the_same_way_the_built_in_gradients_do": {
+    "message": "Une ou plusieurs URL d'image directes https:// (ou data:image/...), une par ligne. Utilisée uniquement comme background-image CSS — jamais évaluée comme script ou balisage. Les lignes non valides sont ignorées individuellement plutôt que de rejeter toute la liste. Avec plusieurs URL et « Faire pivoter les arrière-plans » activé ci-dessous, elles alternent de la même manière que les dégradés intégrés.",
+    "description": "Source: \"One or more direct https:// (or data:image/...) image URLs, one per line. Used only as a CSS background-image — never evaluated as script or markup. Invalid lines are skipped individually rather than rejecting the whole list. With more than one URL and \"Rotate backgrounds\" enabled below, they rotate the same way the built-in gradients do.\""
+  },
+  "open_full_view": {
+    "message": "Ouvrir la vue complète ↗",
+    "description": "Source: \"Open full view ↗\""
+  },
+  "open_full_view_in_a_new_tab": {
+    "message": "Ouvrir la vue complète dans un nouvel onglet",
+    "description": "Source: \"Open full view in a new tab\""
+  },
+  "order": {
+    "message": "Ordre",
+    "description": "Source: \"Order\""
+  },
+  "overcast": {
+    "message": "Couvert",
+    "description": "Source: \"Overcast\""
+  },
+  "ox": {
+    "message": "Bœuf",
+    "description": "Source: \"Ox\""
+  },
+  "page_background_new_tab_homepage_full_view": {
+    "message": "Arrière-plan de la page (Nouvel onglet / page d'accueil / vue complète)",
+    "description": "Source: \"Page background (New Tab / homepage / full view)\""
+  },
+  "partly_cloudy": {
+    "message": "Partiellement nuageux",
+    "description": "Source: \"Partly cloudy\""
+  },
+  "permission_was_not_granted_weather_stays_disabled": {
+    "message": "L'autorisation n'a pas été accordée ; la météo reste désactivée.",
+    "description": "Source: \"Permission was not granted; Weather stays disabled.\""
+  },
+  "persian_date": {
+    "message": "Date persane",
+    "description": "Source: \"Persian date\""
+  },
+  "pick_a_local_folder_of_images_to_rotate_through_as_your_background_images_are_read_once_at_pick_time_and_stored_in_this_browser_profile_s_indexeddb_not_in_your_synced_exported_settings_so_they_do_not_survive_an_extension_reinstall_or_a_move_to_a_different_firefox_profile_computer_re_pick_the_folder_if_that_happens_this_control_has_no_single_storage_local_value_of_its_own_see_src_lib_image_store_js_it_only_participates_in_the_schema_so_it_can_be_shown_hidden_like_every_other_field": {
+    "message": "Choisissez un dossier local d'images à faire défiler comme arrière-plan. Les images sont lues une seule fois au moment du choix et stockées dans l'IndexedDB de ce profil de navigateur — PAS dans vos paramètres synchronisés/exportés — elles ne survivent donc PAS à une réinstallation de l'extension ni à un déplacement vers un autre profil/ordinateur Firefox ; choisissez à nouveau le dossier si cela se produit. Ce contrôle n'a pas de valeur storage.local propre (voir src/lib/image-store.js) — il ne participe au schéma que pour pouvoir être affiché/masqué comme tout autre champ.",
+    "description": "Source: \"Pick a local folder of images to rotate through as your background. Images are read once at pick time and stored in this browser profile's IndexedDB — NOT in your synced/exported settings — so they do NOT survive an extension reinstall or a move to a different Firefox profile/computer; re-pick the folder if that happens. This control has no single storage.local value of its own (see src/lib/image-store.js) — it only participates in the schema so it can be shown/hidden like every other field.\""
+  },
+  "pig": {
+    "message": "Cochon",
+    "description": "Source: \"Pig\""
+  },
+  "pisces": {
+    "message": "Poissons",
+    "description": "Source: \"Pisces\""
+  },
+  "polar_day": {
+    "message": "Jour polaire",
+    "description": "Source: \"Polar day\""
+  },
+  "polar_night": {
+    "message": "Nuit polaire",
+    "description": "Source: \"Polar night\""
+  },
+  "public_holiday": {
+    "message": "jour férié",
+    "description": "Source: \"public holiday\""
+  },
+  "rabbit": {
+    "message": "Lapin",
+    "description": "Source: \"Rabbit\""
+  },
+  "randomly": {
+    "message": "Aléatoirement",
+    "description": "Source: \"Randomly\""
+  },
+  "rat": {
+    "message": "Rat",
+    "description": "Source: \"Rat\""
+  },
+  "rooster": {
+    "message": "Coq",
+    "description": "Source: \"Rooster\""
+  },
+  "rotate": {
+    "message": "Rotation",
+    "description": "Source: \"Rotate\""
+  },
+  "rotate_backgrounds_automatically": {
+    "message": "Faire pivoter les arrière-plans automatiquement",
+    "description": "Source: \"Rotate backgrounds automatically\""
+  },
+  "rotate_every": {
+    "message": "Faire pivoter toutes les",
+    "description": "Source: \"Rotate every\""
+  },
+  "rotate_items_every_n_minutes": {
+    "message": "Faire tourner les éléments toutes les N minutes",
+    "description": "Source: \"Rotate items every N minutes\""
+  },
+  "sagittarius": {
+    "message": "Sagittaire",
+    "description": "Source: \"Sagittarius\""
+  },
+  "scale_all_text_in_the_desklet_up_or_down": {
+    "message": "Agrandir ou réduire tout le texte du desklet.",
+    "description": "Source: \"Scale all text in the desklet up or down.\""
+  },
+  "scorpio": {
+    "message": "Scorpion",
+    "description": "Source: \"Scorpio\""
+  },
+  "search": {
+    "message": "Recherche",
+    "description": "Source: \"Search\""
+  },
+  "search_city_to_auto_fill_coordinates": {
+    "message": "Rechercher une ville pour remplir les coordonnées automatiquement",
+    "description": "Source: \"Search city to auto-fill coordinates\""
+  },
+  "search_engine": {
+    "message": "Moteur de recherche",
+    "description": "Source: \"Search engine\""
+  },
+  "select_a_predefined_date_format_or_choose_custom_to_enter_your_own_strftime_string_below": {
+    "message": "Sélectionnez un format de date prédéfini, ou choisissez Personnalisé pour saisir votre propre chaîne strftime ci-dessous.Sélectionnez un format de date prédéfini, ou choisissez Personnalisé pour saisir votre propre code strftime ci-dessous.",
+    "description": "Source: \"Select a predefined date format, or choose Custom to enter your own strftime string below.\""
+  },
+  "separator_character_between_calendar_items": {
+    "message": "Caractère séparateur entre les éléments du calendrier",
+    "description": "Source: \"Separator character between calendar items\""
+  },
+  "settings_exported": {
+    "message": "Paramètres exportés.",
+    "description": "Source: \"Settings exported.\""
+  },
+  "show_a_search_box_uses_your_default_search_engine": {
+    "message": "Afficher une barre de recherche (utilise votre moteur de recherche par défaut)",
+    "description": "Source: \"Show a search box (uses your default search engine)\""
+  },
+  "show_article_of_the_day": {
+    "message": "Afficher l'article du jour",
+    "description": "Source: \"Show article of the day\""
+  },
+  "show_current_local_time_for_each_city": {
+    "message": "Afficher l'heure locale actuelle pour chaque ville",
+    "description": "Source: \"Show current local time for each city\""
+  },
+  "show_current_weather_uses_open_meteo_requires_internet": {
+    "message": "Afficher la météo actuelle (utilise Open-Meteo, nécessite Internet)",
+    "description": "Source: \"Show current weather (uses Open-Meteo, requires Internet)\""
+  },
+  "show_date": {
+    "message": "Afficher la date",
+    "description": "Source: \"Show date\""
+  },
+  "show_day_of_year_e_g_day_52_of_365": {
+    "message": "Afficher le jour de l'année (ex. Jour 52 sur 365)",
+    "description": "Source: \"Show day of year (e.g. Day 52 of 365)\""
+  },
+  "show_days_until_new_year": {
+    "message": "Afficher les jours jusqu'au Nouvel An",
+    "description": "Source: \"Show days until New Year\""
+  },
+  "show_equinox_and_solstice": {
+    "message": "Afficher les équinoxes et solstices",
+    "description": "Source: \"Show equinox and solstice\""
+  },
+  "show_folk_calendar_saying_for_today": {
+    "message": "Afficher le proverbe populaire du jour",
+    "description": "Source: \"Show folk calendar saying for today\""
+  },
+  "show_future_name_days_in_two_columns": {
+    "message": "Afficher les prochaines fêtes en deux colonnes",
+    "description": "Source: \"Show future name days in two columns\""
+  },
+  "show_hebrew_calendar_date": {
+    "message": "Afficher la date du calendrier hébreu",
+    "description": "Source: \"Show Hebrew calendar date\""
+  },
+  "show_islamic_calendar_date": {
+    "message": "Afficher la date du calendrier islamique",
+    "description": "Source: \"Show Islamic calendar date\""
+  },
+  "show_iso_week_number": {
+    "message": "Afficher le numéro de semaine ISO",
+    "description": "Source: \"Show ISO week number\""
+  },
+  "show_julian_calendar_date": {
+    "message": "Afficher la date du calendrier julien",
+    "description": "Source: \"Show Julian calendar date\""
+  },
+  "show_month_highlights_day_days_in_month": {
+    "message": "Afficher l'actualité du mois (jour / jours dans le mois)",
+    "description": "Source: \"Show month highlights (day / days in month)\""
+  },
+  "show_moon_age_days_since_new_moon": {
+    "message": "Afficher l'âge de la lune (jours depuis la nouvelle lune)",
+    "description": "Source: \"Show moon age (days since new moon)\""
+  },
+  "show_moon_phase": {
+    "message": "Afficher la phase lunaire",
+    "description": "Source: \"Show moon phase\""
+  },
+  "show_moon_phase_name": {
+    "message": "Afficher le nom de la phase lunaire",
+    "description": "Source: \"Show moon phase name\""
+  },
+  "show_moonrise_and_moonset_times": {
+    "message": "Afficher le lever et le coucher de lune",
+    "description": "Source: \"Show moonrise and moonset times\""
+  },
+  "show_name_days": {
+    "message": "Afficher les fêtes",
+    "description": "Source: \"Show name days\""
+  },
+  "show_national_holidays_and_weekends": {
+    "message": "Afficher les jours fériés nationaux et les week-ends",
+    "description": "Source: \"Show national holidays and weekends\""
+  },
+  "show_notable_births_on_this_day": {
+    "message": "Afficher les naissances notables de ce jour",
+    "description": "Source: \"Show notable births on this day\""
+  },
+  "show_notable_deaths_on_this_day": {
+    "message": "Afficher les décès notables de ce jour",
+    "description": "Source: \"Show notable deaths on this day\""
+  },
+  "show_notable_events_on_this_day": {
+    "message": "Afficher les événements notables de ce jour",
+    "description": "Source: \"Show notable events on this day\""
+  },
+  "show_persian_calendar_date": {
+    "message": "Afficher la date du calendrier persan",
+    "description": "Source: \"Show Persian calendar date\""
+  },
+  "show_seconds": {
+    "message": "Afficher les secondes",
+    "description": "Source: \"Show seconds\""
+  },
+  "show_sunrise_and_sunset_times": {
+    "message": "Afficher les heures de lever et coucher du soleil",
+    "description": "Source: \"Show sunrise and sunset times\""
+  },
+  "show_time": {
+    "message": "Afficher l'heure",
+    "description": "Source: \"Show time\""
+  },
+  "show_traditional_month_name": {
+    "message": "Afficher le nom de mois traditionnel",
+    "description": "Source: \"Show traditional month name\""
+  },
+  "show_upcoming_holidays_days_ahead": {
+    "message": "Afficher les prochains jours fériés (jours à l'avance)",
+    "description": "Source: \"Show upcoming holidays (days ahead)\""
+  },
+  "show_upcoming_name_days_days_ahead": {
+    "message": "Afficher les prochaines fêtes (jours à l'avance)",
+    "description": "Source: \"Show upcoming name days (days ahead)\""
+  },
+  "show_upcoming_seasonal_periods_days_ahead": {
+    "message": "Afficher les périodes saisonnières à venir (jours à l'avance)",
+    "description": "Source: \"Show upcoming seasonal periods (days ahead)\""
+  },
+  "show_utc_offset_for_each_city_e_g_utc_1": {
+    "message": "Afficher le décalage UTC pour chaque ville (ex. UTC+1)",
+    "description": "Source: \"Show UTC offset for each city (e.g. UTC+1)\""
+  },
+  "shows_current_temperature_and_conditions_for_your_primary_location_and_for_any_extra_city_below_that_has_a_name_set_enabling_this_requests_permission_to_contact_api_open_meteo_com_a_free_keyless_weather_api_no_account_or_api_key_needed": {
+    "message": "Affiche la température et les conditions actuelles de votre emplacement principal et de chaque ville supplémentaire ci-dessous dont le nom est défini. L'activation demande l'autorisation de contacter api.open-meteo.com, une API météo gratuite sans clé — aucun compte ni clé API n'est nécessaire.",
+    "description": "Source: \"Shows current temperature and conditions for your primary location and for any extra city below that has a name set. Enabling this requests permission to contact api.open-meteo.com, a free keyless weather API — no account or API key needed.\""
+  },
+  "slate": {
+    "message": "Ardoise",
+    "description": "Source: \"Slate\""
+  },
+  "slight_rain": {
+    "message": "Pluie faible",
+    "description": "Source: \"Slight rain\""
+  },
+  "slight_rain_showers": {
+    "message": "Averses de pluie faibles",
+    "description": "Source: \"Slight rain showers\""
+  },
+  "slight_snow_fall": {
+    "message": "Chute de neige faible",
+    "description": "Source: \"Slight snow fall\""
+  },
+  "slight_snow_showers": {
+    "message": "Averses de neige faibles",
+    "description": "Source: \"Slight snow showers\""
+  },
+  "small": {
+    "message": "Petit",
+    "description": "Source: \"Small\""
+  },
+  "snake": {
+    "message": "Serpent",
+    "description": "Source: \"Snake\""
+  },
+  "snow_grains": {
+    "message": "Neige en grains",
+    "description": "Source: \"Snow grains\""
+  },
+  "solid_color": {
+    "message": "Couleur unie",
+    "description": "Source: \"Solid color\""
+  },
+  "spanish": {
+    "message": "Espagnol",
+    "description": "Source: \"Spanish\""
+  },
+  "spring_equinox": {
+    "message": "Équinoxe de printemps",
+    "description": "Source: \"Spring equinox\""
+  },
+  "strftime_codes_a_full_weekday_a_short_weekday_n_day_b_full_month_b_short_month_y_4_digit_year_y_2_digit_year_m_month_number_j_day_of_year_h_hour_24h_i_hour_12h_m_minute_p_am_pm_example_y_b_n_a": {
+    "message": "Codes strftime : %A=jour de la semaine complet  %a=jour de la semaine court  %d=jour  %B=mois complet  %b=mois court  %Y=année sur 4 chiffres  %y=année sur 2 chiffres  %m=numéro du mois  %j=jour de l'année  %H=heure(24h)  %I=heure(12h)  %M=minute  %p=AM/PM.  Exemple : %Y. %B %d., %A",
+    "description": "Source: \"strftime codes: %A=full weekday  %a=short weekday  %d=day  %B=full month  %b=short month  %Y=4-digit year  %y=2-digit year  %m=month number  %j=day of year  %H=hour(24h)  %I=hour(12h)  %M=minute  %p=AM/PM.  Example: %Y. %B %d., %A\""
+  },
+  "summer_solstice": {
+    "message": "Solstice d'été",
+    "description": "Source: \"Summer solstice\""
+  },
+  "sunrise": {
+    "message": "Lever du soleil",
+    "description": "Source: \"Sunrise\""
+  },
+  "sunrise_and_sunset": {
+    "message": "Lever et coucher du soleil",
+    "description": "Source: \"Sunrise and Sunset\""
+  },
+  "sunset": {
+    "message": "Coucher du soleil",
+    "description": "Source: \"Sunset\""
+  },
+  "sync": {
+    "message": "Synchronisation",
+    "description": "Source: \"Sync\""
+  },
+  "sync_settings_across_devices_via_firefox_sync": {
+    "message": "Synchroniser les paramètres entre les appareils via Firefox Sync",
+    "description": "Source: \"Sync settings across devices via Firefox Sync\""
+  },
+  "system_default": {
+    "message": "Système par défaut",
+    "description": "Source: \"System default\""
+  },
+  "system_default_uses_whatever_firefox_s_default_search_engine_is_picking_a_specific_one_always_uses_that_engine_instead_regardless_of_your_firefox_default": {
+    "message": "« Système par défaut » utilise le moteur de recherche par défaut actuel de Firefox. Si vous en choisissez un spécifique, celui-ci sera toujours utilisé, quel que soit votre moteur par défaut Firefox.",
+    "description": "Source: \"\"System default\" uses whatever Firefox's default search engine is. Picking a specific one always uses that engine instead, regardless of your Firefox default.\""
+  },
+  "system_language": {
+    "message": "Langue du système",
+    "description": "Source: \"System language\""
+  },
+  "taurus": {
+    "message": "Taureau",
+    "description": "Source: \"Taurus\""
+  },
+  "text_only": {
+    "message": "Texte uniquement",
+    "description": "Source: \"Text only\""
+  },
+  "text_scale_factor": {
+    "message": "Facteur d'échelle du texte",
+    "description": "Source: \"Text scale factor\""
+  },
+  "theme_default": {
+    "message": "Thème par défaut",
+    "description": "Source: \"Theme default\""
+  },
+  "this_is_the_extension_s_own_background_independent_of_firefox_s_built_in_new_tab_wallpaper_picker_which_extensions_cannot_read_or_set_theme_default_follows_the_light_dark_palette_above_firefox_theme_colors_reads_your_installed_firefox_theme_s_colors_via_the_browser_theme_api_a_real_separate_webextension_api_for_installed_themes_not_the_new_tab_wallpaper_picker_falling_back_to_the_default_palette_if_the_active_theme_has_no_useful_colors_image_folder_lets_you_pick_a_local_folder_of_images_to_rotate_through_stored_in_this_browser_profile_s_indexeddb_rather_than_in_your_synced_settings_see_the_note_under_that_option_the_toolbar_popup_always_uses_the_plain_theme_palette_regardless_of_this_setting": {
+    "message": "Il s'agit de l'arrière-plan propre à l'extension, indépendant du sélecteur d'arrière-plan intégré du nouvel onglet de Firefox (que les extensions ne peuvent ni lire ni définir). « Thème par défaut » suit la palette claire/sombre ci-dessus. « Couleurs du thème Firefox » lit les couleurs de votre thème Firefox installé via l'API browser.theme — une véritable API WebExtension distincte pour les thèmes installés, pas le sélecteur d'arrière-plan du nouvel onglet — revenant à la palette par défaut si le thème actif n'a pas de couleurs utiles. « Dossier d'images » vous permet de choisir un dossier local d'images à faire défiler comme arrière-plan ; elles sont stockées dans l'IndexedDB de ce profil de navigateur, pas dans vos paramètres synchronisés — voir la remarque sous cette option. Le popup de la barre d'outils utilise toujours la palette de thème simple, quel que soit ce paramètre.",
+    "description": "Source: \"This is the extension's own background, independent of Firefox's built-in New Tab wallpaper picker (which extensions cannot read or set). \"Theme default\" follows the light/dark palette above. \"Firefox theme colors\" reads your installed Firefox Theme's colors via the browser.theme API — a real, separate WebExtension API for installed Themes, not the New Tab wallpaper picker — falling back to the default palette if the active theme has no useful colors. \"Image folder\" lets you pick a local folder of images to rotate through, stored in this browser profile's IndexedDB rather than in your synced settings — see the note under that option. The toolbar popup always uses the plain theme palette, regardless of this setting.\""
+  },
+  "this_is_the_extension_s_own_background_independent_of_firefox_s_built_in_new_tab_wallpaper_picker_which_extensions_cannot_read_or_set_theme_default_follows_the_light_dark_palette_above_firefox_theme_colors_reads_your_installed_firefox_theme_s_colors_via_the_browser_theme_api_a_real_separate_webextension_api_for_installed_themes_not_the_new_tab_wallpaper_picker_falling_back_to_the_default_palette_if_the_active_theme_has_no_useful_colors_the_toolbar_popup_always_uses_the_plain_theme_palette_regardless_of_this_setting": {
+    "message": "Il s'agit de l'arrière-plan propre à l'extension, indépendant du sélecteur d'arrière-plan intégré du Nouvel onglet de Firefox (que les extensions ne peuvent ni lire ni définir). « Thème par défaut » suit la palette claire/sombre ci-dessus. « Couleurs du thème Firefox » lit les couleurs de votre thème Firefox installé via l'API browser.theme — une véritable API WebExtension distincte pour les thèmes installés, différente du sélecteur d'arrière-plan du Nouvel onglet — et revient à la palette par défaut si le thème actif n'a pas de couleurs utiles. Le popup de la barre d'outils utilise toujours la palette de thème simple, quel que soit ce paramètre.",
+    "description": "Source: \"This is the extension's own background, independent of Firefox's built-in New Tab wallpaper picker (which extensions cannot read or set). \"Theme default\" follows the light/dark palette above. \"Firefox theme colors\" reads your installed Firefox Theme's colors via the browser.theme API — a real, separate WebExtension API for installed Themes, not the New Tab wallpaper picker — falling back to the default palette if the active theme has no useful colors. The toolbar popup always uses the plain theme palette, regardless of this setting.\""
+  },
+  "this_is_the_extension_s_own_background_independent_of_firefox_s_built_in_new_tab_wallpaper_picker_which_extensions_cannot_read_or_set_theme_default_follows_the_light_dark_palette_above_the_toolbar_popup_always_uses_the_plain_theme_palette_regardless_of_this_setting": {
+    "message": "Il s'agit de l'arrière-plan propre de l'extension, indépendant du sélecteur de fond d'écran intégré de Firefox pour le Nouvel onglet (que les extensions ne peuvent ni lire ni définir). « Thème par défaut » suit la palette claire/sombre ci-dessus. Le popup de la barre d'outils utilise toujours la palette de thème simple, quel que soit ce réglage.",
+    "description": "Source: \"This is the extension's own background, independent of Firefox's built-in New Tab wallpaper picker (which extensions cannot read or set). \"Theme default\" follows the light/dark palette above. The toolbar popup always uses the plain theme palette, regardless of this setting.\""
+  },
+  "thunderstorm": {
+    "message": "Orage",
+    "description": "Source: \"Thunderstorm\""
+  },
+  "thunderstorm_with_heavy_hail": {
+    "message": "Orage avec grêle forte",
+    "description": "Source: \"Thunderstorm with heavy hail\""
+  },
+  "thunderstorm_with_slight_hail": {
+    "message": "Orage avec grêle légère",
+    "description": "Source: \"Thunderstorm with slight hail\""
+  },
+  "tiger": {
+    "message": "Tigre",
+    "description": "Source: \"Tiger\""
+  },
+  "time_format": {
+    "message": "Format de l'heure",
+    "description": "Source: \"Time format\""
+  },
+  "tomorrow": {
+    "message": "Demain",
+    "description": "Source: \"Tomorrow\""
+  },
+  "traditional_month_name_tradition": {
+    "message": "Tradition du nom de mois",
+    "description": "Source: \"Traditional month name tradition\""
+  },
+  "traditional_month_names": {
+    "message": "Noms de mois traditionnels",
+    "description": "Source: \"Traditional Month Names\""
+  },
+  "twilight": {
+    "message": "Crépuscule",
+    "description": "Source: \"Twilight\""
+  },
+  "type_a_city_name_coordinates_are_filled_in_automatically_after_1_5_seconds": {
+    "message": "Tapez un nom de ville — les coordonnées se remplissent automatiquement après 1,5 seconde.",
+    "description": "Source: \"Type a city name — coordinates are filled in automatically after 1.5 seconds.\""
+  },
+  "unknown_conditions": {
+    "message": "Conditions inconnues",
+    "description": "Source: \"Unknown conditions\""
+  },
+  "upcoming_periods_lookahead_days": {
+    "message": "Anticipation des périodes à venir (jours)",
+    "description": "Source: \"Upcoming periods lookahead (days)\""
+  },
+  "use_manual_location_default_budapest_hungary": {
+    "message": "Utiliser un emplacement manuel (par défaut : Budapest, Hongrie)",
+    "description": "Source: \"Use manual location (default: Budapest, Hungary)\""
+  },
+  "violent_rain_showers": {
+    "message": "Averses de pluie violentes",
+    "description": "Source: \"Violent rain showers\""
+  },
+  "virgo": {
+    "message": "Vierge",
+    "description": "Source: \"Virgo\""
+  },
+  "waning_crescent": {
+    "message": "Dernier croissant",
+    "description": "Source: \"Waning Crescent\""
+  },
+  "waning_gibbous": {
+    "message": "Gibbeuse décroissante",
+    "description": "Source: \"Waning Gibbous\""
+  },
+  "water": {
+    "message": "Eau",
+    "description": "Source: \"Water\""
+  },
+  "waxing_crescent": {
+    "message": "Premier croissant",
+    "description": "Source: \"Waxing Crescent\""
+  },
+  "waxing_gibbous": {
+    "message": "Gibbeuse croissante",
+    "description": "Source: \"Waxing Gibbous\""
+  },
+  "weather": {
+    "message": "Météo",
+    "description": "Source: \"Weather\""
+  },
+  "week_n": {
+    "message": "Semaine %d",
+    "description": "Source: \"Week %d\""
+  },
+  "week_number": {
+    "message": "Numéro de semaine",
+    "description": "Source: \"Week number\""
+  },
+  "weekend": {
+    "message": "week-end",
+    "description": "Source: \"weekend\""
+  },
+  "western_zodiac": {
+    "message": "Zodiaque occidental",
+    "description": "Source: \"Western zodiac\""
+  },
+  "western_zodiac_display": {
+    "message": "Affichage du zodiaque occidental",
+    "description": "Source: \"Western zodiac display\""
+  },
+  "when_enabled_most_settings_toggles_colors_single_text_fields_numbers_are_also_written_to_browser_storage_sync_and_on_load_take_precedence_over_this_device_s_local_copy_so_multiple_signed_in_devices_converge_on_the_same_settings_firefox_sync_has_a_strict_quota_100kb_total_8kb_per_item_so_a_few_fields_never_sync_the_custom_background_image_url_s_can_be_long_or_many_the_include_subfolders_folder_picker_flag_the_folder_images_themselves_can_never_sync_they_live_in_this_browser_profile_s_indexeddb_and_this_toggle_itself_it_has_to_be_readable_locally_before_anything_can_decide_whether_to_consult_sync_at_all_requires_being_signed_into_firefox_sync_if_you_aren_t_or_a_write_exceeds_quota_saves_quietly_stay_local_only": {
+    "message": "Lorsque cette option est activée, la plupart des paramètres (interrupteurs, couleurs, champs de texte à une ligne, nombres) sont également écrits dans browser.storage.sync et, au chargement, priment sur la copie locale de cet appareil — de sorte que plusieurs appareils connectés convergent vers les mêmes paramètres. Firefox Sync applique un quota strict (100 Ko au total, 8 Ko par élément), donc certains champs ne sont jamais synchronisés : la ou les URL d'image d'arrière-plan personnalisée (peuvent être longues ou nombreuses), la case « inclure les sous-dossiers » du sélecteur de dossier (le dossier ou les images eux-mêmes ne peuvent jamais être synchronisés — ils résident dans l'IndexedDB de ce profil de navigateur), et cet interrupteur lui-même (il doit pouvoir être lu localement avant même de décider s'il faut consulter Sync). Nécessite d'être connecté à Firefox Sync — si ce n'est pas le cas, ou si une écriture dépasse le quota, les enregistrements restent silencieusement locaux.",
+    "description": "Source: \"When enabled, most settings (toggles, colors, single text fields, numbers) are also written to browser.storage.sync, and on load take precedence over this device's local copy — so multiple signed-in devices converge on the same settings. Firefox Sync has a strict quota (100KB total, 8KB per item), so a few fields never sync: the custom background image URL(s) (can be long or many), the \"include subfolders\" folder-picker flag (the folder/images themselves can never sync — they live in this browser profile's IndexedDB), and this toggle itself (it has to be readable locally before anything can decide whether to consult Sync at all). Requires being signed into Firefox Sync — if you aren't, or a write exceeds quota, saves quietly stay local-only.\""
+  },
+  "when_unchecked_default_only_images_directly_inside_the_chosen_folder_are_used_when_checked_images_in_every_subfolder_underneath_it_are_included_too": {
+    "message": "Si la case n'est pas cochée (par défaut), seules les images se trouvant directement dans le dossier choisi sont utilisées. Si elle est cochée, les images de chaque sous-dossier en dessous sont également incluses.",
+    "description": "Source: \"When unchecked (default), only images directly inside the chosen folder are used. When checked, images in every subfolder underneath it are included too.\""
+  },
+  "wikipedia": {
+    "message": "Wikipédia",
+    "description": "Source: \"Wikipedia\""
+  },
+  "wikipedia_internet_required": {
+    "message": "Wikipédia (Internet requis)",
+    "description": "Source: \"Wikipedia (Internet Required)\""
+  },
+  "wikipedia_language": {
+    "message": "Langue de Wikipédia",
+    "description": "Source: \"Wikipedia language\""
+  },
+  "winter_solstice": {
+    "message": "Solstice d'hiver",
+    "description": "Source: \"Winter solstice\""
+  },
+  "wood": {
+    "message": "Bois",
+    "description": "Source: \"Wood\""
+  },
+  "zodiac": {
+    "message": "Zodiaque",
+    "description": "Source: \"Zodiac\""
+  }
+}

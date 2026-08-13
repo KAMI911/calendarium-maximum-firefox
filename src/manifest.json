@@ -1,0 +1,77 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extension_name__",
+  "description": "__MSG_extension_description__",
+  "version": "0.5.0",
+  "default_locale": "en",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "calendarium-maximum@kami911.firefox",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "chrome_settings_overrides": {
+    "homepage": "newtab.html"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "Calendarium Maximum"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "open-full-view": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Open Calendarium Maximum's full view in a new tab"
+    }
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "search",
+    "menus",
+    "theme"
+  ],
+  "optional_host_permissions": [
+    "https://api.wikimedia.org/*",
+    "https://api.open-meteo.com/*"
+  ],
+  "optional_permissions": [
+    "topSites",
+    "history",
+    "bookmarks",
+    "downloads"
+  ]
+}
