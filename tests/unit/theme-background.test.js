@@ -382,8 +382,8 @@ describe("applyPanelOpacity — 'bg-opacity', panel-only application (NOT docume
         body.style.backgroundColor = "";
     });
 
-    it("leaves backgroundColor empty (fully transparent) for the default 0 opacity", () => {
-        applyPanelOpacity(container, baseState());
+    it("leaves backgroundColor empty (fully transparent) when bg-opacity is explicitly 0", () => {
+        applyPanelOpacity(container, baseState({ "bg-opacity": 0 }));
         expect(container.style.backgroundColor).toBe("");
     });
 

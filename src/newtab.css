@@ -269,6 +269,13 @@ body {
   min-height: 100vh;
   width: 100%;
   margin: 0;
+  /* place-items:center only adds visible breathing room above/below the
+     shell when the shell is SHORTER than the viewport — once the widgets
+     column makes it taller than one screen, centering stops helping and
+     the content butts right up against the very top/bottom edge. This
+     padding guarantees a minimum gap either way. */
+  padding: 24px 0;
+  box-sizing: border-box;
   background: var(--cal-page-bg);
   /* Pin the background to the viewport rather than letting it scroll/
      stretch with the document. Without this, a background-style like a
@@ -464,8 +471,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 70cqw;
+  font-size: 40cqw;
   line-height: 1;
+  overflow: hidden;
+  /* Safety net against overflowing the widget's own rounded box: emoji
+     glyphs commonly render wider than their nominal font-size (extra
+     side bearing), so even a conservative cqw value can occasionally
+     exceed the available width — clip rather than let it stick out. */
+  max-width: 100%;
 }
 
 /* "Small" header state (see the generic [data-size="small"] max-height
@@ -528,11 +541,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1px;
-  /* Default: fully transparent, i.e. "bg-opacity" = 0. A non-zero
-     "bg-opacity" setting overrides this via an inline background-color
-     set by src/lib/render.js's applyPanelOpacity() — a semi-transparent
-     panel behind *this element's own text content* only, independent of
-     whatever "background-style" is painting on document.body below it. */
+  /* Fallback only — in practice always overridden on load by an inline
+     background-color from src/lib/render.js's applyPanelOpacity(), which
+     reads the "bg-opacity" setting (default 0.6) — a panel behind *this
+     element's own text content* only, independent of whatever
+     "background-style" is painting on document.body below it.
+     rgba(0,0,0,0) here just avoids a flash of the wrong color before
+     that JS runs. */
   background-color: rgba(0, 0, 0, 0);
   border-radius: 12px;
   width: min(560px, 92vw);

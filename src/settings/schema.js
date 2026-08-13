@@ -4,7 +4,7 @@
  * Transcribed from the calendarium@kami911 Cinnamon desklet's
  * settings-schema.json (66 keys), plus one Firefox-only addition
  * ("show-search-box", not present in the source desklet — see
- * section-search below). Storage keys are kept identical
+ * section-widgets below). Storage keys are kept identical
  * (kebab-case, e.g. "show-date") so options.js / newtab.js / background.js
  * share one source of truth via browser.storage.local.
  *
@@ -41,21 +41,19 @@ export const LAYOUT = {
     "page-general": {
         title: "General",
         sections: [
-            "section-search", "section-datetime", "section-progress", "section-traditional",
+            "section-datetime", "section-progress", "section-traditional",
             "section-folkdays", "section-holidays", "section-moon",
             "section-sun", "section-weather", "section-zodiac", "section-namedays",
             "section-altcal", "section-appearance", "section-background"
         ]
     },
     // Firefox-home-style widgets column shown alongside the calendar on
-    // the New Tab page (Shortcuts / Recent Activity / Bookmarks /
-    // Downloads / Firefox logo — the Search widget itself stays under
-    // General > Search since it existed before this page did). Each
-    // widget needing a browser API permission (topSites/history/
-    // bookmarks/downloads) requests it at runtime the first time its
-    // "enabled" checkbox is switched on — see options.js's
-    // request<Widget>Permission() functions, mirroring the existing
-    // Wikipedia/Weather optional-permission flow.
+    // the New Tab page (Search / Shortcuts / Recent Activity / Bookmarks
+    // / Downloads / Firefox logo). Each widget needing a browser API
+    // permission (topSites/history/bookmarks/downloads) requests it at
+    // runtime the first time its "enabled" checkbox is switched on — see
+    // options.js's request<Widget>Permission() functions, mirroring the
+    // existing Wikipedia/Weather optional-permission flow.
     "page-widgets": {
         title: "Widgets",
         sections: ["section-widgets"]
@@ -78,10 +76,10 @@ export const LAYOUT = {
         sections: ["section-sync", "section-import-export"]
     },
 
-    "section-search":       { title: "Search", keys: ["show-search-box", "search-engine"] },
     "section-widgets":      {
         title: "Widgets",
         keys: [
+            "show-search-box", "search-engine",
             "widget-shortcuts-enabled", "widget-shortcuts-count", "widget-shortcuts-size",
             "widget-history-enabled", "widget-history-count", "widget-history-size",
             "widget-bookmarks-enabled", "widget-bookmarks-count", "widget-bookmarks-size",
@@ -388,9 +386,9 @@ export const FIELDS = {
     },
     "icon-size":  { id: "icon-size", type: "combobox", default: "medium", description: "Icon and symbol size", tooltip: "Controls the display size of moon phase and zodiac symbols.", options: { "Small": "small", "Medium": "medium", "Large": "large" } },
     "bg-opacity": {
-        id: "bg-opacity", type: "scale", default: 0.0, min: 0.0, max: 1.0, step: 0.05,
+        id: "bg-opacity", type: "scale", default: 0.6, min: 0.0, max: 1.0, step: 0.05,
         description: "Background opacity",
-        tooltip: "0 = fully transparent (default), 1 = a solid opaque panel behind the widget's own text content, independent of the page background below. The panel color follows the light/dark theme so text always stays legible."
+        tooltip: "0 = fully transparent, 1 = a solid opaque panel behind the widget's own text content, independent of the page background below. Defaults to 0.6 so panel text stays readable against any page background out of the box. The panel color follows the light/dark theme so text always stays legible."
     },
 
     "background-style": {
