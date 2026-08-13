@@ -1383,6 +1383,14 @@ msgstr ""
 msgid "Weather"
 msgstr ""
 
+#. options.js->WIDGET_ID_LABELS (widget-order reorder list row label)
+msgid "Calendar"
+msgstr ""
+
+#. settings-schema.json->widget-weather-size->description
+msgid "Weather widget size"
+msgstr ""
+
 msgid "When enabled, most settings (toggles, colors, single text fields, numbers) are also written to browser.storage.sync, and on load take precedence over this device's local copy — so multiple signed-in devices converge on the same settings. Firefox Sync has a strict quota (100KB total, 8KB per item), so a few fields never sync: the custom background image URL(s) (can be long or many), the \"include subfolders\" folder-picker flag (the folder/images themselves can never sync — they live in this browser profile's IndexedDB), and this toggle itself (it has to be readable locally before anything can decide whether to consult Sync at all). Requires being signed into Firefox Sync — if you aren't, or a write exceeds quota, saves quietly stay local-only."
 msgstr ""
 

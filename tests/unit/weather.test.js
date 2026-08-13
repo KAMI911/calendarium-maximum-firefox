@@ -52,7 +52,7 @@ describe("Weather.fetchCurrent", () => {
             return jsonResponse(200, CURRENT_WEATHER_OK);
         });
         let data = await Weather.fetchCurrent(47.5, 19.05);
-        expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1 });
+        expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1, hourly: [] });
         expect(global.browser.storage.local.set).toHaveBeenCalled();
     });
 
@@ -61,7 +61,7 @@ describe("Weather.fetchCurrent", () => {
         await Weather.fetchCurrent(47.5, 19.05); // populates cache
         global.fetch.mockClear();
         let data = await Weather.fetchCurrent(47.5, 19.05); // should hit cache
-        expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1 });
+        expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1, hourly: [] });
         expect(global.fetch).not.toHaveBeenCalled();
     });
 
@@ -70,7 +70,7 @@ describe("Weather.fetchCurrent", () => {
         await Weather.fetchCurrent(47.4979, 19.0402); // populates cache for the rounded key
         global.fetch.mockClear();
         let data = await Weather.fetchCurrent(47.5021, 19.0398); // rounds to the same ~0.05deg cell
-        expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1 });
+        expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1, hourly: [] });
         expect(global.fetch).not.toHaveBeenCalled();
     });
 
@@ -95,7 +95,7 @@ describe("Weather.fetchCurrent", () => {
 
         global.fetch = vi.fn(() => Promise.reject(new Error("offline")));
         let data = await Weather.fetchCurrent(47.5, 19.05);
-        expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1 }); // stale cache still served
+        expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1, hourly: [] }); // stale cache still served
     });
 
     it("network error with no cache at all: resolves null rather than throwing", async () => {
@@ -140,7 +140,7 @@ describe("Weather.fetchCurrent", () => {
         global.fetch = vi.fn(() => jsonResponse(200, CURRENT_WEATHER_OK));
         await new Promise((resolve) => {
             Weather.fetchCurrent(47.5, 19.05, (data) => {
-                expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1 });
+                expect(data).toEqual({ temperature: 21.4, weathercode: 3, windspeed: 8.1, hourly: [] });
                 resolve();
             });
         });
@@ -152,6 +152,37 @@ describe("Weather.fetchCurrent", () => {
         for (let call of global.fetch.mock.calls) {
             expect(String(call[0])).toMatch(/^https:\/\/api\.open-meteo\.com\//);
         }
+    });
+
+    it("requests hourly temperature/weathercode with timezone=auto alongside current_weather", async () => {
+        global.fetch = vi.fn((url) => {
+            expect(url).toContain("hourly=temperature_2m,weathercode");
+            expect(url).toContain("timezone=auto");
+            return jsonResponse(200, CURRENT_WEATHER_OK);
+        });
+        await Weather.fetchCurrent(47.5, 19.05);
+    });
+
+    it("slices the hourly forecast to entries at/after current_weather.time, capped at HOURLY_COUNT", async () => {
+        let withHourly = {
+            current_weather: { temperature: 21.4, windspeed: 8.1, weathercode: 3, time: "2026-06-15T10:00" },
+            hourly: {
+                time: ["2026-06-15T08:00", "2026-06-15T09:00", "2026-06-15T10:00", "2026-06-15T11:00", "2026-06-15T12:00", "2026-06-15T13:00", "2026-06-15T14:00", "2026-06-15T15:00"],
+                temperature_2m: [18, 19, 20, 21, 22, 23, 24, 25],
+                weathercode: [0, 0, 1, 1, 2, 2, 3, 3]
+            }
+        };
+        global.fetch = vi.fn(() => jsonResponse(200, withHourly));
+        let data = await Weather.fetchCurrent(47.5, 19.05);
+        expect(data.hourly.length).toBe(Weather.HOURLY_COUNT);
+        expect(data.hourly[0]).toEqual({ time: "2026-06-15T10:00", temperature: 20, weathercode: 1 });
+        expect(data.hourly[data.hourly.length - 1].time).toBe("2026-06-15T15:00");
+    });
+
+    it("resolves hourly to [] (not throwing) when the hourly block is missing or malformed", async () => {
+        global.fetch = vi.fn(() => jsonResponse(200, { current_weather: { temperature: 21, windspeed: 1, weathercode: 0, time: "2026-06-15T10:00" }, hourly: { time: "not-an-array" } }));
+        let data = await Weather.fetchCurrent(47.5, 19.05);
+        expect(data.hourly).toEqual([]);
     });
 });
 

@@ -638,7 +638,9 @@ function buildImportExportField(field) {
 
 /** Display label per WIDGET_IDS entry — matches the widget titles set by lib/render.js's render<Widget>() functions. */
 const WIDGET_ID_LABELS = {
+    "calendar": "Calendar",
     "search": "Search",
+    "weather": "Weather",
     "shortcuts": "Shortcuts",
     "history": "Recent Activity",
     "bookmarks": "Bookmarks",

@@ -426,6 +426,39 @@ describe("renderWeather", () => {
         Object.assign(popupEls, { "city1-name": undefined });
         expect(() => renderWeather(popupEls, baseState({ "show-weather": true }), { primary: { temperature: 20, weathercode: 0 }, cities: [] })).not.toThrow();
     });
+
+    it("shows the widget and sets its title when enabled and attempted", () => {
+        let els = freshDom();
+        renderWeather(els, baseState({ "show-weather": true }), { primary: { temperature: 20, weathercode: 0 }, cities: [] });
+        expect(els.widgetWeather.hasAttribute("hidden")).toBe(false);
+        expect(els.widgetWeatherTitle.textContent).toBeTruthy();
+    });
+
+    it("hides the widget entirely when weatherData is null (never attempted / no permission)", () => {
+        let els = freshDom();
+        renderWeather(els, baseState({ "show-weather": true }), null);
+        expect(els.widgetWeather.hasAttribute("hidden")).toBe(true);
+    });
+
+    it("renders one hourly tile per entry, with time/icon/temperature, hidden beyond the provided count", () => {
+        let els = freshDom();
+        let hourly = [
+            { time: "2026-06-15T14:00", temperature: 21, weathercode: 0 },
+            { time: "2026-06-15T15:00", temperature: 22, weathercode: 1 }
+        ];
+        renderWeather(els, baseState({ "show-weather": true }), { primary: { temperature: 20, weathercode: 0, hourly }, cities: [] });
+        expect(els.weatherHourly.hasAttribute("hidden")).toBe(false);
+        let tiles = els.weatherHourly.querySelectorAll(".calendarium-weather-widget-hour");
+        expect(Array.from(tiles).filter((t) => !t.hasAttribute("hidden")).length).toBe(2);
+        expect(tiles[0].textContent).toContain("14:00");
+        expect(tiles[0].textContent).toContain("21°C");
+    });
+
+    it("hides the hourly strip when there is no hourly data", () => {
+        let els = freshDom();
+        renderWeather(els, baseState({ "show-weather": true }), { primary: { temperature: 20, weathercode: 0, hourly: [] }, cities: [] });
+        expect(els.weatherHourly.hasAttribute("hidden")).toBe(true);
+    });
 });
 
 describe("renderAll (full-refresh smoke test)", () => {
@@ -623,10 +656,10 @@ describe("applyWidgetOrder", () => {
         expect(widgetIdOrder(els)).toEqual(before);
     });
 
-    it("reorders widgets according to a stored widget-order string", () => {
+    it("reorders widgets according to a stored widget-order string (including the calendar)", () => {
         let els = freshDom();
-        applyWidgetOrder(els, baseState({ "widget-order": "firefox-logo,search,shortcuts,history,bookmarks,downloads" }));
-        expect(widgetIdOrder(els)).toEqual(["firefox-logo", "search", "shortcuts", "history", "bookmarks", "downloads"]);
+        applyWidgetOrder(els, baseState({ "widget-order": "firefox-logo,search,calendar,shortcuts,history,bookmarks,downloads,weather" }));
+        expect(widgetIdOrder(els)).toEqual(["firefox-logo", "search", "calendar", "shortcuts", "history", "bookmarks", "downloads", "weather"]);
     });
 
     it("appends unknown/missing ids at the end rather than throwing", () => {
@@ -634,6 +667,6 @@ describe("applyWidgetOrder", () => {
         expect(() => applyWidgetOrder(els, baseState({ "widget-order": "bogus,search" }))).not.toThrow();
         let order = widgetIdOrder(els);
         expect(order[0]).toBe("search");
-        expect(order.length).toBe(6);
+        expect(order.length).toBe(8);
     });
 });

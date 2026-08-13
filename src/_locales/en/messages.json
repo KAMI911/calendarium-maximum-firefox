@@ -127,6 +127,10 @@
     "message": "Cache duration for Wikipedia data",
     "description": "Source: \"Cache duration for Wikipedia data\""
   },
+  "calendar": {
+    "message": "Calendar",
+    "description": "Source: \"Calendar\""
+  },
   "calendar_highlights": {
     "message": "Calendar Highlights",
     "description": "Source: \"Calendar Highlights\""
@@ -1346,6 +1350,10 @@
   "weather": {
     "message": "Weather",
     "description": "Source: \"Weather\""
+  },
+  "weather_widget_size": {
+    "message": "Weather widget size",
+    "description": "Source: \"Weather widget size\""
   },
   "week_n": {
     "message": "Week %d",

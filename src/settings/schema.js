@@ -43,7 +43,7 @@ export const LAYOUT = {
         sections: [
             "section-datetime", "section-progress", "section-traditional",
             "section-folkdays", "section-holidays", "section-moon",
-            "section-sun", "section-weather", "section-zodiac", "section-namedays",
+            "section-sun", "section-zodiac", "section-namedays",
             "section-altcal", "section-appearance", "section-background"
         ]
     },
@@ -80,6 +80,7 @@ export const LAYOUT = {
         title: "Widgets",
         keys: [
             "show-search-box", "search-engine",
+            "show-weather", "weather-cache-hours", "widget-weather-size",
             "widget-shortcuts-enabled", "widget-shortcuts-count", "widget-shortcuts-size",
             "widget-history-enabled", "widget-history-count", "widget-history-size",
             "widget-bookmarks-enabled", "widget-bookmarks-count", "widget-bookmarks-size",
@@ -95,7 +96,6 @@ export const LAYOUT = {
     "section-holidays":     { title: "National Holidays", keys: ["show-holidays", "holiday-locale", "holiday-lookahead", "show-period-upcoming", "period-upcoming-lookahead"] },
     "section-moon":         { title: "Moon Phase", keys: ["show-moon", "show-moon-name", "show-moon-age", "show-moonrise"] },
     "section-sun":          { title: "Sunrise and Sunset", keys: ["show-sun", "show-solstice"] },
-    "section-weather":      { title: "Weather", keys: ["show-weather", "weather-cache-hours"] },
     "section-altcal":       { title: "Alternate Calendars", keys: ["show-julian", "show-hebrew", "show-islamic", "show-persian"] },
     "section-location":     {
         title: "Location",
@@ -192,7 +192,7 @@ const WIDGET_SIZE_OPTIONS = { "Large": "large", "Small": "small", "Collapsed": "
 // real storage.local scalar, so it is NOT in NON_STORAGE_FIELD_TYPES and
 // stays Firefox-Sync-eligible like any other short string field.
 // ══════════════════════════════════════════════════════════════════════
-export const WIDGET_IDS = Object.freeze(["search", "shortcuts", "history", "bookmarks", "downloads", "firefox-logo"]);
+export const WIDGET_IDS = Object.freeze(["calendar", "search", "weather", "shortcuts", "history", "bookmarks", "downloads", "firefox-logo"]);
 const WIDGET_ORDER_DEFAULT = WIDGET_IDS.join(",");
 
 /**
@@ -336,6 +336,7 @@ export const FIELDS = {
         description: "Cache duration for weather data", dependency: "show-weather", indent: true,
         tooltip: "How long to keep weather data in the local cache before fetching fresh data. Lower values fetch more often; higher values reduce network usage. Weather changes faster than Wikipedia's daily content, so this defaults much lower than the Wikipedia cache."
     },
+    "widget-weather-size": { id: "widget-weather-size", type: "combobox", default: "large", dependency: "show-weather", indent: true, description: "Weather widget size", options: WIDGET_SIZE_OPTIONS },
 
     "use-manual-location": { id: "use-manual-location", type: "checkbox", default: false, description: "Use manual location (default: Budapest, Hungary)" },
     "location-search": { id: "location-search", type: "entry", default: "", dependency: "use-manual-location", indent: true, description: "Search city to auto-fill coordinates", tooltip: "Type a city name — coordinates are filled in automatically after 1.5 seconds." },

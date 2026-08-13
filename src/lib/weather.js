@@ -14,8 +14,12 @@
  * `current_weather=true` returns a `current_weather` object shaped like
  * `{ temperature, windspeed, winddirection, weathercode, time, ... }`
  * (temperature in °C, matching every other unit already used in this
- * extension). No API key, no auth header, no rate-limit registration
- * needed — considerably simpler than the Wikipedia integration.
+ * extension); `&hourly=temperature_2m,weathercode&timezone=auto` adds a
+ * parallel `hourly.{time,temperature_2m,weathercode}` arrays block, sliced
+ * down to a short upcoming-hours strip by _parseHourly() below for the
+ * weather widget's hour-by-hour mini forecast. No API key, no auth
+ * header, no rate-limit registration needed — considerably simpler than
+ * the Wikipedia integration.
  */
 
 // ── WMO weather interpretation codes ───────────────────────────────────
@@ -103,15 +107,48 @@ export const Weather = {
         }
     },
 
+    // How many upcoming hourly entries to keep for the mini hour-by-hour
+    // forecast row (Firefox's own New Tab weather widget shows a similar
+    // strip) — kept small since it's a compact widget, not a full weather
+    // app.
+    HOURLY_COUNT: 6,
+
+    /**
+     * Pick the HOURLY_COUNT hourly entries starting at/after `fromTime`
+     * (the current_weather.time timestamp, in the same location-local
+     * time as the hourly.time array thanks to &timezone=auto) out of the
+     * raw Open-Meteo `hourly` block. Returns [] (never throws/returns
+     * null) on any malformed/missing hourly data — hourly forecast is a
+     * bonus, never worth failing the whole fetch over.
+     */
+    _parseHourly: function(hourly, fromTime) {
+        if (!hourly || !Array.isArray(hourly.time) || !Array.isArray(hourly.temperature_2m) || !Array.isArray(hourly.weathercode)) {
+            return [];
+        }
+        let startIndex = fromTime ? hourly.time.findIndex((t) => t >= fromTime) : 0;
+        if (startIndex === -1) startIndex = 0;
+        let out = [];
+        for (let i = startIndex; i < hourly.time.length && out.length < this.HOURLY_COUNT; i++) {
+            let temp = hourly.temperature_2m[i];
+            let code = hourly.weathercode[i];
+            if (typeof temp !== "number" || typeof code !== "number") continue;
+            out.push({ time: hourly.time[i], temperature: temp, weathercode: code });
+        }
+        return out;
+    },
+
     /**
      * Perform the Open-Meteo request and parse its `current_weather`
-     * object into `{ temperature, weathercode, windspeed }`, or return
-     * null on any HTTP/network/parse error, or a malformed/missing
-     * `current_weather` payload.
+     * object into `{ temperature, weathercode, windspeed, hourly }`, or
+     * return null on any HTTP/network/parse error, or a malformed/missing
+     * `current_weather` payload. `&timezone=auto` makes both
+     * current_weather.time and hourly.time location-local (not UTC), so
+     * they line up directly without a separate timezone lookup.
      */
     _fetch: async function(lat, lon) {
         let url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat +
-                   "&longitude=" + lon + "&current_weather=true";
+                   "&longitude=" + lon + "&current_weather=true" +
+                   "&hourly=temperature_2m,weathercode&forecast_days=2&timezone=auto";
         try {
             let resp = await fetch(url);
             if (resp.status !== 200) {
@@ -129,7 +166,8 @@ export const Weather = {
             return {
                 temperature: cw.temperature,
                 weathercode: cw.weathercode,
-                windspeed: typeof cw.windspeed === "number" ? cw.windspeed : null
+                windspeed: typeof cw.windspeed === "number" ? cw.windspeed : null,
+                hourly: this._parseHourly(json && json.hourly, cw.time)
             };
         } catch (e) {
             console.warn("Calendarium Maximum: weather fetch error: " + e);

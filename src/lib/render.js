@@ -233,8 +233,11 @@ export function getEls(root = document) {
         sunrise: q("cal-sunrise"),
         sunset: q("cal-sunset"),
         cityGrid: q("cal-city-grid"),
-        weatherPrimary: q("cal-weather-primary"),
-        weatherCities: q("cal-weather-cities"),
+        widgetWeather: q("widget-weather"),
+        widgetWeatherTitle: q("widget-weather-title"),
+        weatherPrimary: q("widget-weather-primary"),
+        weatherHourly: q("widget-weather-hourly"),
+        weatherCities: q("widget-weather-cities"),
         zodiacRow: q("cal-zodiac-row"),
         zodiacWesternPart: q("cal-zodiac-western-part"),
         zodiacWesternIcon: q("cal-zodiac-western-icon"),
@@ -610,14 +613,67 @@ function formatWeather(w) {
     return info.emoji + " " + _(info.text) + " · " + Math.round(w.temperature) + "°C";
 }
 
+/** Lazily build (once) the primary-location row's icon/temperature/label child spans, mirroring ensureWeatherCityRows()'s reuse pattern. */
+function ensureWeatherPrimaryParts(els) {
+    if (!els.weatherPrimary) return null;
+    if (els._weatherPrimaryParts) return els._weatherPrimaryParts;
+    let doc = els.weatherPrimary.ownerDocument || document;
+    let icon = doc.createElement("span");
+    let temp = doc.createElement("span");
+    let label = doc.createElement("span");
+    icon.className = "calendarium-weather-widget-icon";
+    temp.className = "calendarium-weather-widget-temp";
+    label.className = "calendarium-weather-widget-label";
+    els.weatherPrimary.appendChild(icon);
+    els.weatherPrimary.appendChild(temp);
+    els.weatherPrimary.appendChild(label);
+    let parts = { icon, temp, label };
+    els._weatherPrimaryParts = parts;
+    return parts;
+}
+
+/** Lazily build (once) HOURLY_COUNT hour-tile placeholders inside els.weatherHourly, mirroring ensureWeatherCityRows()'s reuse pattern. */
+function ensureWeatherHourlyTiles(els, count) {
+    if (!els.weatherHourly) return null;
+    if (els._weatherHourlyTiles) return els._weatherHourlyTiles;
+    let doc = els.weatherHourly.ownerDocument || document;
+    let tiles = [];
+    for (let i = 0; i < count; i++) {
+        let tile = doc.createElement("div");
+        let time = doc.createElement("span");
+        let icon = doc.createElement("span");
+        let temp = doc.createElement("span");
+        tile.className = "calendarium-weather-widget-hour";
+        time.className = "calendarium-weather-widget-hour-time";
+        icon.className = "calendarium-weather-widget-hour-icon";
+        temp.className = "calendarium-weather-widget-hour-temp";
+        tile.appendChild(time);
+        tile.appendChild(icon);
+        tile.appendChild(temp);
+        els.weatherHourly.appendChild(tile);
+        tiles.push({ tile, time, icon, temp });
+    }
+    els._weatherHourlyTiles = tiles;
+    return tiles;
+}
+
+/** "14:00" from an Open-Meteo hourly ISO-ish local timestamp ("2026-06-15T14:00"), or "" if unparseable. */
+function formatHourLabel(isoLocal) {
+    if (!isoLocal) return "";
+    let m = /T(\d{2}):(\d{2})/.exec(isoLocal);
+    return m ? (m[1] + ":" + m[2]) : "";
+}
+
 /**
- * Render current weather for the primary location (els.weatherPrimary) and
- * for each named extra city (els.weatherCities' per-row grid).
+ * Render the Weather widget: current conditions for the primary location
+ * (icon + temperature + label, els.weatherPrimary), an hour-by-hour mini
+ * forecast strip (els.weatherHourly, similar to Firefox's own New Tab
+ * weather widget), and a row per named extra city (els.weatherCities).
  * `weatherData` is `{ primary: WeatherResult|null, cities: [WeatherResult|null, ...] }`
  * once a permitted fetch has actually been attempted (see newtab.js's
  * scheduleWeather()), or plain `null` before that — e.g. "show-weather" is
  * off, or the `api.open-meteo.com` permission hasn't been granted (yet).
- * `weatherData === null` hides the section entirely, the same way the
+ * `weatherData === null` hides the whole widget, the same way the
  * Wikipedia section stays hidden without its permission — a per-location
  * "No data" placeholder only appears once a fetch actually happened and
  * came back empty (e.g. a transient network error), never just because
@@ -625,17 +681,47 @@ function formatWeather(w) {
  */
 export function renderWeather(els, state, weatherData) {
     let attempted = !!weatherData;
+    let show_ = !!state["show-weather"] && attempted;
 
     // Guarded (rather than assumed present) because popup.html deliberately
     // has no weather markup at all — weather needs a network fetch +
     // permission flow that doesn't fit the popup's short-lived nature well,
     // the same boundary as the search box (see options.js/README). Calling
     // renderAll() against popup markup must stay a safe no-op here.
-    if (els.weatherPrimary) {
-        show(els.weatherPrimary, !!state["show-weather"] && attempted);
-        if (state["show-weather"] && attempted) {
-            els.weatherPrimary.textContent = formatWeather(weatherData.primary);
+    if (els.widgetWeather) show(els.widgetWeather, show_);
+    if (els.widgetWeatherTitle) els.widgetWeatherTitle.textContent = _("Weather");
+
+    let primaryParts = ensureWeatherPrimaryParts(els);
+    if (primaryParts) {
+        show(els.weatherPrimary, show_);
+        if (show_) {
+            let w = weatherData.primary;
+            if (w && typeof w.temperature === "number") {
+                let info = getWeatherInfo(w.weathercode);
+                primaryParts.icon.textContent = info.emoji;
+                primaryParts.temp.textContent = Math.round(w.temperature) + "°C";
+                primaryParts.label.textContent = _(info.text);
+            } else {
+                primaryParts.icon.textContent = "";
+                primaryParts.temp.textContent = "";
+                primaryParts.label.textContent = _("No data");
+            }
         }
+    }
+
+    let hourly = (show_ && weatherData.primary && weatherData.primary.hourly) || [];
+    let hourTiles = ensureWeatherHourlyTiles(els, Math.max(hourly.length, 6));
+    if (hourTiles) {
+        show(els.weatherHourly, show_ && hourly.length > 0);
+        hourTiles.forEach((t, i) => {
+            let h = hourly[i];
+            show(t.tile, !!h);
+            if (!h) return;
+            let info = getWeatherInfo(h.weathercode);
+            t.time.textContent = formatHourLabel(h.time);
+            t.icon.textContent = info.emoji;
+            t.temp.textContent = Math.round(h.temperature) + "°C";
+        });
     }
 
     let rows = ensureWeatherCityRows(els);
@@ -644,7 +730,7 @@ export function renderWeather(els, state, weatherData) {
     let cities = (weatherData && weatherData.cities) || [];
     let anyCity = false;
     for (let i = 0; i < 3; i++) {
-        let has = !!(state["show-weather"] && attempted && names[i] && names[i].trim());
+        let has = !!(show_ && names[i] && names[i].trim());
         if (has) anyCity = true;
         show(rows[i].row, has);
         if (!has) continue;

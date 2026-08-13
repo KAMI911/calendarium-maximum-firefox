@@ -705,13 +705,70 @@ body {
   color: var(--cal-city-tz-color);
 }
 
-/* ── Weather ──────────────────────────────────────── */
-.calendarium-weather-primary {
-  font-size: 0.95em;
-  padding-top: 2px;
+/* ── Weather widget ───────────────────────────────── */
+.calendarium-weather-widget-primary {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.calendarium-weather-widget-icon {
+  font-size: 2em;
+  line-height: 1;
+}
+
+.calendarium-weather-widget-temp {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--cal-date-color);
+}
+
+.calendarium-weather-widget-label {
+  font-size: 0.92em;
   color: var(--cal-sun-color);
 }
-.calendarium-weather-primary:empty { display: none; }
+
+/* Hour-by-hour mini forecast strip (Weather.HOURLY_COUNT entries from
+   lib/weather.js), similar in spirit to Firefox's own New Tab weather
+   widget — a horizontally-scrollable row of small tiles rather than
+   wrapping, so it stays compact regardless of widget width. */
+.calendarium-weather-widget-hourly {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  overflow-x: auto;
+}
+
+.calendarium-weather-widget-hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 0 0 auto;
+  min-width: 40px;
+}
+
+.calendarium-weather-widget-hour-time {
+  font-size: 0.77em;
+  color: var(--cal-wiki-header-color);
+}
+
+.calendarium-weather-widget-hour-icon {
+  font-size: 1.3em;
+  line-height: 1;
+}
+
+.calendarium-weather-widget-hour-temp {
+  font-size: 0.85em;
+  color: var(--cal-date-color);
+}
+
+/* "Small" state: just the current-conditions line, no hourly strip or
+   extra-city rows — those need more vertical room than "small" allows. */
+.calendarium-widget[data-size="small"] .calendarium-weather-widget-hourly,
+.calendarium-widget[data-size="small"] .calendarium-weather-cities {
+  display: none;
+}
 
 .calendarium-weather-cities {
   display: flex;

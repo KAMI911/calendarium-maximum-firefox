@@ -16,21 +16,21 @@
          behavior: multi-column only opens a 2nd/3rd/4th column of
          --cal-panel-width when the container is actually wide enough to
          fit one, otherwise everything just stacks in a single column.
-         #calendarium-container (the calendar) is the first child here,
-         carries .calendarium-widget for the same box chrome as the
-         others, but (like Search) has no header — see newtab.css. Each
-         <section class="calendarium-widget"> is independently toggled
-         via [hidden] and carries a data-size attribute ("large" |
-         "small" | "collapsed") controlled by its own header buttons —
-         see wireWidgetHeaderControls() in lib/render.js. DOM order here
-         is only the *default* widget order (the calendar always stays
-         first) — a user-configured re-order of the other widgets
-         physically moves those nodes at runtime (applyWidgetOrder() in
-         lib/render.js), since multi-column layout (unlike flex/grid) has
-         no CSS-only reordering mechanism. -->
+         #calendarium-container (the calendar) is a widget here too —
+         data-widget="calendar", carries .calendarium-widget for the same
+         box chrome as the others, and (like Search) has no header — see
+         newtab.css. Each <section class="calendarium-widget"> is
+         independently toggled via [hidden] and carries a data-size
+         attribute ("large" | "small" | "collapsed") controlled by its
+         own header buttons — see wireWidgetHeaderControls() in
+         lib/render.js. DOM order here is only the *default* widget
+         order — a user-configured re-order (which now includes the
+         calendar) physically moves these nodes at runtime
+         (applyWidgetOrder() in lib/render.js), since multi-column layout
+         (unlike flex/grid) has no CSS-only reordering mechanism. -->
     <aside id="calendarium-widgets" class="calendarium-widgets">
 
-      <main id="calendarium-container" class="calendarium-widget calendarium-container">
+      <main id="calendarium-container" class="calendarium-widget calendarium-container" data-widget="calendar">
 
       <div id="cal-date" class="calendarium-date"></div>
       <div id="cal-time" class="calendarium-time"></div>
@@ -69,9 +69,6 @@
       </div>
 
       <div id="cal-city-grid" class="calendarium-city-grid"></div>
-
-      <div id="cal-weather-primary" class="calendarium-weather-primary" tabindex="0"></div>
-      <div id="cal-weather-cities" class="calendarium-weather-cities"></div>
 
       <div id="cal-zodiac-row" class="calendarium-zodiac-row">
         <span id="cal-zodiac-western-part" class="calendarium-zodiac-part">
@@ -116,6 +113,22 @@
                    autocomplete="off">
             <button type="submit" class="calendarium-search-submit" aria-label="Search">🔍</button>
           </form>
+        </div>
+      </section>
+
+      <section id="widget-weather" class="calendarium-widget" data-widget="weather" data-size="large" hidden>
+        <header class="calendarium-widget-header">
+          <h2 id="widget-weather-title" class="calendarium-widget-title"></h2>
+          <div class="calendarium-widget-controls">
+            <button type="button" class="calendarium-widget-size-btn" data-size-action="small" aria-label="Small">S</button>
+            <button type="button" class="calendarium-widget-size-btn" data-size-action="large" aria-label="Large">L</button>
+            <button type="button" class="calendarium-widget-size-btn" data-size-action="collapsed" aria-label="Collapse">&#8212;</button>
+          </div>
+        </header>
+        <div class="calendarium-widget-body">
+          <div id="widget-weather-primary" class="calendarium-weather-widget-primary" tabindex="0"></div>
+          <div id="widget-weather-hourly" class="calendarium-weather-widget-hourly"></div>
+          <div id="widget-weather-cities" class="calendarium-weather-cities"></div>
         </div>
       </section>
 
