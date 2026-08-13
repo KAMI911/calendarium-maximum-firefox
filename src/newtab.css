@@ -270,6 +270,17 @@ body {
   width: 100%;
   margin: 0;
   background: var(--cal-page-bg);
+  /* Pin the background to the viewport rather than letting it scroll/
+     stretch with the document. Without this, a background-style like a
+     gradient or image is sized to the *body's own box* — and with the
+     widgets column added, that box can now grow far taller than one
+     screen (many widgets + long lists), which visibly distorts a
+     gradient (color bands stretched over thousands of px, or a seam
+     where the renderer's internal tiling kicks in for oversized
+     surfaces) or a cover-sized image. Fixing it to the viewport keeps
+     every background style rendered at a sane, constant size regardless
+     of how tall the page content grows. */
+  background-attachment: fixed;
   display: grid;
   place-items: center;
   font-family: "DejaVu Sans", "Segoe UI", Arial, sans-serif;
@@ -293,10 +304,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: min(360px, 92vw);
+  width: min(480px, 92vw);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .calendarium-shell {
     flex-direction: column;
     align-items: center;
@@ -377,6 +388,13 @@ body {
 .calendarium-widget[data-size="small"] .calendarium-widget-body {
   max-height: 120px;
   overflow-y: auto;
+  /* Reserve the scrollbar's own width up front (rather than only once
+     content actually overflows) so its late appearance can't shrink the
+     available width for already-laid-out text at the last moment —
+     without this, text sized/wrapped against the wider pre-scrollbar
+     width can end up visually crowding/overlapping the scrollbar track
+     the instant it appears. Firefox 97+. */
+  scrollbar-gutter: stable;
 }
 
 /* ── Shortcuts (topSites) — small icon+title tile grid ────────────── */
@@ -440,6 +458,14 @@ body {
   align-items: center;
   font-size: 3em;
   line-height: 1;
+}
+
+/* "Small" header state (see the generic [data-size="small"] max-height
+   rule above) only clips/scrolls other widgets' *lists* — for a single
+   centered glyph with nothing to scroll, that alone doesn't visibly
+   shrink anything, so the logo itself needs its own smaller size here. */
+.calendarium-widget[data-size="small"] .calendarium-firefox-logo-body {
+  font-size: 1.5em;
 }
 
 /* ── Background style (General > Background setting, applyBackground()) ── */
@@ -802,6 +828,22 @@ body {
   white-space: pre-line;
   margin: 0;
   font-family: inherit;
+}
+
+/* Wikipedia "on this day" / "article of the day" entries — clickable,
+   opening the source Wikipedia article (see wikiEntryUrl()/
+   renderWikiEntries() in lib/render.js). display:block + the parent's
+   own white-space:pre-line keeps each entry's own line-wrapped text
+   block-stacked, same look as the plain-text list it replaces. */
+.calendarium-wiki-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  white-space: pre-line;
+}
+.calendarium-wiki-link:hover {
+  color: var(--cal-link-color);
+  text-decoration: underline;
 }
 
 /* ── Search box (optional, "show-search-box" setting) ────────────── */

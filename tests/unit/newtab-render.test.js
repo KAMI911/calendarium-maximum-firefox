@@ -321,12 +321,43 @@ describe("renderWikiOnThisDay / renderWikiFeatured", () => {
         expect(els.wikiBirths.textContent).toContain("1900: Someone Notable");
     });
 
+    it("renders each entry as a link to its Wikipedia article when content_urls is present", () => {
+        renderWikiOnThisDay(els, baseState({ "show-wikipedia": true, "show-wiki-events": true }), {
+            births: [], deaths: [],
+            events: [{ year: 1969, pages: [{ normalizedtitle: "Moon landing", content_urls: { desktop: { page: "https://en.wikipedia.org/wiki/Moon_landing" } } }] }]
+        }, 0);
+        let link = els.wikiEvents.querySelector("a.calendarium-wiki-link");
+        expect(link).toBeTruthy();
+        expect(link.href).toBe("https://en.wikipedia.org/wiki/Moon_landing");
+        expect(link.target).toBe("_blank");
+        expect(link.rel).toContain("noopener");
+        expect(link.textContent).toContain("Moon landing");
+    });
+
+    it("renders an entry as plain (non-link) text when it has no content_urls", () => {
+        renderWikiOnThisDay(els, baseState({ "show-wikipedia": true, "show-wiki-events": true }), {
+            births: [], deaths: [],
+            events: [{ year: 1969, pages: [{ normalizedtitle: "No URL Event" }] }]
+        }, 0);
+        expect(els.wikiEvents.querySelector("a")).toBeNull();
+        expect(els.wikiEvents.textContent).toContain("No URL Event");
+    });
+
     it("renders the featured article header + wrapped extract", () => {
         renderWikiFeatured(els, baseState({ "show-wikipedia": true, "show-wiki-featured": true }), {
             tfa: { normalizedtitle: "Big Topic", extract: "First sentence. Second sentence." }
         });
         expect(els.wikiFeaturedHeader.hasAttribute("hidden")).toBe(false);
         expect(els.wikiFeatured.textContent).toContain("Big Topic: First sentence.");
+    });
+
+    it("renders the featured article as a link when content_urls is present", () => {
+        renderWikiFeatured(els, baseState({ "show-wikipedia": true, "show-wiki-featured": true }), {
+            tfa: { normalizedtitle: "Big Topic", extract: "Text.", content_urls: { desktop: { page: "https://en.wikipedia.org/wiki/Big_Topic" } } }
+        });
+        let link = els.wikiFeatured.querySelector("a.calendarium-wiki-link");
+        expect(link).toBeTruthy();
+        expect(link.href).toBe("https://en.wikipedia.org/wiki/Big_Topic");
     });
 
     it("stays hidden for featured when show-wiki-featured is off", () => {

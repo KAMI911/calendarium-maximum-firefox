@@ -803,6 +803,47 @@ function wikiEntryText(e) {
     return year + title;
 }
 
+/**
+ * The Wikimedia REST API's "onthisday"/"featured" responses embed a ready
+ * absolute URL per page (page.content_urls.desktop.page), already pointed
+ * at whichever language edition actually served the content (relevant
+ * since fetchOnThisDay()/fetchFeatured() in lib/wikipedia.js can silently
+ * fall back to English) — so this is preferred over guessing a URL from
+ * the title, and returns null (never a wrong-language link) when absent.
+ */
+function wikiEntryUrl(e) {
+    let page = e && e.pages && e.pages[0];
+    let url = page && page.content_urls && page.content_urls.desktop && page.content_urls.desktop.page;
+    return url || null;
+}
+
+/**
+ * Replace `container`'s content with one clickable link per entry (each
+ * opening the corresponding Wikipedia article in a new tab), separated by
+ * line breaks — same visual shape as the plain-text join it replaces,
+ * just per-item <a> elements instead of one flat string, built via the
+ * DOM (never innerHTML) since entry titles are untrusted API content.
+ * Entries with no resolvable URL (see wikiEntryUrl()) render as plain
+ * (non-link) text instead of being dropped, so nothing important
+ * silently disappears from the list.
+ */
+function renderWikiEntries(container, entries) {
+    container.textContent = "";
+    entries.forEach((entry, i) => {
+        let url = wikiEntryUrl(entry);
+        let node = document.createElement(url ? "a" : "span");
+        if (url) {
+            node.href = url;
+            node.target = "_blank";
+            node.rel = "noopener noreferrer";
+            node.className = "calendarium-wiki-link";
+        }
+        node.textContent = wrapText(wikiEntryText(entry), 48);
+        container.appendChild(node);
+        if (i < entries.length - 1) container.appendChild(document.createElement("br"));
+    });
+}
+
 export function renderWikiOnThisDay(els, state, data, rotateStep) {
     show(els.wikiEventsHeader, false); show(els.wikiEvents, false);
     show(els.wikiBirthsHeader, false); show(els.wikiBirths, false);
@@ -815,21 +856,21 @@ export function renderWikiOnThisDay(els, state, data, rotateStep) {
     let step  = Math.floor((rotateStep || 0) / every);
 
     if (state["show-wiki-births"] && data.births && data.births.length > 0) {
-        let items = rotateSlice(data.births, step, n).map(wikiEntryText);
+        let items = rotateSlice(data.births, step, n);
         els.wikiBirthsHeader.textContent = _("Births on this day");
-        els.wikiBirths.textContent = items.map((s) => wrapText(s, 48)).join("\n");
+        renderWikiEntries(els.wikiBirths, items);
         show(els.wikiBirthsHeader, true); show(els.wikiBirths, true);
     }
     if (state["show-wiki-deaths"] && data.deaths && data.deaths.length > 0) {
-        let items = rotateSlice(data.deaths, step, n).map(wikiEntryText);
+        let items = rotateSlice(data.deaths, step, n);
         els.wikiDeathsHeader.textContent = _("Deaths on this day");
-        els.wikiDeaths.textContent = items.map((s) => wrapText(s, 48)).join("\n");
+        renderWikiEntries(els.wikiDeaths, items);
         show(els.wikiDeathsHeader, true); show(els.wikiDeaths, true);
     }
     if (state["show-wiki-events"] && data.events && data.events.length > 0) {
-        let items = rotateSlice(data.events, step, n).map(wikiEntryText);
+        let items = rotateSlice(data.events, step, n);
         els.wikiEventsHeader.textContent = _("Events on this day");
-        els.wikiEvents.textContent = items.map((s) => wrapText(s, 48)).join("\n");
+        renderWikiEntries(els.wikiEvents, items);
         show(els.wikiEventsHeader, true); show(els.wikiEvents, true);
     }
 }
@@ -846,8 +887,18 @@ export function renderWikiFeatured(els, state, data) {
     let dot     = extract.indexOf(". ");
     if (dot > 0) extract = extract.substring(0, dot + 1);
     let combined = title + (extract ? (": " + extract) : "");
+    let url = tfa.content_urls && tfa.content_urls.desktop && tfa.content_urls.desktop.page;
     els.wikiFeaturedHeader.textContent = _("Article of the day");
-    els.wikiFeatured.textContent = wrapText(combined, 48);
+    els.wikiFeatured.textContent = "";
+    let node = document.createElement(url ? "a" : "span");
+    if (url) {
+        node.href = url;
+        node.target = "_blank";
+        node.rel = "noopener noreferrer";
+        node.className = "calendarium-wiki-link";
+    }
+    node.textContent = wrapText(combined, 48);
+    els.wikiFeatured.appendChild(node);
     show(els.wikiFeaturedHeader, true);
     show(els.wikiFeatured, true);
 }
