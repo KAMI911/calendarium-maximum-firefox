@@ -191,7 +191,6 @@ export function getEls(root = document) {
         shell: q("calendarium-shell"),
         widgetsAside: q("calendarium-widgets"),
         widgetSearch: q("widget-search"),
-        widgetSearchTitle: q("widget-search-title"),
         searchForm: q("cal-search-form"),
         searchInput: q("cal-search-input"),
         searchEngineSelect: q("cal-search-engine-select"),
@@ -271,7 +270,6 @@ function show(el, visible) {
 export function renderSearchBox(els, state) {
     show(els.widgetSearch, !!state["show-search-box"]);
     show(els.searchForm, !!state["show-search-box"]);
-    if (els.widgetSearchTitle) els.widgetSearchTitle.textContent = _("Search");
 }
 
 export function renderDate(els, state, now) {
@@ -981,6 +979,7 @@ export function renderFirefoxLogo(els, state) {
 export function renderAll(els, state, data, now) {
     applyWidgetSizes(els, state);
     applyWidgetOrder(els, state);
+    applyWidgetPanelOpacity(els, state);
     renderSearchBox(els, state);
     renderShortcuts(els, state, data.shortcuts);
     renderHistory(els, state, data.history);
@@ -1059,6 +1058,19 @@ export function applyWidgetSizes(els, state) {
 }
 
 /**
+ * Give every widget box the exact same background as the calendar panel
+ * (#calendarium-container) — same "bg-opacity" setting, same
+ * applyPanelOpacity() logic — so the widgets column reads as one
+ * consistent surface with the calendar rather than a separately-styled
+ * area. Called once per widget element (each is its own rounded box, the
+ * same way the calendar panel is its own box), not once for the whole
+ * #calendarium-widgets wrapper.
+ */
+export function applyWidgetPanelOpacity(els, state) {
+    widgetElements(els).forEach((el) => applyPanelOpacity(el, state));
+}
+
+/**
  * Wire each widget header's 3 size buttons directly to storage.local —
  * called once from initApp(), not from renderAll() (this is event wiring,
  * not per-refresh rendering, the same distinction as initSearchBox() vs.
@@ -1086,12 +1098,27 @@ export function applyWidgetOrder(els, state) {
 export function wireWidgetHeaderControls(els) {
     widgetElements(els).forEach((el) => {
         let id = el.dataset.widget;
+        function setSize(size) {
+            el.dataset.size = size;
+            if (typeof browser !== "undefined" && browser.storage && browser.storage.local) {
+                browser.storage.local.set({ [`widget-${id}-size`]: size });
+            }
+        }
         el.querySelectorAll(".calendarium-widget-size-btn[data-size-action]").forEach((btn) => {
             btn.addEventListener("click", () => {
-                let size = btn.dataset.sizeAction;
-                el.dataset.size = size;
-                if (typeof browser !== "undefined" && browser.storage && browser.storage.local) {
-                    browser.storage.local.set({ [`widget-${id}-size`]: size });
+                let action = btn.dataset.sizeAction;
+                if (action === "collapsed") {
+                    // Toggle: collapsing remembers the size to go back to;
+                    // clicking "collapse" again (now effectively "expand")
+                    // restores it instead of being a one-way action.
+                    if (el.dataset.size === "collapsed") {
+                        setSize(el.dataset.restoreSize || "large");
+                    } else {
+                        el.dataset.restoreSize = el.dataset.size || "large";
+                        setSize("collapsed");
+                    }
+                } else {
+                    setSize(action);
                 }
             });
         });

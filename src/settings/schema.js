@@ -78,7 +78,7 @@ export const LAYOUT = {
         sections: ["section-sync", "section-import-export"]
     },
 
-    "section-search":       { title: "Search", keys: ["show-search-box", "search-engine", "widget-search-size"] },
+    "section-search":       { title: "Search", keys: ["show-search-box", "search-engine"] },
     "section-widgets":      {
         title: "Widgets",
         keys: [
@@ -170,14 +170,15 @@ export const BACKGROUND_GRADIENT_OPTIONS = {
 // | "collapsed")
 //
 // Normal storage.local scalars like any other combobox field — appear in
-// LAYOUT (section-search for "widget-search-size", section-widgets for
-// the rest, added alongside their own widget) so the "every FIELDS entry
-// has exactly one options-page row" invariant
+// LAYOUT (section-widgets, added alongside their own widget) so the
+// "every FIELDS entry has exactly one options-page row" invariant
 // (tests/unit/options-schema.test.js) keeps holding. This is deliberately
 // redundant with each widget's own header buttons on the New Tab page
 // (wireWidgetHeaderControls()/applyWidgetSizes() in lib/render.js) — same
 // relationship as e.g. "background-rotate-mode" having both a real
-// options-page control and being driven live elsewhere.
+// options-page control and being driven live elsewhere. The Search
+// widget has no header/title bar (see newtab.html) and so has no
+// "widget-search-size" field — it is always shown at its natural size.
 // ══════════════════════════════════════════════════════════════════════
 const WIDGET_SIZE_OPTIONS = { "Large": "large", "Small": "small", "Collapsed": "collapsed" };
 
@@ -225,7 +226,6 @@ export function parseWidgetOrder(state) {
 
 export const FIELDS = {
     "show-search-box": { id: "show-search-box", type: "checkbox", default: false, description: "Show a search box (uses your default search engine)" },
-    "widget-search-size": { id: "widget-search-size", type: "combobox", default: "large", dependency: "show-search-box", indent: true, description: "Search widget size", options: WIDGET_SIZE_OPTIONS },
     "search-engine": {
         id: "search-engine", type: "engine-select", default: "default", indent: true,
         dependency: "show-search-box",

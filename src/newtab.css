@@ -41,11 +41,13 @@
  * ── Panel opacity ────────────────────────────────────────────────────
  * "bg-opacity" is a distinct, older setting (ported from the original
  * desklet) that has nothing to do with "background-style": it's a
- * semi-transparent panel color applied only to #calendarium-container
- * (the element that actually holds the date/time/moon/etc. rows), via
- * src/lib/render.js's applyPanelOpacity(). See that function's doc
- * comment for why the color is light/dark-aware rather than hardcoded
- * black like the original desklet.
+ * semi-transparent panel color applied to #calendarium-container (the
+ * element that actually holds the date/time/moon/etc. rows) AND, via
+ * applyWidgetPanelOpacity(), to every .calendarium-widget box in the
+ * widgets column — one control, one shared panel look across both
+ * columns. Both go through src/lib/render.js's applyPanelOpacity(). See
+ * that function's doc comment for why the color is light/dark-aware
+ * rather than hardcoded black like the original desklet.
  */
 
 :root {
@@ -133,7 +135,6 @@
 
   /* Widgets column (Shortcuts / Recent Activity / Bookmarks / Downloads /
      Firefox logo / Search — see #calendarium-widgets) */
-  --cal-widget-bg: rgba(0, 0, 0, 0.03);
   --cal-widget-border: rgba(0, 0, 0, 0.10);
   --cal-widget-header-bg: rgba(0, 0, 0, 0.05);
   --cal-widget-header-color: #5a5a5a;
@@ -192,7 +193,6 @@
     --cal-input-placeholder: #999999;
     --cal-input-hover-bg: rgba(255, 255, 255, 0.16);
 
-    --cal-widget-bg: rgba(255, 255, 255, 0.04);
     --cal-widget-border: rgba(255, 255, 255, 0.12);
     --cal-widget-header-bg: rgba(255, 255, 255, 0.06);
     --cal-widget-header-color: #aaaaaa;
@@ -254,7 +254,6 @@
   --cal-input-placeholder: #999999;
   --cal-input-hover-bg: rgba(255, 255, 255, 0.16);
 
-  --cal-widget-bg: rgba(255, 255, 255, 0.04);
   --cal-widget-border: rgba(255, 255, 255, 0.12);
   --cal-widget-header-bg: rgba(255, 255, 255, 0.06);
   --cal-widget-header-color: #aaaaaa;
@@ -312,10 +311,17 @@ body {
    "collapsed" — collapsed hides the body and leaves only the header,
    the same [hidden]-driven show/hide primitive used everywhere else in
    this stylesheet is intentionally NOT used here, since the header
-   itself must stay visible). */
+   itself must stay visible). The Search widget has no header at all
+   (see newtab.html) and so never leaves its default "large" state. */
 .calendarium-widget {
   border-radius: 12px;
-  background-color: var(--cal-widget-bg);
+  /* Default: fully transparent, same as .calendarium-container below — a
+     non-zero "bg-opacity" setting overrides this via an inline
+     background-color set by src/lib/render.js's applyPanelOpacity()
+     (applyWidgetPanelOpacity() calls it per widget), so every widget box
+     shares the exact same panel background/opacity as the calendar
+     panel, controlled by the same "Background opacity" control. */
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid var(--cal-widget-border);
   /* Deliberately no overflow:hidden here (unlike a naive rounded-corner
      clip) — this widget can contain absolutely-positioned popups that

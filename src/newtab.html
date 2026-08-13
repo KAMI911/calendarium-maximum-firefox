@@ -19,15 +19,13 @@
          re-order never has to touch the DOM. -->
     <aside id="calendarium-widgets" class="calendarium-widgets">
 
-      <section id="widget-search" class="calendarium-widget" data-widget="search" data-size="large" hidden>
-        <header class="calendarium-widget-header">
-          <h2 id="widget-search-title" class="calendarium-widget-title"></h2>
-          <div class="calendarium-widget-controls">
-            <button type="button" class="calendarium-widget-size-btn" data-size-action="small" aria-label="Small">S</button>
-            <button type="button" class="calendarium-widget-size-btn" data-size-action="large" aria-label="Large">L</button>
-            <button type="button" class="calendarium-widget-size-btn" data-size-action="collapsed" aria-label="Collapse">&#8212;</button>
-          </div>
-        </header>
+      <!-- No header/title bar by design — a bare search box reads oddly
+           with a titled chrome bar above it, unlike the data-driven
+           widgets below. Still a .calendarium-widget (shares the same
+           panel background/opacity and participates in widget-order)
+           and still data-widget="search" for that ordering, just without
+           the header's size/collapse controls. -->
+      <section id="widget-search" class="calendarium-widget" data-widget="search" hidden>
         <div class="calendarium-widget-body">
           <form id="cal-search-form" class="calendarium-search-form">
             <span id="cal-search-engine-select" class="calendarium-search-engine-select" hidden></span>

@@ -38,8 +38,8 @@ describe("settings/schema.js structural integrity", () => {
         expect(Object.keys(seen).length).toBe(Object.keys(FIELDS).length);
     });
 
-    it("has 98 fields: 82 from earlier rounds, plus 'widget-search-size', the Shortcuts/Recent Activity/Bookmarks/Downloads/Firefox-logo widget fields (14), and 'widget-order'", () => {
-        expect(Object.keys(FIELDS).length).toBe(98);
+    it("has 97 fields: 82 from earlier rounds, plus the Shortcuts/Recent Activity/Bookmarks/Downloads/Firefox-logo widget fields (14) and 'widget-order' (the Search widget has no header/size field)", () => {
+        expect(Object.keys(FIELDS).length).toBe(97);
     });
 
     it("no longer has a 'text-scale' field (dead code, superseded by Firefox's own per-origin Ctrl+/- zoom)", () => {

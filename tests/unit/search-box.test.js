@@ -10,7 +10,6 @@ import { DEFAULTS } from "../../src/settings/schema.js";
 function freshDom() {
     document.body.innerHTML = `
       <section id="widget-search" hidden>
-        <h2 id="widget-search-title"></h2>
         <form id="cal-search-form">
           <span id="cal-search-engine-select" hidden></span>
           <input id="cal-search-input" type="search">
@@ -38,10 +37,6 @@ describe("renderSearchBox", () => {
         expect(els.searchForm.hasAttribute("hidden")).toBe(false);
     });
 
-    it("sets the widget title text", () => {
-        renderSearchBox(els, Object.assign({}, DEFAULTS, { "show-search-box": true }));
-        expect(els.widgetSearchTitle.textContent).toBeTruthy();
-    });
 });
 
 describe("submitSearch", () => {

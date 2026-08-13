@@ -424,23 +424,25 @@ describe("renderAll (full-refresh smoke test)", () => {
 });
 
 describe("applyWidgetSizes / wireWidgetHeaderControls", () => {
+    // The Search widget has no header (see newtab.html), so these use the
+    // Shortcuts widget, which does.
     it("defaults a widget's data-size to 'large' when no widget-<id>-size setting is stored", () => {
         let els = freshDom();
         applyWidgetSizes(els, baseState());
-        expect(els.widgetSearch.dataset.size).toBe("large");
+        expect(els.widgetShortcuts.dataset.size).toBe("large");
     });
 
     it("applies a stored widget-<id>-size to the matching widget element", () => {
         let els = freshDom();
-        applyWidgetSizes(els, baseState({ "widget-search-size": "collapsed" }));
-        expect(els.widgetSearch.dataset.size).toBe("collapsed");
+        applyWidgetSizes(els, baseState({ "widget-shortcuts-size": "collapsed" }));
+        expect(els.widgetShortcuts.dataset.size).toBe("collapsed");
     });
 
     it("marks the active size button as aria-pressed", () => {
         let els = freshDom();
-        applyWidgetSizes(els, baseState({ "widget-search-size": "small" }));
-        let smallBtn = els.widgetSearch.querySelector('[data-size-action="small"]');
-        let largeBtn = els.widgetSearch.querySelector('[data-size-action="large"]');
+        applyWidgetSizes(els, baseState({ "widget-shortcuts-size": "small" }));
+        let smallBtn = els.widgetShortcuts.querySelector('[data-size-action="small"]');
+        let largeBtn = els.widgetShortcuts.querySelector('[data-size-action="large"]');
         expect(smallBtn.getAttribute("aria-pressed")).toBe("true");
         expect(largeBtn.getAttribute("aria-pressed")).toBe("false");
     });
@@ -448,19 +450,47 @@ describe("applyWidgetSizes / wireWidgetHeaderControls", () => {
     it("wires each size button to set data-size immediately on click", () => {
         let els = freshDom();
         wireWidgetHeaderControls(els);
-        let collapseBtn = els.widgetSearch.querySelector('[data-size-action="collapsed"]');
+        let collapseBtn = els.widgetShortcuts.querySelector('[data-size-action="collapsed"]');
         collapseBtn.click();
-        expect(els.widgetSearch.dataset.size).toBe("collapsed");
+        expect(els.widgetShortcuts.dataset.size).toBe("collapsed");
     });
 
     it("writes widget-<id>-size to storage.local on click", () => {
         let els = freshDom();
         global.browser = { storage: { local: { set: (obj) => { global.__lastSet = obj; return Promise.resolve(); } } } };
         wireWidgetHeaderControls(els);
-        els.widgetSearch.querySelector('[data-size-action="small"]').click();
-        expect(global.__lastSet).toEqual({ "widget-search-size": "small" });
+        els.widgetShortcuts.querySelector('[data-size-action="small"]').click();
+        expect(global.__lastSet).toEqual({ "widget-shortcuts-size": "small" });
         delete global.browser;
         delete global.__lastSet;
+    });
+
+    it("the collapse button toggles: clicking it again restores the previous size instead of staying collapsed", () => {
+        let els = freshDom();
+        wireWidgetHeaderControls(els);
+        let smallBtn = els.widgetShortcuts.querySelector('[data-size-action="small"]');
+        let collapseBtn = els.widgetShortcuts.querySelector('[data-size-action="collapsed"]');
+
+        smallBtn.click();
+        expect(els.widgetShortcuts.dataset.size).toBe("small");
+
+        collapseBtn.click();
+        expect(els.widgetShortcuts.dataset.size).toBe("collapsed");
+
+        collapseBtn.click();
+        expect(els.widgetShortcuts.dataset.size).toBe("small");
+    });
+
+    it("the collapse button restores to 'large' if the widget was never explicitly sized before collapsing", () => {
+        let els = freshDom();
+        wireWidgetHeaderControls(els);
+        let collapseBtn = els.widgetShortcuts.querySelector('[data-size-action="collapsed"]');
+
+        collapseBtn.click();
+        expect(els.widgetShortcuts.dataset.size).toBe("collapsed");
+
+        collapseBtn.click();
+        expect(els.widgetShortcuts.dataset.size).toBe("large");
     });
 });
 
