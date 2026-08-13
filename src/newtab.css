@@ -452,20 +452,29 @@ body {
 .calendarium-widget-list-item:hover { color: var(--cal-link-color); }
 
 /* ── Firefox logo (decorative) ─────────────────────────────────────── */
+/* container-type:inline-size turns "cqw" below into a fraction of this
+   box's own rendered width, so "large" scales the glyph with however
+   wide the widget actually is (narrow column, full-width stacked
+   layout, etc.) rather than a fixed em size. */
+.calendarium-widget-firefox-logo .calendarium-widget-body {
+  container-type: inline-size;
+}
+
 .calendarium-firefox-logo-body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
+  font-size: 70cqw;
   line-height: 1;
 }
 
 /* "Small" header state (see the generic [data-size="small"] max-height
    rule above) only clips/scrolls other widgets' *lists* — for a single
    centered glyph with nothing to scroll, that alone doesn't visibly
-   shrink anything, so the logo itself needs its own smaller size here. */
+   shrink anything, so the logo itself needs its own smaller size here:
+   what used to be the (fixed) "large" size, now demoted to "small". */
 .calendarium-widget[data-size="small"] .calendarium-firefox-logo-body {
-  font-size: 1.5em;
+  font-size: 3em;
 }
 
 /* ── Background style (General > Background setting, applyBackground()) ── */
