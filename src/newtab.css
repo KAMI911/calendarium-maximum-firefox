@@ -317,7 +317,12 @@ body {
   border-radius: 12px;
   background-color: var(--cal-widget-bg);
   border: 1px solid var(--cal-widget-border);
-  overflow: hidden;
+  /* Deliberately no overflow:hidden here (unlike a naive rounded-corner
+     clip) — this widget can contain absolutely-positioned popups that
+     need to overhang its bounds, e.g. the search widget's engine-picker
+     dropdown (.engine-dropdown-list in options page's own subtree,
+     mounted via createEngineDropdown() in lib/render.js). The header's
+     own border-radius (below) rounds its top corners to match instead. */
 }
 
 .calendarium-widget-header {
@@ -327,6 +332,7 @@ body {
   gap: 8px;
   padding: 8px 12px;
   background-color: var(--cal-widget-header-bg);
+  border-radius: 12px 12px 0 0;
 }
 
 .calendarium-widget-title {
