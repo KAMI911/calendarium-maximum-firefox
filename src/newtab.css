@@ -288,59 +288,47 @@ body {
   font-family: "DejaVu Sans", "Segoe UI", Arial, sans-serif;
 }
 
-/* ── Two-column shell (widgets left, calendar right) ─────────────────
-   #calendarium-shell is body's single centered child (replacing the
-   calendar panel as that role); .calendarium-widgets caps its own width
-   the same way .calendarium-container does below, so the two columns
-   read as similarly-sized boxes. Hiding a widget via [hidden] removes it
-   from flex layout entirely, so the remaining widgets close the gap
-   automatically — no extra reflow JS needed. */
-.calendarium-shell {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 16px;
-}
+/* #calendarium-shell is now just a passthrough wrapper around the single
+   flowing area below — body's display:grid;place-items:center already
+   centers it as body's one child, nothing else needed here. */
 
-/* CSS multi-column (not grid/flex): items flow down one column and wrap
-   into the next once it's full, packing height efficiently (unlike a
-   grid's row-locked track sizing, which would leave a short widget's row
+/* Single flowing area: the calendar panel (#calendarium-container) and
+   every widget are equal-status boxes in ONE CSS multi-column container
+   — CSS multi-column (not grid/flex): items flow down one column and
+   wrap into the next once it's full, packing height efficiently (unlike
+   a grid's row-locked track sizing, which would leave a short item's row
    as tall as its tallest sibling in the same row across every column).
-   The column width is tied to --cal-panel-width (the same width the
-   calendar panel targets, below), so each widget reads roughly as wide
-   as the calendar itself rather than a narrower tile — 1 column on a
-   narrow widgets area, up to 4 once there's enough room for that many.
-   Each column always stretches to fill an even share of the container's
-   own width (including the 1-column case, where that's just the
-   container's full width), and the container itself is already
-   horizontally centered as part of the shell/page — so a single column
-   reads centered on the page too, with nothing extra needed here for
-   that case. Container width caps at enough for 4 columns of
-   --cal-panel-width (560px) plus 3 gaps: 4×560 + 3×16 = 2288px. */
+   This is what gives the "prefer stacking in one column; spread sideways
+   only once there's genuinely enough room; never force horizontal
+   scroll" behavior for free: multi-column only opens a 2nd/3rd/4th
+   column of --cal-panel-width when the CONTAINER's own (necessarily
+   viewport-bounded, via the width rule below) box is actually wide
+   enough to fit one — otherwise everything just stacks in a single
+   column, no matter how many items there are. Width is capped at 96vw
+   directly (not "min(some large px, 92vw)" per item like an earlier
+   version did) specifically because that earlier version sized the
+   widgets column and the calendar panel *independently* against 92vw
+   each, as two separate flex siblings — their two 92vw's could sum to
+   *more* than 100vw and force horizontal scroll, since neither knew
+   about the other. There's only one sized box now, so a single 96vw cap
+   is sufcient and can't be exceeded regardless of how many columns it
+   ends up using. Also caps at enough width for 4 columns of
+   --cal-panel-width (560px) plus 3 gaps: 4×560 + 3×16 = 2288px — more
+   than 4 columns would make each individual widget feel too small. */
 .calendarium-widgets {
   columns: 4 var(--cal-panel-width);
   column-gap: 16px;
-  width: min(2320px, 92vw);
+  width: min(2320px, 96vw);
 }
 
 .calendarium-widget {
   /* Multi-column layout's own vertical spacing knob — column-gap only
      controls the gutter *between* columns, not between stacked items
-     within one column, so this replaces the flex-layout "gap" it used
-     to rely on. */
+     within one column, so this is how items get spaced from each
+     other vertically within a column. */
   margin-bottom: 10px;
   /* Never split one widget's header/body across two columns. */
   break-inside: avoid;
-}
-
-@media (max-width: 1100px) {
-  .calendarium-shell {
-    flex-direction: column;
-    align-items: center;
-  }
-  .calendarium-widgets {
-    width: min(var(--cal-panel-width), 92vw);
-  }
 }
 
 /* ── Individual widget ─────────────────────────────────────────────
@@ -411,15 +399,26 @@ body {
   display: none;
 }
 
-.calendarium-widget[data-size="small"] .calendarium-widget-body {
+/* "Small" for the Shortcuts tile grid (no per-item count-vs-8 math here,
+   unlike the text lists below — a grid's row count depends on how many
+   columns fit, not a flat item count). */
+.calendarium-widget[data-size="small"] .calendarium-widget-grid {
   max-height: 120px;
   overflow-y: auto;
-  /* Reserve the scrollbar's own width up front (rather than only once
-     content actually overflows) so its late appearance can't shrink the
-     available width for already-laid-out text at the last moment —
-     without this, text sized/wrapped against the wider pre-scrollbar
-     width can end up visually crowding/overlapping the scrollbar track
-     the instant it appears. Firefox 97+. */
+  scrollbar-gutter: stable;
+}
+
+/* "Small" for text lists (Recent Activity / Bookmarks / Downloads):
+   caps to roughly 8 visible rows with a scrollbar, but — per
+   applyWidgetSizes() in lib/render.js, which sets [data-cap-list] only
+   when the widget's own "widget-<id>-count" setting exceeds 8 — a list
+   already configured to show 8 or fewer items is left uncapped, since
+   there'd be nothing to scroll to. ~23px/row (0.88em text + 3px
+   top/bottom padding, against this page's ~16px base font-size) + the
+   list's own 2px row gap: 8×23 + 7×2 = 198px. */
+.calendarium-widget[data-size="small"][data-cap-list="true"] .calendarium-widget-list {
+  max-height: 198px;
+  overflow-y: auto;
   scrollbar-gutter: stable;
 }
 
@@ -499,11 +498,11 @@ body {
   max-width: 100%;
 }
 
-/* "Small" header state (see the generic [data-size="small"] max-height
-   rule above) only clips/scrolls other widgets' *lists* — for a single
-   centered glyph with nothing to scroll, that alone doesn't visibly
-   shrink anything, so the logo itself needs its own smaller size here:
-   what used to be the (fixed) "large" size, now demoted to "small". */
+/* "Small" header state only clips/scrolls other widgets' *lists* (see
+   the grid/list max-height rules above) — for a single centered glyph
+   with nothing to scroll, that alone doesn't visibly shrink anything, so
+   the logo itself needs its own smaller size here: what used to be the
+   (fixed) "large" size, now demoted to "small". */
 .calendarium-widget[data-size="small"] .calendarium-firefox-logo-body {
   font-size: 3em;
 }

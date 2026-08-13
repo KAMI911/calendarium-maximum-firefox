@@ -478,6 +478,24 @@ describe("applyWidgetSizes / wireWidgetHeaderControls", () => {
         expect(largeBtn.getAttribute("aria-pressed")).toBe("false");
     });
 
+    it("marks a list widget with data-cap-list only when small AND configured for more than 8 items", () => {
+        let els = freshDom();
+        applyWidgetSizes(els, baseState({ "widget-history-size": "small", "widget-history-count": 12 }));
+        expect(els.widgetHistory.dataset.capList).toBe("true");
+    });
+
+    it("does not set data-cap-list when small but configured for 8 or fewer items", () => {
+        let els = freshDom();
+        applyWidgetSizes(els, baseState({ "widget-history-size": "small", "widget-history-count": 5 }));
+        expect(els.widgetHistory.dataset.capList).toBeUndefined();
+    });
+
+    it("does not set data-cap-list when large, even with more than 8 items configured", () => {
+        let els = freshDom();
+        applyWidgetSizes(els, baseState({ "widget-history-size": "large", "widget-history-count": 12 }));
+        expect(els.widgetHistory.dataset.capList).toBeUndefined();
+    });
+
     it("wires each size button to set data-size immediately on click", () => {
         let els = freshDom();
         wireWidgetHeaderControls(els);

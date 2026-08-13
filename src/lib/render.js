@@ -1102,13 +1102,31 @@ function widgetElements(els) {
 }
 
 /** Set data-size (and the header buttons' aria-pressed state) on every widget element from its own "widget-<id>-size" setting. */
+// Widgets with a configurable item count ("widget-<id>-count" in
+// settings/schema.js) — used below to decide whether "small" needs to
+// scroll/cap at all: no point capping a list that's already short.
+const WIDGET_COUNT_IDS = new Set(["shortcuts", "history", "bookmarks", "downloads"]);
+const SMALL_LIST_MAX_VISIBLE_ITEMS = 8;
+
 export function applyWidgetSizes(els, state) {
     widgetElements(els).forEach((el) => {
-        let size = (state && state[`widget-${el.dataset.widget}-size`]) || "large";
+        let id = el.dataset.widget;
+        let size = (state && state[`widget-${id}-size`]) || "large";
         el.dataset.size = size;
         el.querySelectorAll(".calendarium-widget-size-btn[data-size-action]").forEach((btn) => {
             btn.setAttribute("aria-pressed", String(btn.dataset.sizeAction === size));
         });
+
+        // "small" only needs to scroll/cap a list-type widget's body when
+        // it's actually configured to show more items than fit in that
+        // capped view — a widget already set to show 5 items shouldn't
+        // grow a pointless empty scrollable area just because it's small.
+        if (WIDGET_COUNT_IDS.has(id)) {
+            let count = (state && state[`widget-${id}-count`]) || 0;
+            let capped = size === "small" && count > SMALL_LIST_MAX_VISIBLE_ITEMS;
+            if (capped) el.dataset.capList = "true";
+            else delete el.dataset.capList;
+        }
     });
 }
 
