@@ -865,11 +865,20 @@ body {
    renderWikiEntries() in lib/render.js). display:block + the parent's
    own white-space:pre-line keeps each entry's own line-wrapped text
    block-stacked, same look as the plain-text list it replaces. */
-.calendarium-wiki-link {
+/* One entry per line — display:block alone is what stacks them (no <br>
+   needed between entries; adding one on top of a block-level break would
+   visibly double it into a blank line). Applied to every entry
+   (renderWikiEntries() in lib/render.js) whether or not it resolved a
+   URL, so entries without one still each get their own line instead of
+   collapsing onto a single inline run. */
+.calendarium-wiki-entry {
   display: block;
+  white-space: pre-line;
+}
+
+.calendarium-wiki-link {
   color: inherit;
   text-decoration: none;
-  white-space: pre-line;
 }
 .calendarium-wiki-link:hover {
   color: var(--cal-link-color);

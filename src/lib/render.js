@@ -829,18 +829,22 @@ function wikiEntryUrl(e) {
  */
 function renderWikiEntries(container, entries) {
     container.textContent = "";
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
         let url = wikiEntryUrl(entry);
         let node = document.createElement(url ? "a" : "span");
+        // "calendarium-wiki-entry" (display:block) alone stacks each
+        // entry on its own line — no <br> needed (and one would add a
+        // *second*, visibly blank line on top of the block break).
+        // "calendarium-wiki-link" only adds link-specific styling
+        // (color/hover) on top, for entries that resolved a URL.
+        node.className = "calendarium-wiki-entry" + (url ? " calendarium-wiki-link" : "");
         if (url) {
             node.href = url;
             node.target = "_blank";
             node.rel = "noopener noreferrer";
-            node.className = "calendarium-wiki-link";
         }
         node.textContent = wrapText(wikiEntryText(entry), 48);
         container.appendChild(node);
-        if (i < entries.length - 1) container.appendChild(document.createElement("br"));
     });
 }
 
