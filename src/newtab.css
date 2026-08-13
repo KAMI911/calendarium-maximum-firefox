@@ -277,17 +277,6 @@ body {
   padding: 24px 0;
   box-sizing: border-box;
   background: var(--cal-page-bg);
-  /* Pin the background to the viewport rather than letting it scroll/
-     stretch with the document. Without this, a background-style like a
-     gradient or image is sized to the *body's own box* — and with the
-     widgets column added, that box can now grow far taller than one
-     screen (many widgets + long lists), which visibly distorts a
-     gradient (color bands stretched over thousands of px, or a seam
-     where the renderer's internal tiling kicks in for oversized
-     surfaces) or a cover-sized image. Fixing it to the viewport keeps
-     every background style rendered at a sane, constant size regardless
-     of how tall the page content grows. */
-  background-attachment: fixed;
   display: grid;
   place-items: center;
   font-family: "DejaVu Sans", "Segoe UI", Arial, sans-serif;
@@ -471,13 +460,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40cqw;
+  /* container-type is on .calendarium-widget-body (the query container),
+     so "cqw" measures THAT element's own border-box width — before its
+     own 12px-each-side padding is subtracted for this child. Subtract
+     that padding (24px) plus its 1px border each side explicitly, so
+     the glyph's ~1em-square rendered box lines up with the actual
+     available content width instead of overflowing past it. */
+  font-size: calc(100cqw - 26px);
   line-height: 1;
   overflow: hidden;
-  /* Safety net against overflowing the widget's own rounded box: emoji
-     glyphs commonly render wider than their nominal font-size (extra
-     side bearing), so even a conservative cqw value can occasionally
-     exceed the available width — clip rather than let it stick out. */
+  /* Pure insurance against sub-pixel/font-metric variance (some emoji
+     glyphs render very slightly wider than their nominal font-size) —
+     the calc() above is sized to need this only for that residual
+     slack, not as the primary sizing mechanism. */
   max-width: 100%;
 }
 
@@ -534,6 +529,17 @@ body {
 .calendarium-bg-gradient-mint     { background: linear-gradient(135deg, #43e97b, #38f9d7, #d9f7ee); }
 .calendarium-bg-gradient-lavender { background: linear-gradient(135deg, #a18cd1, #fbc2eb, #e0c3fc); }
 .calendarium-bg-gradient-copper   { background: linear-gradient(135deg, #b79891, #94716b, #43302b); }
+
+/* Explicit background-size (after the `background:` shorthands above, so
+   it isn't reset by them) rather than relying on a gradient's default
+   auto-sizing — pins it to exactly one fill of body's own box, which now
+   grows dynamically with however much content the widgets column adds,
+   instead of being capped to one screen. A gradient normally doesn't
+   tile even at "auto" size, but pinning this explicitly removes any
+   ambiguity for very tall/short boxes. */
+[class*="calendarium-bg-gradient-"] {
+  background-size: 100% 100%;
+}
 
 .calendarium-container {
   font-size: 15px;
@@ -874,7 +880,11 @@ body {
 .calendarium-search-form {
   display: flex;
   gap: 6px;
-  padding-bottom: 10px;
+  /* No padding-bottom here — the form now always lives inside
+     .calendarium-widget-body (search widget), whose own padding already
+     gives even spacing on every side; an extra bottom padding here on
+     top of that made the widget's bottom edge look noticeably thicker
+     than its top/sides. */
 }
 
 .calendarium-search-input {
