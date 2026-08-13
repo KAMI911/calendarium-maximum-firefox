@@ -588,26 +588,34 @@ describe("renderShortcuts / renderHistory / renderBookmarks / renderDownloads / 
 });
 
 describe("applyWidgetOrder", () => {
-    it("sets style.order to the default index for each widget when no widget-order is stored", () => {
+    // Multi-column layout (see newtab.css's "columns" rule) means the CSS
+    // `order` property has no effect here, unlike flex/grid — so this
+    // physically reorders the DOM nodes instead; assert on actual DOM
+    // order (via widgetsAside.children) rather than a style property.
+    function widgetIdOrder(els) {
+        return Array.from(els.widgetsAside.children)
+            .filter((el) => el.dataset && el.dataset.widget)
+            .map((el) => el.dataset.widget);
+    }
+
+    it("leaves the default DOM order untouched when no widget-order is stored", () => {
         let els = freshDom();
+        let before = widgetIdOrder(els);
         applyWidgetOrder(els, baseState());
-        expect(els.widgetSearch.style.order).toBe("0");
-        expect(els.widgetShortcuts.style.order).toBe("1");
-        expect(els.widgetFirefoxLogo.style.order).toBe("5");
+        expect(widgetIdOrder(els)).toEqual(before);
     });
 
     it("reorders widgets according to a stored widget-order string", () => {
         let els = freshDom();
         applyWidgetOrder(els, baseState({ "widget-order": "firefox-logo,search,shortcuts,history,bookmarks,downloads" }));
-        expect(els.widgetFirefoxLogo.style.order).toBe("0");
-        expect(els.widgetSearch.style.order).toBe("1");
-        expect(els.widgetDownloads.style.order).toBe("5");
+        expect(widgetIdOrder(els)).toEqual(["firefox-logo", "search", "shortcuts", "history", "bookmarks", "downloads"]);
     });
 
     it("appends unknown/missing ids at the end rather than throwing", () => {
         let els = freshDom();
-        applyWidgetOrder(els, baseState({ "widget-order": "bogus,search" }));
-        expect(els.widgetSearch.style.order).toBe("0");
-        expect(Number(els.widgetShortcuts.style.order)).toBeGreaterThan(0);
+        expect(() => applyWidgetOrder(els, baseState({ "widget-order": "bogus,search" }))).not.toThrow();
+        let order = widgetIdOrder(els);
+        expect(order[0]).toBe("search");
+        expect(order.length).toBe(6);
     });
 });

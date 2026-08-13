@@ -28,10 +28,12 @@
          convention used throughout the calendar column) and carries a
          data-size attribute ("large" | "small" | "collapsed") controlled
          by its own header buttons — see wireWidgetHeaderControls() in
-         lib/render.js. DOM order here is the *default* widget order;
-         the actual visual order is driven by the CSS `order` property
-         (applyWidgetOrder() in lib/render.js) so a user-configured
-         re-order never has to touch the DOM. -->
+         lib/render.js. Flows into up to 3 columns via CSS multi-column
+         (newtab.css's "columns" rule) rather than a fixed single stack.
+         DOM order here is only the *default* widget order — a
+         user-configured re-order physically moves these nodes at
+         runtime (applyWidgetOrder() in lib/render.js), since multi-column
+         layout (unlike flex/grid) has no CSS-only reordering mechanism. -->
     <aside id="calendarium-widgets" class="calendarium-widgets">
 
       <!-- No header/title bar by design — a bare search box reads oddly

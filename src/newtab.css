@@ -296,11 +296,32 @@ body {
   gap: 16px;
 }
 
+/* CSS multi-column (not grid/flex): items flow down one column and wrap
+   into the next once it's full, packing height efficiently (unlike a
+   grid's row-locked track sizing, which would leave a short widget's row
+   as tall as its tallest sibling in the same row across every column).
+   "columns: 4 300px" auto-picks up to 4 columns of at least 300px each —
+   1 on a narrow widgets area, up to 4 once there's room for them — rather
+   than a fixed column count. Each column always stretches to fill an
+   even share of the container's own width (including the 1-column case,
+   where that's just the container's full width), and the container
+   itself is already horizontally centered as part of the shell/page —
+   so a single column reads centered on the page too, with nothing extra
+   needed here for that case. */
 .calendarium-widgets {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: min(480px, 92vw);
+  columns: 4 300px;
+  column-gap: 16px;
+  width: min(1280px, 92vw);
+}
+
+.calendarium-widget {
+  /* Multi-column layout's own vertical spacing knob — column-gap only
+     controls the gutter *between* columns, not between stacked items
+     within one column, so this replaces the flex-layout "gap" it used
+     to rely on. */
+  margin-bottom: 10px;
+  /* Never split one widget's header/body across two columns. */
+  break-inside: avoid;
 }
 
 @media (max-width: 1100px) {

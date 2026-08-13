@@ -1137,16 +1137,23 @@ export function applyWidgetPanelOpacity(els, state) {
  */
 /**
  * Apply the user's configured widget order (settings/schema.js's
- * "widget-order" field, read via parseWidgetOrder()) as the CSS `order`
- * property on each widget element — deliberately NOT reordering the DOM
- * itself, so this stays a simple, reflow-safe one-liner per widget
- * regardless of which widgets are currently hidden.
+ * "widget-order" field, read via parseWidgetOrder()) by physically
+ * reordering the widget elements in the DOM — appendChild() on an
+ * already-attached node *moves* it rather than duplicating it, so
+ * calling this in the desired order just walks each widget to the end
+ * in turn. (An earlier version used the CSS `order` property instead,
+ * which is flex/grid-only and silently has no effect now that
+ * .calendarium-widgets is a CSS multi-column container — see
+ * newtab.css's "columns" rule — so real DOM reordering is required.)
  */
 export function applyWidgetOrder(els, state) {
+    if (!els.widgetsAside) return;
     let order = parseWidgetOrder(state);
-    widgetElements(els).forEach((el) => {
-        let index = order.indexOf(el.dataset.widget);
-        el.style.order = index === -1 ? order.length : index;
+    let byId = {};
+    widgetElements(els).forEach((el) => { byId[el.dataset.widget] = el; });
+    order.forEach((id) => {
+        let el = byId[id];
+        if (el) els.widgetsAside.appendChild(el);
     });
 }
 
