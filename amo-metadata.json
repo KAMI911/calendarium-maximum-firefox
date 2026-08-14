@@ -1,4 +1,8 @@
 {
+  "categories": {
+    "firefox": ["appearance"],
+    "android": ["appearance"]
+  },
   "version": {
     "license": "GPL-3.0-only"
   }
